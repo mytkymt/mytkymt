@@ -7,7 +7,7 @@ authors:
 - Daisuke Iwai
 - Kosuke Sato
 
-date: "2020-09-05T00:00:00Z"
+date: "2020-12-04T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
