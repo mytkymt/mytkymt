@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Master's course student
+role: Master's Student
 
 # Organizations/Affiliations
 organizations:
@@ -70,5 +70,5 @@ user_groups:
 - Visitors
 ---
 
-Yamato Miyatake is a master's course student at Osaka University. His research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
+Yamato Miyatake is a master's student at Osaka University. His research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
 
