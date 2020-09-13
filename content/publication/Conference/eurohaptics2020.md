@@ -1,5 +1,5 @@
 ---
-title: "HaptoMapping: Visuo-Haptic AR System using Projection-based Control of Wearable Haptic Devices"
+title: "Test"
 authors:
 - Yamato Miyatake
 - Takefumi Hiraki
