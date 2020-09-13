@@ -1,5 +1,5 @@
 ---
-title: "Test"
+title: "Visuo-Haptic Display by Embedding Imperceptible Spatial Haptic Information into Projected Images"
 authors:
 - Yamato Miyatake
 - Takefumi Hiraki
@@ -7,7 +7,7 @@ authors:
 - Daisuke Iwai
 - Kosuke Sato
 
-date: "2020-12-04T00:00:00Z"
+date: "2020-09-05T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -23,10 +23,12 @@ publication_types: ["9"]
 publication: "In ACM SIGGRAPH Asia 2020 Emerging Technologies"
 # publication_short: EuroHaptics 2020
 
+# abstract: We propose a novel projection-based AR system that can present consistent visuo-haptic sensations on a non-planar physical surface without inserting any visual display devices between a user and the surface. The core technical contribution is controlling wearable haptic displays using a pixel-level visible light communication projector. The projection system can embed spatial haptic information into each pixel, and the haptic displays vibrate according to the detected pixel information. We confirm that the proposed system can display visuo-haptic information with pixel-precise alignment with a delay of 85 ms. We can also employ the proposed system as a novel experimental platform to clarify the spatio-temporal perceptual characteristics of visual and haptic sensations. As a result of the conducted user studies, we revealed that the noticeable thresholds of visual-haptic asynchrony were about 100 ms (temporal) and 10 mm (spatial), respectively.
+
 # Summary. An optional shortened abstract.
 summary: 
 tags:
-- "Conference paper - Demo and Poster"
+- "Conference paper - Oral"
 featured: true
 
 links:

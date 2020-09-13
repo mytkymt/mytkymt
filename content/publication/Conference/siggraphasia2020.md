@@ -1,5 +1,5 @@
 ---
-title: "Visuo-Haptic Display by Embedding Imperceptible Spatial Haptic Information into Projected Images"
+title: "HaptoMapping: Visuo-Haptic AR System using Projection-based Control of Wearable Haptic Devices"
 authors:
 - Yamato Miyatake
 - Takefumi Hiraki
