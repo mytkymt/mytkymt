@@ -17,7 +17,7 @@ publishDate: "2019-09-013T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["9"]
+publication_types: ["1","9"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Haptics: Science, Technology, Applications (Proceedings of the 12th International Conference on Human Haptic Sensing and Touch Enabled Computer Applications – EuroHaptics 2020)"
