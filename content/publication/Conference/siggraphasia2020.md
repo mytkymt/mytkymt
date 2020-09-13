@@ -7,7 +7,7 @@ authors:
 - Daisuke Iwai
 - Kosuke Sato
 
-date: "2020-9-14T00:00:00Z"
+date: "2020-9-014T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -28,7 +28,7 @@ publication: "In ACM SIGGRAPH Asia 2020 Emerging Technologies"
 # Summary. An optional shortened abstract.
 summary: 
 tags:
-- "Conference paper - Oral"
+- "Conference paper - Demo"
 featured: true
 
 links:
