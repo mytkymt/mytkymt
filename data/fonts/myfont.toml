@@ -1,0 +1,11 @@
+# Font style metadata
+name = "myfont"
+
+# Optional Google font URL
+google_fonts = "Jost:400,700|Montserrat|Roboto+Mono"
+
+# Font families
+heading_font = "Jost"
+body_font = "Montserrat"
+nav_font = "Jost"
+mono_font = "Roboto Mono"
