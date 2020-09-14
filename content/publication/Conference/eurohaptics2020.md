@@ -54,3 +54,14 @@ projects:
 #   Otherwise, set `slides: ""`.
 # slides: example
 ---
+# Bibtex
+``` 
+@InProceedings{miyatake2020visuo-haptic,
+title={Visuo-Haptic Display by Embedding Imperceptible Spatial Haptic Information into Projected Images},
+author={Miyatake, Yamato and Hiraki, Takefumi and Maeda, Tomosukeand Iwai, Daisuke and Sato, Kosuke},
+booktitle="Haptics: Science, Technology, Applications",
+year="2020",
+publisher="Springer International Publishing",
+pages="226--234",
+}
+```
