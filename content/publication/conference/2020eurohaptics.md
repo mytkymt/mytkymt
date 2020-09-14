@@ -31,8 +31,9 @@ tags:
 featured: true
 
 links:
+ - name: Bib
+  url: "/publication/conference/2020eurohaptics_miyatake.bib"
 url_pdf: https://link.springer.com/content/pdf/10.1007/978-3-030-58147-3_25.pdf
-url_bib: "/conference/2020eurohaptics_miyatake.bib"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 

@@ -31,8 +31,9 @@ tags:
 featured: true
 
 links:
-url_pdf: "2020interaction_miyatake.pdf"
-url_bib: "2020interaction_miyatake.bib"
+ - name: Bib
+  url: "/publication/conference/2020interaction_miyatake.bib"
+url_pdf: "/publication/conference/2020interaction_miyatake.pdf"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
