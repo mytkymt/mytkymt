@@ -7,7 +7,7 @@ authors:
 - 岩井　大輔
 - 佐藤　宏介
 
-date: "2020-03-011T00:00:00Z"
+date: "2020-03-09T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
