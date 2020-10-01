@@ -30,9 +30,6 @@ summary:
 tags:
 featured: true
 
-links:
- - name: Bib
- - url: https://yamato-miyatake.netlify.app/publication/conference/2020interaction_miyatake.bib
 url_pdf: "/publication/conference/2020interaction_miyatake.pdf"
 
 # Featured image

@@ -20,7 +20,7 @@ publishDate: "2020-09-014T00:00:00Z"
 publication_types: ["10"]
 
 # Publication name and optional abbreviated publication name.
-publication: "In ACM SIGGRAPH Asia 2020 Emerging Technologies, (tso appear)"
+publication: "In ACM SIGGRAPH Asia 2020 Emerging Technologies (to appear)"
 # publication_short: EuroHaptics 2020
 
 # abstract: We propose a novel projection-based AR system that can present consistent visuo-haptic sensations on a non-planar physical surface without inserting any visual display devices between a user and the surface. The core technical contribution is controlling wearable haptic displays using a pixel-level visible light communication projector. The projection system can embed spatial haptic information into each pixel, and the haptic displays vibrate according to the detected pixel information. We confirm that the proposed system can display visuo-haptic information with pixel-precise alignment with a delay of 85 ms. We can also employ the proposed system as a novel experimental platform to clarify the spatio-temporal perceptual characteristics of visual and haptic sensations. As a result of the conducted user studies, we revealed that the noticeable thresholds of visual-haptic asynchrony were about 100 ms (temporal) and 10 mm (spatial), respectively.
@@ -31,9 +31,6 @@ tags:
 - "Conference paper - Demo"
 featured: true
 
-links:
-url_pdf: https://link.springer.com/content/pdf/10.1007/978-3-030-58147-3_25.pdf
-url_cite: "/conference/citations/eurohaptics2020_miyatake.bib"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
