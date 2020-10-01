@@ -29,10 +29,6 @@ publication: "Haptics: Science, Technology, Applications (Proceedings of the 12t
 summary: 
 tags:
 featured: true
-
-links:
- - name: Bib
- - url: https://yamato-miyatake.netlify.app/publication/conference/2020interaction_miyatake.bib/publication/conference/2020eurohaptics_miyatake.bib
 url_pdf: https://link.springer.com/content/pdf/10.1007/978-3-030-58147-3_25.pdf
 
 # Featured image
