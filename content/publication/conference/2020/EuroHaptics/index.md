@@ -29,7 +29,7 @@ publication: "Haptics: Science, Technology, Applications (Proceedings of the 12t
 summary: 
 tags:
 featured: true
-url_pdf: https://link.springer.com/content/pdf/10.1007/978-3-030-58147-3_25.pdf
+#url_pdf: https://link.springer.com/content/pdf/10.1007/978-3-030-58147-3_25.pdf
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
