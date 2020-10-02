@@ -30,7 +30,7 @@ summary:
 tags:
 featured: true
 
-url_pdf: "/publication/conference/2020interaction_miyatake.pdf"
+url_pdf: "files/miyatake_interaction.pdf"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
