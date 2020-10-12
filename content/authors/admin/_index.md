@@ -42,18 +42,18 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-- icon: envelope
-  icon_pack: fas
-  link: miyatake@sens.sys.es.osaka-u.ac.jp  # For a direct email link, use "miyatake@sens.sys.es.osaka-u.ac.jp".
+#- icon: envelope
+#  icon_pack: fas
+#  link: miyatake@sens.sys.es.osaka-u.ac.jp  # For a direct email link, use "miyatake@sens.sys.es.osaka-u.ac.jp".
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/miyatakeyama
-#- icon: google-scholar
-#  icon_pack: ai
-#  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-#- icon: github
-#  icon_pack: fab
-#  link: https://github.com/gcushen
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.co.jp/citations?user=_fvSDcAAAAAJ&hl=en
+- icon: github
+  icon_pack: fab
+  link: https://github.com/ymtmytk
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -72,7 +72,7 @@ user_groups:
 
 Yamato Miyatake is a master's student of [Sato laboratory](https://www.sens.sys.es.osaka-u.ac.jp/ "Sens Laboratory") at Osaka University. His research interests include AR/VR/MR, Human-Computer Interaction, and Haptics.
 
-He was a chrysanthemum scout of the scout association of Japan and received grants by Tobitate Japan Scholarship Program. 
+He was a chrysanthemum and peregrine falcon scout of the scout association of Japan and received grants from Tobitate Japan Scholarship Program. 
 
 He likes making and eating srilankan Rice & Curry, making coffee and tea, playing basketball, and thinking about something new.
 
