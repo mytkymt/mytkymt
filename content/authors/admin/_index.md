@@ -53,7 +53,7 @@ social:
   link: https://scholar.google.co.jp/citations?user=_fvSDcAAAAAJ&hl=en
 - icon: github
   icon_pack: fab
-  link: https://github.com/ymtmytk
+  link: https://github.com/mytkymt
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -70,7 +70,7 @@ user_groups:
 - Visitors
 ---
 
-Yamato Miyatake is a master's student of [Sato laboratory](https://www.sens.sys.es.osaka-u.ac.jp/ "Sens Laboratory") at Osaka University. His research interests include AR/VR/MR, Human-Computer Interaction, and Haptics.
+Yamato Miyatake is a graduate student at [Sato laboratory](https://www.sens.sys.es.osaka-u.ac.jp/ "Sens Laboratory") at Osaka University. His research interests include AR/VR/MR, Human-Computer Interaction, and Haptics.
 
 He likes making and eating srilankan Rice & Curry, making coffee and tea, playing basketball, and thinking about something new.
 
