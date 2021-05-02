@@ -24,12 +24,6 @@ date_format = "Jan 2006"
   location = "Tokyo, Japan"
   date_start = "2020-02-01"
   date_end = "2020-03-01"
-  description = """
-  
-  * Analysing
-  * Modelling
-  * Deploying
-  """
 
 [[experience]]
   title = "Enginner (Intern)"
@@ -38,7 +32,6 @@ date_format = "Jan 2006"
   location = "Ibaraki, Japan"
   date_start = "2017-09-01"
   date_end = "2017-10-01"
-  description = """
 
 [[experience]]
   title = "Web Developer (Intern)"
@@ -47,6 +40,5 @@ date_format = "Jan 2006"
   location = "Colombo, Sri Lanka"
   date_start = "2016-03-01"
   date_end = "2016-04-01"
-  description = """
 
 +++
