@@ -1,8 +1,6 @@
----
-Title: Mediated Social Haptics ざっくりまとめ
-
----
 +++
+title="Mediated Social Haptics ざっくりまとめ"
+
 active=false
 +++
 
