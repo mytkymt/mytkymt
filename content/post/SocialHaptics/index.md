@@ -1,6 +1,10 @@
 ---
 Title: Mediated Social Haptics ざっくりまとめ
+
 ---
++++
+active=false
++++
 
 # 工事中
 # Mediated Social Haptics関連の研究をざっくりまとめます
