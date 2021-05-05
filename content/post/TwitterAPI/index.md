@@ -15,7 +15,7 @@ I used following items.
 For details of those APIs and services, please visit other sites.
 
 The source code is open below.
-I referred <a src=https://tech-lab.sios.jp/archives/21400> this web site </a>.
+I referred [this web site](https://tech-lab.sios.jp/archives/21400).
 
 ```python
 import tweepy
