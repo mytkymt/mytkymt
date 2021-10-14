@@ -5,14 +5,12 @@ Tag: Haptics
 ---
 I made a simple python-based web app.
 
-The app automatically deletes my tweets when the total number of tweets is more than three.
+The app automatically deletes tweets when the total number of tweets is more than three.
 
 I used following items.
  - twitter API
  - python 3 with tweepy (you may need to install)
  - pythonanywhere (simple and easy-to-use web server)
-
-For details of those APIs and services, please visit other sites.
 
 The source code is open below.
 I referred [this web site](https://tech-lab.sios.jp/archives/21400).
