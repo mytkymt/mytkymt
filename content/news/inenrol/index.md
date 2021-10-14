@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: ""
+title: "a"
 date: 2020-04-01T23:32:55+09:00
 
 ---
