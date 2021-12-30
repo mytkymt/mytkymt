@@ -23,7 +23,7 @@ publication_types: ["10"]
 publication: "情報処理学会 インタラクション2020論文集"
 # publication_short: EuroHaptics 2020
 
-# abstract: We propose a novel projection-based AR system that can present consistent visuo-haptic sensations on a non-planar physical surface without inserting any visual display devices between a user and the surface. The core technical contribution is controlling wearable haptic displays using a pixel-level visible light communication projector. The projection system can embed spatial haptic information into each pixel, and the haptic displays vibrate according to the detected pixel information. We confirm that the proposed system can display visuo-haptic information with pixel-precise alignment with a delay of 85 ms. We can also employ the proposed system as a novel experimental platform to clarify the spatio-temporal perceptual characteristics of visual and haptic sensations. As a result of the conducted user studies, we revealed that the noticeable thresholds of visual-haptic asynchrony were about 100 ms (temporal) and 10 mm (spatial), respectively.
+abstract: 本研究では，映像に対する触覚提示の位置ずれ・時間遅れを知覚不可能なレベルに低減する視触覚 重畳システムを開発し，視覚情報に対応した触覚刺激の提示を再現する手法を提案する．本手法では，空 間分割型可視光通信を用いて映像に不可視の触覚刺激情報を埋め込み，この情報を用いて触覚提示デバイ スを制御することで，位置ずれと時間遅れの低減，視覚情報に対応した触覚刺激の提示を実現する．この 手法を用いて，振動子の異なる 2 種類の触覚提示デバイスと，このデバイスを用いた視触覚重畳システム を開発した．そしてデバイスの映像に対する触覚刺激提示の遅延時間を測定し，実装した視触覚重畳シス テムを用いて人間の視覚と触覚の遅延知覚に関する主観評価実験を行った．その結果，開発したデバイス は遅延時間を人間には知覚不可能なレベルまで低減できており，本システムにおける人間の遅延知覚の刺 激閾は約 100 ms であることを明らかにした.
 
 # Summary. An optional shortened abstract.
 summary: 
