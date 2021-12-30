@@ -30,7 +30,7 @@ summary:
 tags:
 - "Conference paper - Demo"
 featured: true
-
+url_pdf: "https://www.miyatakeyama.to/publication/conference/2020/SIGGRAPHAsia/SIGGRAPHAsia2020_HaptoMapping.pdf"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
