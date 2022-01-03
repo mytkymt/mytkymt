@@ -70,9 +70,6 @@ user_groups:
 - Visitors
 ---
 
-Yamato Miyatake is a graduate student at [Sato laboratory](https://www.sens.sys.es.osaka-u.ac.jp/ "Sens Laboratory") at Osaka University. His research interests include AR/VR/MR, Human-Computer Interaction, and Haptics.
-
-He likes music, travel, and srilankan Rice & Curry.
-
+Yamato Miyatake is a graduate student at [Sato laboratory](https://www.sens.sys.es.osaka-u.ac.jp/ "Sens Laboratory") at Osaka University. His research interests include AR/VR/MR, Human-Computer Interaction, Haptics, and Human-Food Interaction.
 
 
