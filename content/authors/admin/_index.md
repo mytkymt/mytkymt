@@ -54,6 +54,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/mytkymt
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/yamato-miyatake-717b67177/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -70,6 +73,8 @@ user_groups:
 - Visitors
 ---
 
-Yamato Miyatake is a graduate student at [Sato laboratory](https://www.sens.sys.es.osaka-u.ac.jp/ "Sens Laboratory") at Osaka University. His research interests include AR/VR/MR, Human-Computer Interaction, Haptics, and Human-Food Interaction.
+Yamato Miyatake is a software engineer at Bosch Japan, Cross-domain computing solutions.
+Previously at [Sato laboratory](https://www.sens.sys.es.osaka-u.ac.jp/ "Sens Laboratory") at Osaka University, he focused on visuo-haptic interface and 3D food printing. 
+His research interests include AR/VR, Haptic interface, digital fabrication, and Human-Computer/Food Interaction.
 
 
