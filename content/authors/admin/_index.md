@@ -48,9 +48,6 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/miyatakeyama
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.jp/citations?user=_fvSDcAAAAAJ&hl=en
 - icon: github
   icon_pack: fab
   link: https://github.com/mytkymt
@@ -74,7 +71,7 @@ user_groups:
 ---
 
 Yamato Miyatake is a software engineer at Bosch Japan, Cross-domain computing solutions.
-Previously at [Sato laboratory](https://www.sens.sys.es.osaka-u.ac.jp/ "Sens Laboratory") at Osaka University, he focused on visuo-haptic interface and 3D food printing. 
+Previously at Sato laboratory at Osaka University, he focused on visuo-haptic interface and 3D food printing. 
 His research interests include AR/VR, Haptic interface, digital fabrication, and Human-Computer/Food Interaction.
 
 
