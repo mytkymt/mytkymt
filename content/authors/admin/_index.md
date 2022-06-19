@@ -10,11 +10,11 @@ authors:
 superuser: true
 
 # Role/position
-role: Master's Student
+role: Software Engineer (Environment recognition system)
 
 # Organizations/Affiliations
 organizations:
-- name: Osaka University
+- name: Bosch Japan
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -33,6 +33,9 @@ education:
   #- course: MEng in Artificial Intelligence
   #  institution: Massachusetts Institute of Technology
   #  year: 2009
+  - course: MSc in Engineering
+    institution: Osaka University
+    year: 2022
   - course: BSc in Engineering
     institution: Osaka University
     year: 2020
