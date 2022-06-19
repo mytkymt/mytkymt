@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Software Engineer (Environment recognition system)
+role: Software Engineer (Radar and camera system)
 
 # Organizations/Affiliations
 organizations:
@@ -74,7 +74,9 @@ user_groups:
 ---
 
 Yamato Miyatake is a software engineer at Bosch Japan, Cross-domain computing solutions.
-Previously at Sato laboratory at Osaka University, he focused on visuo-haptic interface and 3D food printing. 
-His research interests include AR/VR, Haptic interface, digital fabrication, and Human-Computer/Food Interaction.
+He has an experience in sensor development for driver assistance/automated driving. This consists of radar and camera perception development.
+
+His research experience includes visuo-haptic interface and 3D food printing.
+He developed a projection-based visuo-haptic interface and a data embedding system inside food using a 3D food printer at Sato laboratory at Osaka University.
 
 
