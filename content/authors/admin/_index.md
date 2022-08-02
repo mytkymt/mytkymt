@@ -48,9 +48,6 @@ social:
 #- icon: envelope
 #  icon_pack: fas
 #  link: miyatake@sens.sys.es.osaka-u.ac.jp  # For a direct email link, use "miyatake@sens.sys.es.osaka-u.ac.jp".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/miyatakeyama
 - icon: github
   icon_pack: fab
   link: https://github.com/mytkymt
