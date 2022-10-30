@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Software Engineer (Radar and camera system)
+role: Software Development Engineer <br>(Radar and camera system)
 
 # Organizations/Affiliations
 organizations:
@@ -21,9 +21,10 @@ organizations:
 bio: My research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
 
 interests:
-- AR/VR/MR
-- HCI
-- Haptics
+- Extended Reality
+- Human-Computer Interaction
+- Human Perception
+- Digital Fabrication
 
 education:
   courses:
@@ -70,10 +71,10 @@ user_groups:
 - Visitors
 ---
 
-Yamato Miyatake is a software engineer at Bosch Japan, Cross-domain computing solutions.
+Yamato Miyatake is a software engineer at [Bosch Japan](https://www.bosch.com/) , Cross-domain computing solutions.
 He has an experience in sensor development for driver assistance/automated driving. This consists of radar and camera perception development.
 
 His research experience includes visuo-haptic interface and 3D food printing.
-He developed a projection-based visuo-haptic interface and a data embedding system inside food using a 3D food printer at Sato laboratory at Osaka University.
+He developed a projection-based visuo-haptic interface and a data embedding system inside food using a 3D food printer at [Sato laboratory]() at Osaka University.
 
 

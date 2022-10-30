@@ -6,8 +6,8 @@ authors:
 - Daisuke Iwai
 - Kosuke Sato
 
-date: "2022-11-03T00:00:00Z"
-doi: ""
+date: "2022-10-27T00:00:00Z"
+doi: "10.1145/3526113.3545669"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2022-10-27T00:00:00Z"
@@ -19,13 +19,14 @@ publishDate: "2022-10-27T00:00:00Z"
 publication_types: ["9"]
 
 # Publication name and optional abbreviated publication name.
-publication: "User Interface Software and Technology"
-publication_short: "UIST 2022"
+publication: "The ACM Symposium on User Interface Software and Technology (UIST)"
+#publication_short: "UIST 2022"
 
 # Summary. An optional shortened abstract.
 summary: 
 tags:
 featured: true
+url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -36,7 +37,8 @@ featured: true
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects: interiqr
+projects: 
+- interiqr
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.

@@ -1,32 +1,32 @@
 ---
-title: "3Dプリント食品内部への情報埋め込み"
+title: "Demonstration of interiqr: Unobtrusive Edible Tags using Food 3D Printing"
 authors:
-- 宮武　大和
-- プンポンサノン・パリンヤ
-- 岩井　大輔
-- 佐藤　宏介
+- Yamato Miyatake
+- Parinya Punpongsanon
+- Daisuke Iwai
+- Kosuke Sato
 
-date: "2022-03-03T00:00:00Z"
+date: "2022-10-27T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2022-03-03T00:00:00Z"
+publishDate: "2022-10-27T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["9"]
+publication_types: ["10"]
 
 # Publication name and optional abbreviated publication name.
-publication: "情報処理学会 第84回全国大会講演論文集"
-# publication_short: EuroHaptics 2020
+publication: "The ACM Symposium on User Interface Software and Technology (UIST)"
+#publication_short: "UIST 2022"
 
 # Summary. An optional shortened abstract.
 summary: 
 tags:
 featured: true
-url_pdf: "/files/IPSJT_2022_miyatake.pdf"
+url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -46,4 +46,6 @@ projects:
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 # slides: example
+image:
+    preveiw_only: true
 ---
