@@ -1,9 +1,15 @@
 ---
-title: "HaptoMapping: Visuo-Haptic Augmented Reality by Embedding User-Imperceptible Tactile Display Control Signals in a Projected Image"
+title: "HaptoMapping"
+subtitle: 'Visuo-Haptic Augmented Reality by Embedding User-Imperceptible Tactile Display Control Signals in a Projected Image'
 summary: 
 tags:
 - Haptics
-date: "2016-04-27T00:00:00Z"
+presented: 
+- "IEEE TVCG'23"
+- "IEEE VR'22 (Oral)"
+- "SIGGRAPH Asia'20 (Demo)"
+- "EuroHaptics'20 (Oral)"
+date: "2023-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
