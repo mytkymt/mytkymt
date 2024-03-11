@@ -6,7 +6,7 @@ authors:
 - Daisuke Iwai
 - Kosuke Sato
 
-date: "2021-12-29T00:00:00Z"
+date: "2023-12-29T00:00:00Z"
 doi: "10.1109/TVCG.2021.3136214"
 
 # Schedule page publish date (NOT publication's date).

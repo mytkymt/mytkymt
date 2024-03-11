@@ -1,9 +1,10 @@
 ---
-title: "interiqr: Unobtrusive Edible Tags using Food 3D Printing"
+title: "interiqr"
+subtitle: "Unobtrusive Edible Tags using Food 3D Printing"
 summary: 
 tags:
-- Food printing
-date: "2016-04-27T00:00:00Z"
+- "Fabrication"
+date: "2022-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
