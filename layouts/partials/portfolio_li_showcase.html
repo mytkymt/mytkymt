@@ -28,34 +28,41 @@
 
 {{ $js_tag_classes := delimit (apply (apply $item.Params.tags "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
 
-<div class="col-lg-12 project-item isotope-item {{ $js_tag_classes | safeHTMLAttr }}">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <h3 class="article-title mb-0 mt-0">
-        {{- if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end -}}
-        {{ $item.Title | markdownify | emojify }}
-        {{- if $do_link}}</a>{{end -}}
-      </h3>
-
-      {{ with $summary }}
-      <div class="article-style">
-        {{ . }}
-      </div>
-      {{ end }}
-
-      <div class="btn-links">
-        {{ partial "page_links" (dict "page" $item "is_list" 0) }}
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first {{$order}}">
+<!-- Start of project item -->
+<div class="row project-item isotope-item align-items-center ml-0 mb-4">
+    <!-- Container for image -->
+    <div class="col feature-image" style="background-color: black;">
       {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
       {{ with $resource }}
-      {{ $image := .Resize "300x" }}
-      {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
-        <img src="{{ $image.RelPermalink }}" alt="" style="border-radius: 20px;">
+      <!-- Check if there's a link for the item and wrap image with it -->
+      {{ if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
+        <!-- Display the image with a style to make it square and adjust margin -->
+        <img src="{{ .RelPermalink }}" alt="" style="border-radius: 5px;width: 100%; ">
       {{if $do_link}}</a>{{end}}
       {{end}}
     </div>
-  </div>
+    <!-- Container for title -->
+    <div class="col-lg-10">
+      <div class="article-title left-text mb-0 mt-0">
+        <!-- Check if there's a link for the item and apply it to the title -->
+        {{- if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end -}}
+        {{ $item.Title | markdownify | emojify }}
+        {{- if $do_link}}</a>{{end -}}
+      </div>
+      <div class="left-text ml-0 mr-0 mb-0 mt-0 fs-0">
+        <!-- Check if there's a link for the item and apply it to the title -->
+        {{ $item.Params.subtitle | markdownify | emojify }}
+      </div>
+      <div class="left-text ml-0 mr-0 mb-0 mt-0 fs-0">
+        {{ range $item.Params.presented }}
+        <!-- Check if there's a link for the item and apply it to the title -->
+          {{ . | markdownify | emojify }}
+        {{ end }}
+      </div>
+      
+      <div class="btn-links mb-0">
+        {{ partial "page_links" (dict "page" $item "is_list" 0) }}
+      </div>
+    </div>
 </div>
+<!-- End of project item -->
