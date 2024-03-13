@@ -74,19 +74,39 @@
     {{ with $st.Params.subtitle }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
   </div>
   <div class="items">
+    {{ $pubCounter := 1 }}
 
-    {{ with $st.Content }}{{ . }}{{ end }}
-
-    {{ range $post := $query }}
-      {{ if eq $st.Params.design.view 1 }}
-        {{ partial "li_list" . }}
-      {{ else if eq $st.Params.design.view 3 }}
-        {{ partial "li_card" . }}
-      {{ else if eq $st.Params.design.view 4 | and (eq $items_type "publication") }}
-        {{ partial "li_citation" . }}
-      {{ else }}
-        {{ partial "li_compact" . }}
+    {{/* Journal Articles */}}
+    <div class="Journal_EN">
+      <h2>Journal Articles and Letters</h2>
+      {{ range $post := (where $query ".Params.publication_types" "intersect" (slice "1")) }}
+      [{{ $pubCounter }}] {{ partial "li_citation" . }}
+      {{ $pubCounter = add $pubCounter 1 }}
       {{ end }}
-    {{end}}
+    </div>
+    
+    {{/* Journal Articles JP */}}
+    <div class="Conference_EN">
+      <h2>Journal Articles and Letters (in Japanese)</h2>
+      {{ range $post := (where $query ".Params.publication_types" "intersect" (slice "2")) }}
+      {{ partial "li_citation" . }}
+      {{ end }}
+    </div>
+
+    {{/* Conference Papers */}}
+    <div class="Conference_Oral_EN">
+      <h2>Conference Papers (Oral)</h2>
+      {{ range $post := (where $query ".Params.publication_types" "intersect" (slice "3")) }}
+      {{ partial "li_citation" . }}
+      {{ end }}
+    </div>
+    {{/* Conference Papers */}}
+    <div class="Conference_Demo_EN">
+      <h2>Conference Papers (Demo and Poster)</h2>
+      {{ range $post := (where $query ".Params.publication_types" "intersect" (slice "4")) }}
+      {{ partial "li_citation" . }}
+      {{ end }}
+    </div>
+
 
   </div>
