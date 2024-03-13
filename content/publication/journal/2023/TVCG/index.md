@@ -6,17 +6,22 @@ authors:
 - Daisuke Iwai
 - Kosuke Sato
 
-date: "2023-12-29T00:00:00Z"
+date: "2023-12-29"
 doi: "10.1109/TVCG.2021.3136214"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2021-12-29T00:00:00Z"
+publishDate: "2021-12-29"
 
-# Publication type.
-# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
-# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
-# 7 = Thesis; 8 = Patent
-publication_types: ["2"]
+# 0 = Uncategorized
+# 1 = Journal paper 
+# 2 = Journal JP
+# 3 = Conference Oral
+# 4 = Conference demo
+# 5 = Conference jp
+# 6 = Book
+# 7 = Book section
+# 8 = Patent
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: "IEEE Transactions of Visualization and Computer Graphics (TVCG)"

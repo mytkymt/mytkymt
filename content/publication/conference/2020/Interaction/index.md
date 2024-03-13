@@ -14,10 +14,17 @@ doi: ""
 publishDate: "2020-09-014T00:00:00Z"
 
 # Publication type.
-# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
-# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
-# 7 = Thesis; 8 = Patent; 9 = conference paper - oral, 10 = conference paper - demo
-publication_types: ["10"]
+# Legend: 
+# 0 = Uncategorized
+# 1 = Journal paper 
+# 2 = Journal JP
+# 3 = Conference Oral
+# 4 = Conference demo
+# 5 = Conference jp
+# 6 = Book
+# 7 = Book section
+# 8 = Patent
+publication_types: ["5"]
 
 # Publication name and optional abbreviated publication name.
 publication: "情報処理学会 インタラクション2020論文集"

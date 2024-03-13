@@ -7,17 +7,24 @@ authors:
 - Daisuke Iwai
 - Kosuke Sato
 
-date: "2020-09-05T00:00:00Z"
+date: "2020-09-05"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2019-09-013T00:00:00Z"
+publishDate: "2019-09-013"
 
 # Publication type.
-# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
-# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
-# 7 = Thesis; 8 = Patent
-publication_types: ["9"]
+# Legend: 
+# 0 = Uncategorized
+# 1 = Journal paper 
+# 2 = Journal JP
+# 3 = Conference Oral
+# 4 = Conference demo
+# 5 = Conference jp
+# 6 = Book
+# 7 = Book section
+# 8 = Patent
+publication_types: ["3"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Haptics: Science, Technology, Applications (Proceedings of the 12th International Conference on Human Haptic Sensing and Touch Enabled Computer Applications – EuroHaptics 2020)"

@@ -158,37 +158,25 @@
 
 - id: pub_uncat
   translation: Uncategorized
-
-- id: pub_conf
-  translation: Conference paper
-
 - id: pub_journal
-  translation: Journal article
-
-- id: pub_preprint
-  translation: Preprint
-
-- id: pub_report
-  translation: Report
-
+  translation: Journal Articles and Letters
+- id: pub_journal_jp
+  translation: Journal Article (in Japanese)
+- id: pub_conf_oral
+  translation: Conference Papers (Oral)
+- id: pub_conf_demo
+  translation: Conference Papers (Demo and Poster)
+- id: pub_conf_jp
+  translation: Conference paper (in Japanese)
 - id: pub_book
   translation: Book
-
 - id: pub_book_section
   translation: Book section
-
-- id: pub_thesis
-  translation: Thesis
-
 - id: pub_patent
   translation: Patent
 
-- id: pub_oral
-  translation: Conference paper - Oral
-
-- id: pub_demo
-  translation: Conference paper - Demo and Poster
-
+- id: award
+  translation: Award
 # Project details
 
 - id: open_project_site
