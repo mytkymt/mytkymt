@@ -76,37 +76,20 @@
   <div class="items">
     {{ $pubCounter := 1 }}
 
-    {{/* Journal Articles */}}
-    <div class="Journal_EN">
-      <h2>Journal Articles and Letters</h2>
-      {{ range $post := (where $query ".Params.publication_types" "intersect" (slice "1")) }}
-      [{{ $pubCounter }}] {{ partial "li_citation" . }}
-      {{ $pubCounter = add $pubCounter 1 }}
-      {{ end }}
-    </div>
-    
-    {{/* Journal Articles JP */}}
-    <div class="Conference_EN">
-      <h2>Journal Articles and Letters (in Japanese)</h2>
-      {{ range $post := (where $query ".Params.publication_types" "intersect" (slice "2")) }}
-      {{ partial "li_citation" . }}
-      {{ end }}
-    </div>
+    {{ $pub_types := partial "functions/get_pub_types" . }}
+    {{ $pubtypeCounter := 0}}
 
-    {{/* Conference Papers */}}
-    <div class="Conference_Oral_EN">
-      <h2>Conference Papers (Oral)</h2>
-      {{ range $post := (where $query ".Params.publication_types" "intersect" (slice "3")) }}
-      {{ partial "li_citation" . }}
-      {{ end }}
-    </div>
-    {{/* Conference Papers */}}
-    <div class="Conference_Demo_EN">
-      <h2>Conference Papers (Demo and Poster)</h2>
-      {{ range $post := (where $query ".Params.publication_types" "intersect" (slice "4")) }}
-      {{ partial "li_citation" . }}
-      {{ end }}
-    </div>
 
+    {{ range $pub_type := $pub_types}}
+      {{ $matching_pubs := where $query ".Params.publication_types" "intersect" (slice (string $pubtypeCounter)) }}
+      {{ if $matching_pubs }}
+          <h2>{{$pub_type}}</h2>
+          {{ range $post := (where $query ".Params.publication_types" "intersect" (slice (string $pubtypeCounter))) }}
+          {{ partial "li_my_citation" (dict "content" . "pubCounter" $pubCounter)}}
+          {{ $pubCounter = add $pubCounter 1}}
+          {{ end }}
+      {{end}}
+      {{ $pubtypeCounter = add $pubtypeCounter 1}}
+    {{end}}
 
   </div>

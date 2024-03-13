@@ -31,7 +31,7 @@
 <!-- Start of project item -->
 <div class="row project-item isotope-item align-items-center ml-0 mb-4">
     <!-- Container for image -->
-    <div class="col feature-image" style="background-color: black;">
+    <div class="col feature-image">
       {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
       {{ with $resource }}
       <!-- Check if there's a link for the item and wrap image with it -->
@@ -42,18 +42,18 @@
       {{end}}
     </div>
     <!-- Container for title -->
-    <div class="col-lg-10">
+    <div class="col-9">
       <div class="article-title left-text mb-0 mt-0">
         <!-- Check if there's a link for the item and apply it to the title -->
         {{- if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end -}}
         {{ $item.Title | markdownify | emojify }}
         {{- if $do_link}}</a>{{end -}}
       </div>
-      <div class="left-text ml-0 mr-0 mb-0 mt-0 fs-0">
+      <div class="left-text ml-0 mr-0 mb-2 mt-0">
         <!-- Check if there's a link for the item and apply it to the title -->
         {{ $item.Params.subtitle | markdownify | emojify }}
       </div>
-      <div class="left-text ml-0 mr-0 mb-0 mt-0 fs-0">
+      <div class="left-text ml-0 mr-0 mb-2 mt-0" style="font-size: smaller;">
         {{ range $item.Params.presented }}
         <!-- Check if there's a link for the item and apply it to the title -->
           {{ . | markdownify | emojify }}
