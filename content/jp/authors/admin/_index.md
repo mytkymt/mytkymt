@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 宮武大和
+title: Yamato Miyatake
 
 # Username (this should match the folder name)
 authors:
@@ -10,12 +10,12 @@ authors:
 superuser: true
 
 # Role/position
-role: Software Development Engineer <br>(Radar and camera system)
+role: Software Development Engineer
 
 # Organizations/Affiliations
 organizations:
 - name: Bosch Japan
-  url: ""
+  url: "https://corporate.bosch.co.jp/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
@@ -41,28 +41,45 @@ education:
     institution: Osaka University
     year: 2020
 
+# Experiences.
+#   Add/remove as many `[[experience]]` blocks below as you like.
+#   Required fields are `title`, `company`, and `date_start`.
+#   Leave `date_end` empty if it's your current employer.
+#   Begin/end multi-line descriptions with 3 quotes `"""`.
+experience:
+  - title: Software Engineer (Full time)
+    company: Bosch Japan
+    company_url: https://corporate.bosch.co.jp/
+    location: Kanagawa, Japan
+    date_start: 2022-04-01
+    date_end:
+  - title: R&D Engineer (Internship)
+    company: Sony
+    company_url: https://sony.jp/
+    location: Tokyo, Japan
+    date_start: 2021-02-01
+    date_end: 2021-03-01
+  - title: Engineer (Internship)
+    company: JAXA
+    company_url: https://global.jaxa.jp/
+    location: Ibaraki, Japan
+    date_start: 2017-09-01
+    date_end: 2017-10-01
+
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
-social:
-#- icon: envelope
-#  icon_pack: fas
-#  link: miyatake@sens.sys.es.osaka-u.ac.jp  # For a direct email link, use "miyatake@sens.sys.es.osaka-u.ac.jp".
-- icon: github
-  icon_pack: fab
-  link: https://github.com/mytkymt
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/yamato-miyatake-717b67177/
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
+#- icon: cv
 #   icon_pack: ai
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "miyatake.yamato [at] gmail.com"
+
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
