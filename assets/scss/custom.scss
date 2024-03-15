@@ -12,3 +12,24 @@
     z-index: 1030;
     padding: 0 1rem;
 }
+
+.home-section {
+  background-color: $sta-home-section-odd;
+  padding: 50px 0 30px 0;
+  animation: intro 0.3s both;
+  animation-delay: 0.15s;
+}
+
+.article-title {
+  font-size: 1.2rem;
+  font-weight:bold;
+}
+
+.article-title a {
+  color: #444444;
+  transition: color 0.6s ease;
+}
+
+.article-subtitle {
+  font-size: 0.9rem;
+}

@@ -29,9 +29,9 @@
 {{ $js_tag_classes := delimit (apply (apply $item.Params.tags "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
 
 <!-- Start of project item -->
-<div class="row project-item isotope-item align-items-center ml-0 mb-4">
+<div class="row project-item isotope-item align-items-center ml-0 mb-4 justify-content-center">
     <!-- Container for image -->
-    <div class="col feature-image">
+    <div class="col-2 feature-image">
       {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
       {{ with $resource }}
       <!-- Check if there's a link for the item and wrap image with it -->
@@ -49,17 +49,23 @@
         {{ $item.Title | markdownify | emojify }}
         {{- if $do_link}}</a>{{end -}}
       </div>
-      <div class="left-text ml-0 mr-0 mb-2 mt-0">
+      <div class="article-subtitle left-text ml-0 mr-0 mb-2 mt-0">
         <!-- Check if there's a link for the item and apply it to the title -->
         {{ $item.Params.subtitle | markdownify | emojify }}
       </div>
-      <div class="left-text ml-0 mr-0 mb-2 mt-0" style="font-size: smaller;">
-        {{ range $item.Params.presented }}
-        <!-- Check if there's a link for the item and apply it to the title -->
-          {{ . | markdownify | emojify }}
-        {{ end }}
-      </div>
-      
+
+      {{ $presented := $item.Params.presented }}
+      {{ if $presented }}
+        <div class="article-subtitle left-text ml-0 mr-0 mb-2 mt-0">
+          <b>Presented at</b> 
+          {{ $length := len $item.Params.presented }}
+          {{ range $index, $element := $item.Params.presented }}
+            {{ $element | markdownify | emojify }}
+            {{ if lt $index (sub $length 1) }}, {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+
       <div class="btn-links mb-0">
         {{ partial "page_links" (dict "page" $item "is_list" 0) }}
       </div>

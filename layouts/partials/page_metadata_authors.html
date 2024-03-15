@@ -5,9 +5,7 @@
   {{ $link_authors := site.Params.link_authors | default true }}
   {{ range $index, $name_raw := . }}
     {{- $profile_page := site.GetPage (printf "/%s/%s" $taxonomy .) -}}
-    {{- $name := $profile_page.Title | default $name_raw -}}
-    <span {{ if site.Params.highlight_superuser | and (eq $profile_page.Params.superuser true) }}class="font-weight-bold"{{end}}>
-        {{$name}},
-    </span>
+    {{$name := $name_raw}}
+    <span {{ if (eq $name "Yamato Miyatake") | or (eq $name "宮武大和") }}class="font-weight-bold" style="text-decoration: underline;"{{end}}>{{$name}}</span>,
   {{- end -}}
 {{- end -}}

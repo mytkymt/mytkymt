@@ -89,6 +89,9 @@
 - id: education
   translation: Education
 
+- id: experience
+  translation: Experience
+
 - id: user_profile_latest
   translation: Latest
 
@@ -167,7 +170,7 @@
 - id: pub_conf_demo
   translation: Conference Papers (Demo and Poster)
 - id: pub_conf_jp
-  translation: Conference paper (in Japanese)
+  translation: Conference Papers (in Japanese)
 - id: pub_book
   translation: Book
 - id: pub_book_section

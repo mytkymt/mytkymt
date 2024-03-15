@@ -28,7 +28,7 @@ publication_types: ["5"]
 
 # Publication name and optional abbreviated publication name.
 publication: "第66回システム制御情報学会研究発表講演会講演論文集（SCI'22）"
-#publication_short: "UIST 2022"
+Award: "学生発表奨励賞"
 
 # Summary. An optional shortened abstract.
 summary: 

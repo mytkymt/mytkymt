@@ -8,7 +8,7 @@ authors:
 - Kosuke Sato
 
 date: "2020-09-05"
-doi: ""
+doi: "10.1007/978-3-030-58147-3_25"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2019-09-013"
@@ -57,14 +57,3 @@ projects:
 #   Otherwise, set `slides: ""`.
 # slides: example
 ---
-# Bibtex
-``` 
-@InProceedings{miyatake2020visuo-haptic,
-title={Visuo-Haptic Display by Embedding Imperceptible Spatial Haptic Information into Projected Images},
-author={Miyatake, Yamato and Hiraki, Takefumi and Maeda, Tomosukeand Iwai, Daisuke and Sato, Kosuke},
-booktitle="Haptics: Science, Technology, Applications",
-year="2020",
-publisher="Springer International Publishing",
-pages="226--234",
-}
-```

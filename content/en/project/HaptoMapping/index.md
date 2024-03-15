@@ -19,10 +19,10 @@ image:
   focal_point: Smart
 
 url_code: ""
-#url_pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9665216"
+url_pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9665216"
+url_pdf_title: "IEEE TVCG"
 url_slides: ""
-#url_publication: "a"
-#url_video: "https://youtu.be/Xt9G5ohcn5M"
+url_video: "https://youtu.be/Xt9G5ohcn5M"
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -31,5 +31,4 @@ url_slides: ""
 #   Otherwise, set `slides = ""`.
 slides: example
 ---
-HaptoMapping is a projection-based visuo-haptic augmented reality (VHAR) system, that can render visual and haptic content independently and present consistent visuo-haptic sensations on physical surfaces. <br>
-(EuroHaptics2021, SIGGRAPH Asia E-tech 2021, TVCG)
+HaptoMapping is a projection-based visuo-haptic augmented reality (VHAR) system, that can render visual and haptic content independently and present consistent visuo-haptic sensations on physical surfaces.

@@ -17,9 +17,10 @@ presented:
 - "ACM UIST'22 (Oral and Demo)"
 
 #url_code: ""
-#url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
+url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
 #url_slides: ""
-#url_video: "https://youtu.be/vAMmxEroSzs"
+url_video: "https://youtu.be/vAMmxEroSzs"
+url_video_name: "Teaser"
 
 
 # Slides (optional).
