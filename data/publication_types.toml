@@ -1,14 +1,12 @@
 # Publication types.
 # Each item in the list corresponds to an item in the language packs.
 types = [ "pub_uncat",
-          "pub_conf",
           "pub_journal",
-          "pub_preprint",
-          "pub_report",
+          "pub_journal_jp",
+          "pub_conf_oral",
+          "pub_conf_demo",
+          "pub_conf_jp",
           "pub_book",
           "pub_book_section",
-          "pub_thesis",
           "pub_patent",
-          "pub_oral",
-          "pub_demo"
         ]
