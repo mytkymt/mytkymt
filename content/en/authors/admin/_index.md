@@ -10,12 +10,12 @@ authors:
 superuser: true
 
 # Role/position
-role: Software Development Engineer <br>(Radar and camera system)
+role: Software Development Engineer
 
 # Organizations/Affiliations
 organizations:
 - name: Bosch Japan
-  url: ""
+  url: "https://corporate.bosch.co.jp/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
