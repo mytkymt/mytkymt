@@ -19,10 +19,10 @@ image:
   focal_point: Smart
 
 url_code: ""
-url_pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9665216"
+#url_pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9665216"
 url_slides: ""
-url_publication: "a"
-url_video: "https://youtu.be/Xt9G5ohcn5M"
+#url_publication: "a"
+#url_video: "https://youtu.be/Xt9G5ohcn5M"
 
 # Slides (optional).
 #   Associate this project with Markdown slides.

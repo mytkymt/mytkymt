@@ -9,14 +9,17 @@ date: "2022-04-27T00:00:00Z"
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
-image:
-  caption: 
-  focal_point: Smart
+#image:
+#  caption: 
+#  focal_point: Smart
 
-url_code: ""
-url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
-url_slides: ""
-url_video: "https://youtu.be/vAMmxEroSzs"
+presented: 
+- "ACM UIST'22 (Oral and Demo)"
+
+#url_code: ""
+#url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
+#url_slides: ""
+#url_video: "https://youtu.be/vAMmxEroSzs"
 
 
 # Slides (optional).
