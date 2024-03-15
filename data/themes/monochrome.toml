@@ -1,0 +1,26 @@
+# Theme metadata
+name = "ebony_clay"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#ffffff"
+
+# Menu
+menu_primary = "#ffffff"
+menu_text = "#aeacac"
+menu_text_active = "#565454"
+menu_title = "#565454"
+
+# Backgrounds
+background = "#ffffff"
+home_section_odd = "#ffffff"
+home_section_even = "#ffffff"
+
+dark_background = ""
+dark_home_section_odd = ""
+dark_home_section_even = ""
+
+link = "#868383"
+link_hover = "#d7d7d7"
