@@ -2,28 +2,12 @@
 {{ $page := .page }}
 {{ $link := "" }}
 
-
-{{ $pdf := "" }}
-{{ $resource := $page.Resources.GetMatch (printf "%s.pdf" $page.File.ContentBaseName) }}
-{{ with $resource }}
-  {{ $pdf = .RelPermalink }}
-{{ else }}
-  {{ if $page.Params.url_pdf }}
-    {{ $pdf = $page.Params.url_pdf | relURL }}
-  {{ end }}
-{{ end }}
-
-{{ $pdf_title := "PDF" }}
-{{if $page.Params.url_pdf_title}}
-  {{ $pdf_title := $page.Params.url_pdf_title }} 
-{{end}}
-
 {{/*Project link*/}}
 {{ if $page.Params.projects }}
 {{ range $page.Params.projects }}
   {{ with (site.GetPage (printf "project/%s" .)) }}
   <a class="btn btn-outline-dark my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ .RelPermalink }}">
-    <i class="fas fa-wrench"></i> Project
+    <i class="fas fa-wrench"></i>&nbsp;Project
   </a>
   {{ else }}
     {{/* errorf "The `projects` parameter in `content/%s` references a project file, `content/project/%s`, which cannot be found. Please either set `projects = []` or fix the reference." $page.File.Path . */}}
@@ -37,10 +21,25 @@
 {{ end }}
 {{ end }}
 
+{{ $pdf := "" }}
+{{ $resource := $page.Resources.GetMatch (printf "%s.pdf" $page.File.ContentBaseName) }}
+{{ with $resource }}
+  {{ $pdf = .RelPermalink }}
+{{ else }}
+  {{ if $page.Params.url_pdf }}
+    {{ $pdf = $page.Params.url_pdf | relURL }}
+  {{ end }}
+{{ end }}
+
+{{ $pdf_title := "PDF" }}
+{{if $page.Params.url_pdf_title}}
+  {{ $pdf_title = $page.Params.url_pdf_title }} 
+{{end}}
+
 {{/*PDF link*/}}
 {{ with $pdf}}
 <a class="btn btn-outline-dark my-1 mr-1{{ if $is_list }} btn-sm{{ end }}" href="{{ . }}" target="_blank" rel="noopener">
-  <i class="fas fa-file-pdf"></i> {{$pdf_title}}
+  <i class="fas fa-file-pdf"></i>&nbsp;{{$pdf_title}}
 </a>
 {{ end }}
 
@@ -122,7 +121,7 @@
     {{ $link = . | relURL }}
   {{ end }}
 <a class="btn btn-outline-dark my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
-  <i class="fab fa-youtube"></i> Teaser
+  <i class="fab fa-youtube"></i>&nbsp;Teaser
 </a>
 {{ end }}
 
@@ -135,7 +134,7 @@
     {{ $link = . | relURL }}
   {{ end }}
 <a class="btn btn-outline-dark my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
-  <i class="fab fa-youtube"></i> Talk
+  <i class="fab fa-youtube"></i>&nbsp;Talk
 </a>
 {{ end }}
 
@@ -155,7 +154,7 @@
 {{/*DOI link*/}}
 {{ with $page.Params.doi }}
 <a class="btn btn-outline-dark my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
-  <i class="fas fa-link"></i> DOI
+  <i class="fas fa-link"></i>&nbsp;DOI
 </a>
 {{ end }}
 {{ range $page.Params.links }}

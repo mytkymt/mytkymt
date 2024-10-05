@@ -10,12 +10,14 @@ authors:
 superuser: true
 
 # Role/position
-role: Software Development Engineer
+role: Ph.D. Student / Software Development Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Bosch Japan
-  url: "https://corporate.bosch.co.jp/"
+- name: Saitama University
+- url:  "https://en.saitama-u.ac.jp/"
+- name: Bosch
+- url: "https://bosch.com"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
@@ -25,6 +27,7 @@ interests:
 - Human-Computer Interaction
 - Human Perception
 - Digital Fabrication
+- Human-Food Interaction
 
 education:
   courses:
@@ -34,6 +37,9 @@ education:
   #- course: MEng in Artificial Intelligence
   #  institution: Massachusetts Institute of Technology
   #  year: 2009
+  - course: Ph.D. Student
+    institution: Saitama University
+    year: 
   - course: MSc in Engineering
     institution: Osaka University
     year: 2022
@@ -47,12 +53,19 @@ education:
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 experience:
-  - title: Software Engineer (Full time)
-    company: Bosch Japan
+  - title: Independent researcher (JST ACT-X)
+    company: JST
     company_url: https://corporate.bosch.co.jp/
+    location: Saitama, Japan
+    date_start: 2024-10-01
+    date_end: 2027-03-31
+  - title: Software Engineer (Full time)
+    company: Bosch
+    company_url: https://bosch.com
     location: Kanagawa, Japan
+    location: Stuttgart, Germany
     date_start: 2022-04-01
-    date_end:
+    date_end: 2024-12-31
   - title: R&D Engineer (Internship)
     company: Sony
     company_url: https://sony.jp/
@@ -88,10 +101,11 @@ user_groups:
 - Visitors
 ---
 
-Yamato Miyatake is a software engineer at [Bosch Japan](https://www.bosch.com/) , Cross-domain computing solutions.
-He has an experience in sensor development for driver assistance/automated driving. This consists of radar and camera perception development.
+Yamato Miyatake is currently pursuing a Ph.D. at [Saitama University](https://en.saitama-u.ac.jp/) under the supervision of [Parinya Punpongsanon](https://punpongsanon.info/), focusing on the intersection of human-food interaction, digital fabrication, and Human-centered AI. His goal is to pioneer innovations in digital culinary experiences.
 
-His research experience includes visuo-haptic interface and 3D food printing.
-He developed a projection-based visuo-haptic interface and a data embedding system inside food using a 3D food printer at [Sato laboratory]() at Osaka University.
+Before this, he worked on automated driving systems at [Bosch](https://www.bosch.com/) , where he honed his skills in AI-based environment recognition. 
+
+In 2022, he earned a Master of Engineering degree from [Osaka University](https://www.osaka-u.ac.jp/en), specializing in Computer Vision, Robotics, Machine Learning, Signal Processing, and Human-Computer Interaction.
+Additionally, his research at [SENS laboratory](https://www.sens.sys.es.osaka-u.ac.jp/) has explored haptic presentation in Augmented Reality (AR) and embedding information using 3D food printing. These works have been presented at premier conferences, including IEEE VR and UIST.
 
 
