@@ -20,9 +20,16 @@ image:
 
 url_code: ""
 url_pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9665216"
-url_pdf_title: "IEEE TVCG"
+url_pdf_title: "IEEE TVCG (Open Access)"
 url_slides: ""
 url_video: "https://youtu.be/Xt9G5ohcn5M"
+
+authors:
+  - Yamato Miyatake
+  - Takefumi Hiraki
+  - Tomosuke Maeda
+  - Daisuke Iwai
+  - Kosuke Sato
 
 # Slides (optional).
 #   Associate this project with Markdown slides.

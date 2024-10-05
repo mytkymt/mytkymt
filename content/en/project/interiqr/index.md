@@ -15,9 +15,16 @@ external_link: ""
 
 presented: 
 - "ACM UIST'22 (Oral and Demo)"
+- 
+authors:
+  - Yamato Miyatake
+  - Parinya Punpongsanon
+  - Daisuke Iwai
+  - Kosuke Sato
 
 #url_code: ""
-url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
+url_pdf: "https://dl.acm.org/doi/pdf/10.1145/3526113.3545669"
+url_pdf_title: "ACM"
 #url_slides: ""
 url_video: "https://youtu.be/vAMmxEroSzs"
 url_video_name: "Teaser"
