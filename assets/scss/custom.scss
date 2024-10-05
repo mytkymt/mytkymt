@@ -33,3 +33,10 @@
 .article-subtitle {
   font-size: 0.9rem;
 }
+
+.project-image {
+  border-radius: 5px;
+  width: 80%;  
+  margin: 0 auto; 
+  object-fit: cover;
+}
