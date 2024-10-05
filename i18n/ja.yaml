@@ -116,6 +116,8 @@
   translation: Book section
 - id: pub_patent
   translation: Patent
+- id: pub_press
+  translation: 報道
 - id: award
   translation: 受賞
 - id: open_project_site

@@ -177,6 +177,8 @@
   translation: Book section
 - id: pub_patent
   translation: Patent
+- id: pub_press
+  translation: Press
 
 - id: award
   translation: Award

@@ -9,4 +9,5 @@ types = [ "pub_uncat",
           "pub_book",
           "pub_book_section",
           "pub_patent",
+          "pub_press"
         ]
