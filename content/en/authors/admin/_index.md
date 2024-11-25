@@ -103,7 +103,7 @@ user_groups:
 
 Yamato Miyatake is currently pursuing a Ph.D. at [Saitama University](https://en.saitama-u.ac.jp/) under the supervision of [Parinya Punpongsanon](https://punpongsanon.info/), focusing on the intersection of human-food interaction, digital fabrication, and Human-centered AI. His goal is to pioneer innovations in digital culinary experiences.
 
-Before this, he worked on automated driving systems at [Bosch](https://www.bosch.com/) , where he honed his skills in AI-based environment recognition. 
+Before this, he worked on driver assistance system at [Bosch](https://www.bosch.com/) , where he honed his skills in sensor-based environment recognition. 
 
 In 2022, he earned a Master of Engineering degree from [Osaka University](https://www.osaka-u.ac.jp/en), specializing in Computer Vision, Robotics, Machine Learning, Signal Processing, and Human-Computer Interaction.
 Additionally, his research at [SENS laboratory](https://www.sens.sys.es.osaka-u.ac.jp/) has explored haptic presentation in Augmented Reality (AR) and embedding information using 3D food printing. These works have been presented at premier conferences, including IEEE VR and UIST.
