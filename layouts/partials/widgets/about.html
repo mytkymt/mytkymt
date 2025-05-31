@@ -2,16 +2,21 @@
 {{ $page := .page }}
 
 {{ $author := "" }}
-{{ if .author }}
-  {{ $author = .author }}
-{{ else }}
+{{ if $page.Params.author }}
   {{ $author = $page.Params.author }}
-{{end}}
+{{ else if $page.Params.authors }}
+  {{ $author = index $page.Params.authors 0 }}
+{{ else }}
+  {{ $author = $page.File.TranslationBaseName }}
+{{ end }}
+
+{{ warnf "DEBUG (about.html) – $author: %s, page slug: %s, page.File.Path: %s" $author $page.File.TranslationBaseName $page.File.Path }}
+{{ warnf "%#v" $page.Params }}
 
 {{ $person_page_path := (printf "/authors/%s" $author) }}
 {{ $person_page := site.GetPage $person_page_path }}
 {{ if not $person_page }}
-  {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your About widget and create an associated author page if one does not already exist. See https://sourcethemes.com/academic/docs/page-builder/#about " $person_page_path }}
+  {{ errorf "Could not find an author page at `%s` (while rendering page: %s, widget: %s). Please check the value of `author` in your About widget and create an associated author page if one does not already exist. See https://sourcethemes.com/academic/docs/page-builder/#about " $person_page_path $page.File.Path $page.Params.widget }}
 {{end}}
 {{ $person := $person_page.Params }}
 {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}

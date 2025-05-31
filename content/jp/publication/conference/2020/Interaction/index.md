@@ -11,7 +11,7 @@ date: "2020-03-09T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2020-09-014T00:00:00Z"
+publishDate: "2020-09-14T00:00:00Z"
 
 # Publication type.
 # Legend: 

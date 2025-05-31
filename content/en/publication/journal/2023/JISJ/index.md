@@ -3,7 +3,7 @@ title: interiqr tech prints edible, informational QR codes right into foods
 authors:
 - Ben Coxworth
 
-date: "2022-4-27"
+date: "2022-04-27"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).

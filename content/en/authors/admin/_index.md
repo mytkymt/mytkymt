@@ -1,6 +1,7 @@
 ---
 # Display name
 title: Yamato Miyatake
+author: admin
 
 # Username (this should match the folder name)
 authors:

@@ -6,7 +6,7 @@ authors:
 - Daisuke Iwai
 - Kosuke Sato
 
-date: "2023-4-27"
+date: "2023-04-27"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).

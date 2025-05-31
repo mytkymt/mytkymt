@@ -1,0 +1,29 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+{{ $title := $page.Title }}
+{{ $sections := $page.Params.sections }}
+
+<div class="row mb-0">
+  <div class="col-12">
+    <h1>{{ $title | markdownify | emojify }}</h1>
+    {{ if $sections }}
+      {{ range $sections }}
+        {{ if .subtitle }}
+          <h3>{{ .subtitle | markdownify | emojify }}</h3>
+        {{ end }}
+        {{ if .items }}
+          <ul class="ul-reviews">
+            {{ range .items }}
+              <li>{{ . | markdownify | emojify }}</li>
+            {{ end }}
+          </ul>
+        {{ else }}
+          <p>No items available.</p>
+        {{ end }}
+      {{ end }}
+    {{ else }}
+      <p>No sections available.</p>
+    {{ end }}
+  </div>
+</div> 

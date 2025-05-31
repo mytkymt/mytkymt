@@ -133,7 +133,7 @@
 - id: slides
   translation: Slides
 - id: authors
-  translation: Authors
+  translation: 著者
 - id: search
   translation: Search
 - id: search_placeholder
