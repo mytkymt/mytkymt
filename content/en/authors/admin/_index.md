@@ -11,14 +11,12 @@ authors:
 superuser: true
 
 # Role/position
-role: Ph.D. Student / Software Development Engineer
+role: Ph.D. Student
 
 # Organizations/Affiliations
 organizations:
 - name: Saitama University
 - url:  "https://en.saitama-u.ac.jp/"
-- name: Bosch
-- url: "https://bosch.com"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
