@@ -25,7 +25,7 @@ publishDate: "2025-10-01T00:00:00Z"
 publication_types: ["4"]
 
 # Publication name and optional abbreviated publication name.
-publication: "In ACM UIST 2025 Posters"
+publication: "The ACM Symposium on User Interface Software and Technology (UIST) 2025 Posters"
 # publication_short: EuroHaptics 2020
 
 abstract: 

@@ -1,14 +1,15 @@
 ---
-title: "An Exploratory Study on Edible Conductive Materials Using Water and Oil-based Gels for Human-Food Interaction"
+title: "食品の電気抵抗情報を用いた可食センサーに関する研究"
 authors:
-- Yamato Miyatake
-- Parinya Punpongsanon
+- 神尾幸希
+- 宮武大和
+- プンポンサノン・パリンヤ
 
-date: "2025-10-01T00:00:00Z"
+date: "2025-03-03"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-10-01T00:00:00Z"
+publishDate: "2025-03-03"
 
 # Publication type.
 # Legend: 
@@ -21,18 +22,15 @@ publishDate: "2025-10-01T00:00:00Z"
 # 6 = Book
 # 7 = Book section
 # 8 = Patent
-publication_types: ["4"]
+publication_types: ["5"]
 
 # Publication name and optional abbreviated publication name.
-publication: "The ACM Symposium on User Interface Software and Technology (UIST) 2025 Posters"
+publication: "情報処理学会 第87回全国大会講演論文集"
 # publication_short: EuroHaptics 2020
-
-abstract: 
 
 # Summary. An optional shortened abstract.
 summary: 
 tags:
-- "Conference paper - Demo"
 featured: true
 url_pdf: ""
 
@@ -46,7 +44,7 @@ url_pdf: ""
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects:
-- conductive-circuit
+- 
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
