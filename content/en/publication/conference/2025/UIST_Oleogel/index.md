@@ -5,11 +5,11 @@ authors:
 - Huaishu Peng
 - Parinya Punpongsanon
 
-date: "2025-10-06T00:00:00Z"
+date: "2025-10-01T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-10-00T00:00:00Z"
+publishDate: "2025-10-01T00:00:00Z"
 
 # Publication type.
 # Legend: 
