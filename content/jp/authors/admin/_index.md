@@ -53,12 +53,6 @@ education:
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 experience:
-  - title: Independent researcher (JST ACT-X)
-    company: JST
-    company_url: https://corporate.bosch.co.jp/
-    location: Saitama, Japan
-    date_start: 2024-10-01
-    date_end: 2027-03-31
   - title: Software Engineer (Full time)
     company: Bosch
     company_url: https://bosch.com
