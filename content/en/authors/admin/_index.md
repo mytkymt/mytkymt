@@ -54,7 +54,7 @@ education:
 experience:
   - title: Independent researcher (JST ACT-X)
     company: JST
-    company_url: https://corporate.bosch.co.jp/
+    company_url: https://www.jst.go.jp/kisoken/act-x/
     location: Saitama, Japan
     date_start: 2024-10-01
     date_end: 2027-03-31
@@ -88,9 +88,10 @@ experience:
 #- icon: cv
 #   icon_pack: ai
 #   link: files/cv.pdf
+mailto: "miyatake.yamato@gmail.com"
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "miyatake.yamato [at] gmail.com"
+email: "miyatake.yamato@gmail.com"
 
 
 # Organizational groups that you belong to (for People widget)
