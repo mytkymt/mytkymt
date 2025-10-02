@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "2 posters will be presented at UIST 2025!!"
+title: "Demonstration at SIGGRAPHAsia 2020 Emerging Technologies"
 date: 2020-12-04T23:28:00+09:00
 projects: [HaptoMapping]
 ---
