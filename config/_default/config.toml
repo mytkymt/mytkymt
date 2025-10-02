@@ -68,11 +68,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
     startLevel = 2
     endLevel = 3
 
-# Disable Google Analytics
-[params]
-  [params.marketing]
-    google_analytics = ""  # Empty string disables Google Analytics
-  googleAnalytics = ""
+
 
 [imaging]
   resampleFilter = "lanczos"
@@ -111,5 +107,5 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   [[related.indices]]
     name = "admin"
     weight = 20.0
-    
+
 googleAnalytics = ""
