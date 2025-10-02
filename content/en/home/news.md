@@ -61,7 +61,7 @@ subtitle = ""
   
 [advanced]
  # Custom CSS. 
- css_style = "color: #333333 !important;"
+ css_style = "color: #333333 !important; .stream-item .article-style-icon { display: none !important; }"
  
  # CSS class.
  css_class = ""
