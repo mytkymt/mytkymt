@@ -25,12 +25,12 @@
   {{ $show_buttons = true }}
 {{ end }}
 
-<div class="view-list-item">
+<div class="view-list-item" style="color: #333333;">
   {{/* Removed icon line for news items */}}
   {{ if ne $item.Type "news" }}
   <i class="{{$icon_pack}} {{$icon}} pub-icon" aria-hidden="true"></i>
   {{ end }}
-  <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
+  <a href="{{$link}}" {{ $target | safeHTMLAttr }} style="color: #333333;">{{ $item.Title }}</a>
 
   {{ if eq $item.Type "talk" }}
   <div class="article-metadata">
