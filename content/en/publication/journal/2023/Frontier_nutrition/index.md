@@ -4,11 +4,11 @@ authors:
 - Yamato Miyatake
 - Parinya Punpongsanon
 
-date: "2025-10-05"
+date: "2025-10-04"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-10-05"
+publishDate: "2025-10-04"
 
 # 0 = Uncategorized
 # 1 = Journal paper 
