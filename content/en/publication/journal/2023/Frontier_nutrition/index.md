@@ -1,16 +1,14 @@
 ---
-title: "HaptoMapping: Visuo-Haptic Augmented Reality by Embedding User-Imperceptible Tactile Display Control Signals in a Projected Image"
+title: ""
 authors:
 - Yamato Miyatake
-- Takefumi Hiraki
-- Daisuke Iwai
-- Kosuke Sato
+- Parinya Punpongsanon
 
-date: "2023-12-29"
-doi: "10.1109/TVCG.2021.3136214"
+date: "2025-10-05"
+doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2021-12-29"
+publishDate: "2025-10-05"
 
 # 0 = Uncategorized
 # 1 = Journal paper 
@@ -24,7 +22,7 @@ publishDate: "2021-12-29"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Frontier"
+publication: "Frontiers in Nutrition"
 #publication_short: TVCG
 
 abstract: 
