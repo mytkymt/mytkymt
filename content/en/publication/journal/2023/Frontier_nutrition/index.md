@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "EateryTag: Investigating Unobtrusive Edible Tags using Digital Food Fabrication"
 authors:
 - Yamato Miyatake
 - Parinya Punpongsanon
@@ -22,7 +22,7 @@ publishDate: "2025-10-05"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Frontiers in Nutrition"
+publication: "Frontiers in Nutrition (To appear)"
 #publication_short: TVCG
 
 abstract: 
