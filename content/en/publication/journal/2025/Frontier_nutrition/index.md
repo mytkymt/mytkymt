@@ -5,7 +5,7 @@ authors:
 - Parinya Punpongsanon
 
 date: "2025-10-04"
-doi: ""
+doi: "10.3389/fnut.2025.1641849"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-10-04"
@@ -22,7 +22,7 @@ publishDate: "2025-10-04"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Frontiers in Nutrition (To appear)"
+publication: "Frontiers in Nutrition"
 #publication_short: TVCG
 
 abstract: 
@@ -32,7 +32,7 @@ summary:
 tags:
 - "Journal paper"
 featured: true
-url_pdf: 
+url_pdf: "https://public-pages-files-2025.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1641849/pdf"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
