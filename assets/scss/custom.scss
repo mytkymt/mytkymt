@@ -1,10 +1,123 @@
+@font-face {
+  font-family: "SiteHelveticaNeue";
+  src: local("Helvetica Neue UltraLight"), local("HelveticaNeue-UltraLight"),
+    local("Helvetica Neue Thin"), local("HelveticaNeue-Thin");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SiteHelveticaNeue";
+  src: local("Helvetica Neue Light"), local("HelveticaNeue-Light");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SiteHelveticaNeue";
+  src: local("Helvetica Neue"), local("HelveticaNeue");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SiteHelveticaNeue";
+  src: local("Helvetica Neue Medium"), local("HelveticaNeue-Medium");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SiteHelveticaNeue";
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --site-sans-font: "SiteHelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+.article-container,
+.docs-article-container,
+.article-metadata,
+.article-subtitle,
+.pub-list-item,
+.dropdown-item,
+.navbar,
+.navbar-light,
+.navbar-brand,
+.nav-link {
+  font-family: var(--site-sans-font);
+}
+
+body,
+.article-container,
+.docs-article-container,
+.article-metadata,
+.article-subtitle,
+.pub-list-item,
+.dropdown-item,
+.nav-link,
+.navbar-brand {
+  font-family: var(--site-sans-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.article-title,
+.navbar-brand,
+.nav-link,
+.nav-link.active,
+.dropdown-item-active {
+  font-family: var(--site-sans-font);
+}
+
+body,
+.article-container,
+.docs-article-container,
+.article-metadata,
+.article-subtitle,
+.pub-list-item,
+.dropdown-item,
+.nav-link,
+.navbar-brand {
+  font-weight: 300;
+  letter-spacing: -0.015em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.article-title,
+b,
+strong,
+.font-weight-bold,
+.nav-link.active,
+.dropdown-item-active {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
 .navbar {
     height: 70px;
     background: $sta-menu-primary;
   /* this is the part that takes out the shadow & the only edit */
     box-shadow: none;  
     font-size: 18px;
-    font-weight: 900 !important;
     position: fixed;
     top: 0;
     right: 0;
@@ -22,7 +135,6 @@
 
 .article-title {
   font-size: 1.2rem;
-  font-weight:bold;
 }
 
 .article-title a {
@@ -32,6 +144,7 @@
 
 .article-subtitle {
   font-size: 0.9rem;
+  letter-spacing: -0.02em;
 }
 
 .project-image {

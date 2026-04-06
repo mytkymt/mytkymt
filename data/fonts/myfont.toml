@@ -5,7 +5,7 @@ name = "myfont"
 #google_fonts = "Jost:400,700|Montserrat|Roboto+Mono"
 
 # Font families
-heading_font = "Montserrat"
-body_font = "Montserrat"
-nav_font = "Montserrat"
-mono_font = "Montserrat"
+heading_font = "Helvetica Neue"
+body_font = "Helvetica Neue"
+nav_font = "Helvetica Neue"
+mono_font = "SFMono-Regular"
