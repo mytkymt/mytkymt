@@ -77,6 +77,16 @@ experience:
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
+social:
+- icon: envelope
+  icon_pack: fas
+  link: 'mailto:miyatake.yamato@gmail.com'
+- icon: linkedin-in
+  icon_pack: fab
+  link: 'https://www.linkedin.com/in/yamato-miyatake/'
+- icon: x-twitter
+  icon_pack: fab
+  link: 'https://x.com/miyatakeyama'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -101,5 +111,3 @@ Before this, he worked on driver assistance systems at [Bosch](https://www.bosch
 
 In 2022, he earned a Master of Engineering degree from [Osaka University](https://www.osaka-u.ac.jp/en), specializing in Computer Vision, Robotics, Machine Learning, Signal Processing, and Human-Computer Interaction.
 Additionally, his research at [SENS laboratory](https://www.sens.sys.es.osaka-u.ac.jp/) has explored haptic presentation in Augmented Reality (AR) and embedding information using 3D food printing. These works have been presented at premier conferences, including IEEE VR and UIST.
-
-

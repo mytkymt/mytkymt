@@ -47,7 +47,7 @@ url_pdf: ""
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects:
-- conductive-circuit
+- ChewTect
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.

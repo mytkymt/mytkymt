@@ -64,7 +64,13 @@
         {{ end }}
         <li>
           <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
+            {{ if eq .icon "x-twitter" }}
+            <svg class="big-icon" viewBox="0 0 1200 1227" role="img" aria-label="X" xmlns="http://www.w3.org/2000/svg" style="width: 2rem; height: 2rem; fill: currentColor; vertical-align: middle;">
+              <path d="M714.163 519.284 1160.89 0H1055.06L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.831l409.645-476.152 327.196 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.474-67.894L144.011 79.694h162.604l304.797 436.007 47.474 67.894 396.2 566.721H892.482L569.165 687.854v-.026Z"/>
+            </svg>
+            {{ else }}
             <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} big-icon"></i>
+            {{ end }}
           </a>
         </li>
         {{ end }}
