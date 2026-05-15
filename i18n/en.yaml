@@ -170,7 +170,7 @@
 - id: pub_conf_demo
   translation: Extended Abstracts (Peer-Reviewed)
 - id: pub_conf_jp
-  translation: Conference Papers (in Japanese)
+  translation: Conference Papers (Japanese)
 - id: pub_book
   translation: Book
 - id: pub_book_section
