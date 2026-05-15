@@ -168,7 +168,7 @@
 - id: pub_conf_oral
   translation: Conference Papers
 - id: pub_conf_demo
-  translation: Extended Abstracts
+  translation: Extended Abstracts (Reviewed)
 - id: pub_conf_jp
   translation: Conference Papers (in Japanese)
 - id: pub_book
