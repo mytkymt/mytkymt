@@ -6,9 +6,9 @@ tags:
 - Haptics
 presented: 
 - "IEEE TVCG'23"
-- "IEEE VR'22 (Paper)"
+- "IEEE VR'22 (Invited)"
 - "SIGGRAPH Asia'20 (Demo)"
-- "EuroHaptics'20 (Paper)"
+- "EuroHaptics'20 ()"
 date: "2023-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
