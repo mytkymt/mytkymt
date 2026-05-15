@@ -26,6 +26,7 @@ publication_types: ["3"]
 # Publication name and optional abbreviated publication name.
 publication: "Designing Interactive Systems Conference (DIS '26)"
 #publication_short: TVCG
+Award: "学生発表奨励賞"
 
 abstract: 
 
