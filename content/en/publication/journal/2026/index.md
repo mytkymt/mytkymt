@@ -5,7 +5,7 @@ authors:
 - Parinya Punpongsanon
 
 date: "2026-04-15"
-doi: "10.3389/fnut.2025.1641849"
+doi: "10.48550/arXiv.2603.22887"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2026-04-15"
@@ -22,7 +22,7 @@ publishDate: "2026-04-15"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Frontiers in Nutrition"
+publication: "arXiv"
 #publication_short: TVCG
 
 abstract: 
