@@ -1,10 +1,10 @@
 ---
-title: "EateryTag: Investigating Unobtrusive Edible Tags using Digital Food Fabrication"
+title: "TastePrint: A 3D Food Printing System for Layer-wise Taste Distribution via Airbrushed Liquid Seasoning"
 authors:
 - Yamato Miyatake
 - Parinya Punpongsanon
 
-date: "2025-10-04"
+date: "2026-10-04"
 doi: "10.3389/fnut.2025.1641849"
 
 # Schedule page publish date (NOT publication's date).
