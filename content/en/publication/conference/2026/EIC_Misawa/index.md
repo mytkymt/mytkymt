@@ -7,11 +7,11 @@ authors:
 - "岩井 大輔"
 - "プンポンサノン パリンヤ"
 
-date: ""
+date: "2026-03-12"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2026-04-15"
+publishDate: "2026-03-12"
 
 # 0 = Uncategorized
 # 1 = Journal paper 
@@ -22,10 +22,10 @@ publishDate: "2026-04-15"
 # 6 = Book
 # 7 = Book section
 # 8 = Patent
-publication_types: ["1"]
+publication_types: ["5"]
 
 # Publication name and optional abbreviated publication name.
-publication: "arXiv"
+publication: "電子情報通信学会　総合大会"
 #publication_short: TVCG
 
 abstract: 
@@ -33,9 +33,9 @@ abstract:
 # Summary. An optional shortened abstract.
 summary: 
 tags:
-- "Journal paper"
+- "Conference paper"
 featured: true
-url_pdf: "https://arxiv.org/pdf/2603.22887"
+url_pdf: ""
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -46,9 +46,6 @@ url_pdf: "https://arxiv.org/pdf/2603.22887"
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects:
-- tasteprint
-
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
