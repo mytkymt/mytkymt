@@ -10,14 +10,12 @@ authors:
 superuser: true
 
 # Role/position
-role: 博士後期課程 1年 / Software Development Engineer
+role: 博士後期課程 2年
 
 # Organizations/Affiliations
 organizations:
 - name: 埼玉大学
 - url:  "https://en.saitama-u.ac.jp/"
-- name: Bosch
-- url: "https://bosch.com"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
@@ -53,13 +51,6 @@ education:
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 experience:
-  - title: Software Engineer (Full time)
-    company: Bosch
-    company_url: https://bosch.com
-    location: Kanagawa, Japan
-    location: Stuttgart, Germany
-    date_start: 2022-04-01
-    date_end: 2024-12-31
   - title: R&D Engineer (Internship)
     company: Sony
     company_url: https://sony.jp/
@@ -106,8 +97,6 @@ user_groups:
 ---
 
 Yamato Miyatake is currently pursuing a Ph.D. at [Saitama University](https://en.saitama-u.ac.jp/) under the supervision of [Parinya Punpongsanon](https://punpongsanon.info/), focusing on the intersection of human-food interaction, digital fabrication, and Human-centered AI. His goal is to pioneer innovations in digital culinary experiences.
-
-Before this, he worked on driver assistance systems at [Bosch](https://www.bosch.com/) , where he honed his skills in sensor-based environment recognition. 
 
 In 2022, he earned a Master of Engineering degree from [Osaka University](https://www.osaka-u.ac.jp/en), specializing in Computer Vision, Robotics, Machine Learning, Signal Processing, and Human-Computer Interaction.
 Additionally, his research at [SENS laboratory](https://www.sens.sys.es.osaka-u.ac.jp/) has explored haptic presentation in Augmented Reality (AR) and embedding information using 3D food printing. These works have been presented at premier conferences, including IEEE VR and UIST.
