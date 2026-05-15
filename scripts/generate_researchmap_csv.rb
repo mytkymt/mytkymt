@@ -290,12 +290,51 @@ def media_coverage_row(_path, data)
 end
 
 def write_researchmap_csv(path, type_name, headers, rows)
+  if rows.empty?
+    FileUtils.rm_f(path)
+    return
+  end
+
   CSV.open(path, "w", encoding: "UTF-8", force_quotes: false) do |csv|
     csv << [type_name]
     csv << headers
     rows.each do |row|
       csv << headers.map { |header| row.fetch(header, "null") }
     end
+  end
+end
+
+def validate_researchmap_csv!(path, expected_headers)
+  rows = CSV.read(path)
+  type_row, header_row, *data_rows = rows
+  raise "#{path}: first row is missing" if type_row.nil? || type_row.empty?
+  raise "#{path}: header row is missing" if header_row.nil?
+  raise "#{path}: unexpected headers" unless header_row == expected_headers
+  raise "#{path}: duplicate headers found" unless header_row.uniq.length == header_row.length
+
+  forbidden_headers = [
+    "会員 ID",
+    "DOI ランディング先",
+    "DOI 無償アクセス可否",
+    "DOI 公開開始(予定)日",
+    "DOI2",
+    "DOI2 ランディング先",
+    "DOI2 無償アクセス可否",
+    "DOI2 公開開始(予定)日",
+    "URL 無償アクセス可否",
+    "URL 公開開始(予定)日",
+    "URL2 無償アクセス可否",
+    "URL2 公開開始(予定)日",
+    "関連情報 URL",
+    "関連情報 URL2"
+  ]
+  found_forbidden = header_row & forbidden_headers
+  raise "#{path}: forbidden headers found: #{found_forbidden.join(", ")}" unless found_forbidden.empty?
+
+  data_rows.each_with_index do |row, index|
+    line = index + 3
+    raise "#{path}: line #{line} has #{row.length} columns; expected #{header_row.length}" unless row.length == header_row.length
+    raise "#{path}: line #{line} has blank cells; use null" if row.any? { |cell| cell.nil? || cell == "" }
   end
 end
 
@@ -339,6 +378,10 @@ write_researchmap_csv(
   MEDIA_COVERAGE_HEADERS,
   rows[:media_coverage]
 )
+
+validate_researchmap_csv!(File.join(OUTPUT_DIR, "published_papers.csv"), PUBLISHED_PAPERS_HEADERS) if rows[:published_papers].any?
+validate_researchmap_csv!(File.join(OUTPUT_DIR, "presentations.csv"), PRESENTATIONS_HEADERS) if rows[:presentations].any?
+validate_researchmap_csv!(File.join(OUTPUT_DIR, "media_coverage.csv"), MEDIA_COVERAGE_HEADERS) if rows[:media_coverage].any?
 
 puts "Generated #{rows[:published_papers].size} published_papers rows"
 puts "Generated #{rows[:presentations].size} presentations rows"
