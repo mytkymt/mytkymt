@@ -6,7 +6,7 @@ tags:
 - "Fabrication"
 - "Food"
 presented:
-- "arXiv (2026)"
+- "arXiv"
 date: "2026-04-28T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
