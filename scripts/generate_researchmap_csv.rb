@@ -228,21 +228,8 @@ def published_paper_row(path, data)
     "ISSN" => "null",
     "eISSN" => "null",
     "DOI" => value_or_null(data["doi"]),
-    "DOI ランディング先" => nullish?(data["doi"]) ? "null" : "publisher_site",
-    "DOI 無償アクセス可否" => "null",
-    "DOI 公開開始(予定)日" => "null",
-    "DOI2" => "null",
-    "DOI2 ランディング先" => "null",
-    "DOI2 無償アクセス可否" => "null",
-    "DOI2 公開開始(予定)日" => "null",
     "URL" => url_value(data),
-    "URL 無償アクセス可否" => "null",
-    "URL 公開開始(予定)日" => "null",
-    "URL2" => "null",
-    "URL2 無償アクセス可否" => "null",
-    "URL2 公開開始(予定)日" => "null",
-    "関連情報 URL" => "null",
-    "関連情報 URL2" => "null"
+    "URL2" => "null"
   )
 end
 
