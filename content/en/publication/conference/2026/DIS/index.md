@@ -1,17 +1,16 @@
 ---
 title: "着色要因による食欲変化と味覚への影響 ―クッキー事例として―"
 authors:
-- "見澤 宏紀"
-- "岡部 兼也"
-- "山田 蒼"
-- "宮武 大和"
-- "プンポンサノン パリンヤ"
+- "Yamato Miyatake"
+- "Aoi Yamada"
+- "Huaishu Peng"
+- "Parinya Punpongsanon"
 
-date: "2026-03-12"
-doi: ""
+date: "2026-06-13"
+doi: "10.1145/3800645.3812893"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2026-03-12"
+publishDate: "2026-06-13"
 
 # 0 = Uncategorized
 # 1 = Journal paper 
@@ -22,10 +21,10 @@ publishDate: "2026-03-12"
 # 6 = Book
 # 7 = Book section
 # 8 = Patent
-publication_types: ["5"]
+publication_types: ["3"]
 
 # Publication name and optional abbreviated publication name.
-publication: "電子情報通信学会　総合大会"
+publication: "Designing Interactive Systems Conference (DIS '26)"
 #publication_short: TVCG
 
 abstract: 
@@ -35,7 +34,7 @@ summary:
 tags:
 - "Conference paper"
 featured: true
-url_pdf: ""
+url_pdf: "https://doi.org/10.1145/3800645.3812893"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
