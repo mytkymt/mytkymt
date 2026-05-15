@@ -14,7 +14,7 @@ external_link: ""
 #  focal_point: Smart
 
 presented: 
-- "ACM UIST'22 (Oral and Demo)"
+- "ACM UIST'22 (Full paper and Demo)"
 - 
 authors:
   - Yamato Miyatake
