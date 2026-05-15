@@ -1,11 +1,14 @@
 ---
 title: "内部構造を制御した食品の咀嚼音特性に基づく食事摂取量推定"
 authors:
-- Yamato Miyatake
-- Parinya Punpongsanon
+- "山田 蒼"
+- "宮武 大和"
+- "雨坂 宇宙"
+- "岩井 大輔"
+- "プンポンサノン パリンヤ"
 
-date: "2026-04-15"
-doi: "10.48550/arXiv.2603.22887"
+date: ""
+doi: ""
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2026-04-15"
