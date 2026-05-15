@@ -60,6 +60,8 @@
   translation: 興味・関心
 - id: education
   translation: 学歴
+- id: experience
+  translation: 経歴
 - id: user_profile_latest
   translation: Latest
 - id: see_certificate
