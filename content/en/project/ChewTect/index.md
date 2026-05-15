@@ -7,7 +7,7 @@ tags:
 - "Food"
 presented:
 - "ACM UIST'25 (Poster)"
-- "ACM DIS'26 (Best Paper Honorable Mention)"
+- "ACM DIS'26 (Full paper - Best Paper Honorable Mention)"
 date: "2026-04-28T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
