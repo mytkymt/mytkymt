@@ -220,18 +220,15 @@ def peer_reviewed(data)
 end
 
 def url_value(data)
-  url = value_or_null(data["url_pdf"])
-  return "null" if url == "null"
-  return "#{SITE_BASE_URL}#{url}" if url.start_with?("/")
-
-  url
+  "null"
 end
 
 def published_paper_row(path, data)
   title_ja, title_en = split_language(data["title"])
   authors_ja, authors_en = japanese_text?(Array(data["authors"]).join(" ")) ? [list_or_null(data["authors"]), "null"] : ["null", list_or_null(data["authors"])]
   journal_ja, journal_en = split_language(data["publication"])
-  abstract_ja, abstract_en = split_language(data["abstract"])
+  abstract_ja = "null"
+  abstract_en = "null"
 
   common_row.merge(
     "タイトル(日本語)" => title_ja,
@@ -268,7 +265,8 @@ def presentation_row(_path, data)
   title_ja, title_en = split_language(data["title"])
   speakers_ja, speakers_en = japanese_text?(Array(data["authors"]).join(" ")) ? [list_or_null(data["authors"]), "null"] : ["null", list_or_null(data["authors"])]
   meeting_ja, meeting_en = split_language(data["publication"])
-  abstract_ja, abstract_en = split_language(data["abstract"])
+  abstract_ja = "null"
+  abstract_en = "null"
 
   common_row.merge(
     "タイトル(日本語)" => title_ja,
@@ -300,7 +298,8 @@ end
 def media_coverage_row(_path, data)
   title_ja, title_en = split_language(data["title"])
   source_ja, source_en = split_language(data["publication"])
-  summary_ja, summary_en = split_language(data["summary"] || data["abstract"])
+  summary_ja = "null"
+  summary_en = "null"
 
   common_row.merge(
     "タイトル(日本語)" => title_ja,
