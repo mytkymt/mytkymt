@@ -35,14 +35,14 @@ education:
   #- course: MEng in Artificial Intelligence
   #  institution: Massachusetts Institute of Technology
   #  year: 2009
-  - course: Ph.D. Student
-    institution: Saitama University
+  - course: 博士後期課程
+    institution: 埼玉大学
     year: 
-  - course: MSc in Engineering
-    institution: Osaka University
+  - course: 工学修士
+    institution: 大阪大学
     year: 2022
-  - course: BSc in Engineering
-    institution: Osaka University
+  - course: 工学学士
+    institution: 大阪大学
     year: 2020
 
 # Experiences.
