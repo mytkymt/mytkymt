@@ -9,6 +9,7 @@ require "yaml"
 ROOT = File.expand_path("..", __dir__)
 PUBLICATION_ROOT = File.join(ROOT, "content/en/publication")
 OUTPUT_DIR = File.join(PUBLICATION_ROOT, "researchmap")
+SITE_BASE_URL = "https://www.miyatakeyama.to"
 
 COMMON_HEADERS = [
   "アクション名",
@@ -147,6 +148,17 @@ def common_row
   }
 end
 
+def apply_update_id(row, id)
+  return row if nullish?(id)
+
+  row.merge(
+    "アクション名" => "update",
+    "アクションタイプ" => "doc",
+    "類似業績マージ優先度" => "null",
+    "ID" => id.to_s
+  )
+end
+
 def publication_kind(path, data)
   type = Array(data["publication_types"]).first.to_s
   relative_path = path.delete_prefix("#{PUBLICATION_ROOT}/")
@@ -193,7 +205,11 @@ def peer_reviewed(data)
 end
 
 def url_value(data)
-  value_or_null(data["url_pdf"])
+  url = value_or_null(data["url_pdf"])
+  return "null" if url == "null"
+  return "#{SITE_BASE_URL}#{url}" if url.start_with?("/")
+
+  url
 end
 
 def published_paper_row(path, data)
@@ -361,6 +377,7 @@ rows = {
   presentations: [],
   media_coverage: []
 }
+seen_published_papers = {}
 
 paths.each do |path|
   data = front_matter(path)
@@ -368,6 +385,16 @@ paths.each do |path|
 
   case publication_kind(path, data)
   when :published_papers
+    dedupe_key = if !nullish?(data["doi"])
+                   "doi:#{data["doi"].to_s.downcase}"
+                 else
+                   title = data["title"].to_s.downcase.gsub(/\s+/, " ").strip
+                   date = date_value(data["date"])
+                   "title:#{title}:#{date}"
+                 end
+    next if seen_published_papers[dedupe_key]
+
+    seen_published_papers[dedupe_key] = true
     rows[:published_papers] << published_paper_row(path, data)
   when :presentations
     rows[:presentations] << presentation_row(path, data)
