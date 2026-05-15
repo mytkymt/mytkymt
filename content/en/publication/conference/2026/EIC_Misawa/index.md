@@ -1,5 +1,5 @@
 ---
-title: "TastePrint: A 3D Food Printing System for Layer-wise Taste Distribution via Airbrushed Liquid Seasoning"
+title: "内部構造を制御した食品の咀嚼音特性に基づく食事摂取量推定"
 authors:
 - Yamato Miyatake
 - Parinya Punpongsanon
