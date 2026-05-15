@@ -4,12 +4,27 @@
 require "csv"
 require "date"
 require "fileutils"
+require "uri"
 require "yaml"
 
 ROOT = File.expand_path("..", __dir__)
 PUBLICATION_ROOT = File.join(ROOT, "content/en/publication")
 OUTPUT_DIR = File.join(PUBLICATION_ROOT, "researchmap")
 SITE_BASE_URL = "https://www.miyatakeyama.to"
+KNOWN_PUBLISHED_PAPER_IDS = {
+  "doi:10.1007/978-3-030-58147-3_25" => "48844193",
+  "doi:10.1145/3415255.3422891" => "48844194",
+  "doi:10.1109/tvcg.2021.3136214" => "48844137",
+  "doi:10.1145/3526113.3545669" => "48844192",
+  "doi:10.1145/3746058.3758407" => "52660469",
+  "doi:10.1145/3746058.3758423" => "52660468",
+  "doi:10.3389/fnut.2025.1641849" => "52681424",
+  "title:センサ内蔵スマートテーブルウェアの構築とロボットアームによるフィードバックの検討:2022-05-27" => "48844185",
+  "title:an exploratory study on fabricating of unobtrusive edible tags:2024-12-06" => "48844191"
+}.freeze
+FORCE_PUBLISHED_PAPER_KEYS = [
+  "doi:10.1145/3526114.3558630"
+].freeze
 
 COMMON_HEADERS = [
   "アクション名",
@@ -352,6 +367,18 @@ def validate_researchmap_csv!(path, expected_headers)
     raise "#{path}: line #{line} has #{row.length} columns; expected #{header_row.length}" unless row.length == header_row.length
     raise "#{path}: line #{line} has blank cells; use null" if row.any? { |cell| cell.nil? || cell == "" }
 
+    header_row.each_with_index do |header, cell_index|
+      next unless ["URL", "URL2"].include?(header)
+
+      url = row[cell_index]
+      next if url == "null"
+
+      uri = URI.parse(url)
+      raise "#{path}: line #{line} has invalid URL: #{url}" unless uri.is_a?(URI::HTTP) && uri.host
+    rescue URI::InvalidURIError
+      raise "#{path}: line #{line} has invalid URL: #{url}"
+    end
+
     if type_row.first == "published_papers"
       title_ja = row[header_row.index("タイトル(日本語)")]
       title_en = row[header_row.index("タイトル(英語)")]
@@ -371,7 +398,47 @@ def validate_researchmap_csv!(path, expected_headers)
   end
 end
 
-paths = Dir.glob(File.join(PUBLICATION_ROOT, "**/index.md")).sort
+def paper_key_from_row(header, row)
+  doi = row[header.index("DOI")]
+  return "doi:#{doi.to_s.downcase}" unless nullish?(doi) || doi == "null"
+
+  title_ja = row[header.index("タイトル(日本語)")]
+  title_en = row[header.index("タイトル(英語)")]
+  date = row[header.index("出版年月")]
+  title = [title_ja, title_en].reject { |value| value == "null" }.join(" ").downcase.gsub(/\s+/, " ").strip
+  "title:#{title}:#{date}"
+end
+
+def paper_key_from_hash(row)
+  doi = row["DOI"]
+  return "doi:#{doi.to_s.downcase}" unless nullish?(doi) || doi == "null"
+
+  title = [row["タイトル(日本語)"], row["タイトル(英語)"]].reject { |value| value == "null" }.join(" ").downcase.gsub(/\s+/, " ").strip
+  "title:#{title}:#{row["出版年月"]}"
+end
+
+def apply_published_paper_error_overrides(rows)
+  rows.map do |row|
+    key = paper_key_from_hash(row)
+
+    if KNOWN_PUBLISHED_PAPER_IDS[key]
+      apply_update_id(row, KNOWN_PUBLISHED_PAPER_IDS[key])
+    elsif FORCE_PUBLISHED_PAPER_KEYS.include?(key)
+      row.merge(
+        "アクション名" => "insert",
+        "アクションタイプ" => "force",
+        "類似業績マージ優先度" => "null",
+        "ID" => "null"
+      )
+    else
+      row
+    end
+  end
+end
+
+paths = Dir.glob(File.join(PUBLICATION_ROOT, "**/index.md")).sort_by do |path|
+  [path.include?("/journal/") ? 0 : 1, path]
+end
 rows = {
   published_papers: [],
   presentations: [],
@@ -402,6 +469,8 @@ paths.each do |path|
     rows[:media_coverage] << media_coverage_row(path, data)
   end
 end
+
+rows[:published_papers] = apply_published_paper_error_overrides(rows[:published_papers])
 
 FileUtils.mkdir_p(OUTPUT_DIR)
 write_researchmap_csv(
