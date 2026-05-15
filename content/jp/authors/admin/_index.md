@@ -96,7 +96,6 @@ user_groups:
 - Visitors
 ---
 
-Yamato Miyatake is currently pursuing a Ph.D. at [Saitama University](https://en.saitama-u.ac.jp/) under the supervision of [Parinya Punpongsanon](https://punpongsanon.info/), focusing on the intersection of human-food interaction, digital fabrication, and Human-centered AI. His goal is to pioneer innovations in digital culinary experiences.
+宮武大和は、[埼玉大学](https://en.saitama-u.ac.jp/)で博士後期課程に在籍し、[Parinya Punpongsanon](https://punpongsanon.info/)先生のもとで研究を行っています。Human-Food Interaction、デジタルファブリケーション、Human-centered AIの交わる領域に関心があり、食の体験をより豊かにするデジタル技術を探求しています。
 
-In 2022, he earned a Master of Engineering degree from [Osaka University](https://www.osaka-u.ac.jp/en), specializing in Computer Vision, Robotics, Machine Learning, Signal Processing, and Human-Computer Interaction.
-Additionally, his research at [SENS laboratory](https://www.sens.sys.es.osaka-u.ac.jp/) has explored haptic presentation in Augmented Reality (AR) and embedding information using 3D food printing. These works have been presented at premier conferences, including IEEE VR and UIST.
+2022年に[大阪大学](https://www.osaka-u.ac.jp/en)で工学修士号を取得しました。在学中はコンピュータビジョン、ロボティクス、機械学習、信号処理、Human-Computer Interactionを学び、[SENS研究室](https://www.sens.sys.es.osaka-u.ac.jp/)ではARにおける触覚提示や、3Dフードプリンティングによる情報埋め込みに取り組みました。これらの研究成果は、IEEE VRやUISTなどの国際会議で発表されています。

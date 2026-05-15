@@ -12,6 +12,31 @@
  languageCode = "ja-jp"
  contentDir = "content/jp"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
 
+  [[ja.menu.main]]
+    name = "Home"
+    url = "#about"
+    weight = 1
+
+  [[ja.menu.main]]
+    name = "経歴"
+    url = "#background"
+    weight = 10
+
+  [[ja.menu.main]]
+    name = "Projects"
+    url = "#projects"
+    weight = 20
+
+  [[ja.menu.main]]
+    name = "Publications"
+    url = "#publications"
+    weight = 30
+
+  [[ja.menu.main]]
+    name = "CV"
+    url = "/files/CV.pdf"
+    weight = 50
+
 # Uncomment the lines below to configure your website in a second language.
 #[zh]
 #  languageCode = "zh-Hans"
