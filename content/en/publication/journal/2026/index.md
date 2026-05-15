@@ -32,7 +32,7 @@ summary:
 tags:
 - "Journal paper"
 featured: true
-url_pdf: "https://public-pages-files-2025.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1641849/pdf"
+url_pdf: "https://arxiv.org/pdf/2603.22887"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -44,7 +44,7 @@ url_pdf: "https://public-pages-files-2025.frontiersin.org/journals/nutrition/art
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects:
-- interiqr
+- tasteprint
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
