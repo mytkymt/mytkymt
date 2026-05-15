@@ -168,8 +168,7 @@ def publication_kind(path, data)
 
   return :media_coverage if relative_path.start_with?("press/") || type == "9"
   return :published_papers if relative_path.start_with?("journal/")
-  return :published_papers if type == "3"
-  return :presentations if %w[4 5].include?(type)
+  return :published_papers if %w[3 4 5].include?(type)
 
   :published_papers
 end
@@ -180,6 +179,8 @@ def publishing_type(path, data)
 
   return "scientific_journal" if path.include?("/journal/")
   return "international_conference_proceedings" if type == "3"
+  return "research_society" if type == "4"
+  return "research_society" if type == "5"
   return "international_conference_proceedings" if publication.match?(/conference|symposium|proceedings|acm|ieee|eurohaptics|dis|uist/)
 
   "others"
