@@ -200,6 +200,13 @@ def international?(data)
   japanese_text?(text) ? "FALSE" : "TRUE"
 end
 
+def peer_reviewed(data)
+  type = Array(data["publication_types"]).first.to_s
+  return "FALSE" if type == "5"
+
+  "null"
+end
+
 def url_value(data)
   value_or_null(data["url_pdf"])
 end
@@ -228,7 +235,7 @@ def published_paper_row(path, data)
     "開始ページ" => "null",
     "終了ページ" => "null",
     "記述言語" => japanese_text?(data["title"]) ? "jpn" : "eng",
-    "査読の有無" => "null",
+    "査読の有無" => peer_reviewed(data),
     "招待の有無" => "null",
     "掲載種別" => publishing_type(path, data),
     "国際・国内誌" => international?(data),
