@@ -1,5 +1,5 @@
 ---
-title: "着色要因による食欲変化と味覚への影響 ―クッキー事例として―"
+title: "ChewTect: Designing Temporal Food Texture via Computational Molding"
 authors:
 - "Yamato Miyatake"
 - "Aoi Yamada"

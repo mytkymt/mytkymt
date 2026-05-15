@@ -27,6 +27,7 @@ theme = "academic"
 
 # Get last modified date for content from Git?
 enableGitInfo = false
+buildFuture = true
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -109,4 +110,3 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   [[related.indices]]
     name = "admin"
     weight = 20.0
-
