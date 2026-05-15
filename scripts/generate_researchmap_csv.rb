@@ -45,21 +45,8 @@ PUBLISHED_PAPERS_HEADERS = (COMMON_HEADERS + [
   "ISSN",
   "eISSN",
   "DOI",
-  "DOI ランディング先",
-  "DOI 無償アクセス可否",
-  "DOI 公開開始(予定)日",
-  "DOI2",
-  "DOI2 ランディング先",
-  "DOI2 無償アクセス可否",
-  "DOI2 公開開始(予定)日",
   "URL",
-  "URL 無償アクセス可否",
-  "URL 公開開始(予定)日",
-  "URL2",
-  "URL2 無償アクセス可否",
-  "URL2 公開開始(予定)日",
-  "関連情報 URL",
-  "関連情報 URL2"
+  "URL2"
 ]).freeze
 
 PRESENTATIONS_HEADERS = (COMMON_HEADERS + [
