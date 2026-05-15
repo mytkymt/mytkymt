@@ -4,11 +4,11 @@ authors:
 - Yamato Miyatake
 - Parinya Punpongsanon
 
-date: "2026-10-04"
+date: "2026-04-15"
 doi: "10.3389/fnut.2025.1641849"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-10-04"
+publishDate: "2026-04-15"
 
 # 0 = Uncategorized
 # 1 = Journal paper 
