@@ -335,6 +335,23 @@ def validate_researchmap_csv!(path, expected_headers)
     line = index + 3
     raise "#{path}: line #{line} has #{row.length} columns; expected #{header_row.length}" unless row.length == header_row.length
     raise "#{path}: line #{line} has blank cells; use null" if row.any? { |cell| cell.nil? || cell == "" }
+
+    if type_row.first == "published_papers"
+      title_ja = row[header_row.index("タイトル(日本語)")]
+      title_en = row[header_row.index("タイトル(英語)")]
+      authors_ja = row[header_row.index("著者(日本語)")]
+      authors_en = row[header_row.index("著者(英語)")]
+      publication_date = row[header_row.index("出版年月")]
+
+      raise "#{path}: line #{line} has no title" if [title_ja, title_en].all? { |cell| cell == "null" }
+      raise "#{path}: line #{line} has no authors" if [authors_ja, authors_en].all? { |cell| cell == "null" }
+      raise "#{path}: line #{line} has no publication date" if publication_date == "null"
+    elsif type_row.first == "media_coverage"
+      title_ja = row[header_row.index("タイトル(日本語)")]
+      title_en = row[header_row.index("タイトル(英語)")]
+
+      raise "#{path}: line #{line} has no title" if [title_ja, title_en].all? { |cell| cell == "null" }
+    end
   end
 end
 
