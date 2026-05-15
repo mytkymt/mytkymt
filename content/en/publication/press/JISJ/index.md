@@ -27,14 +27,14 @@ publishDate: "2023-10-27"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "The ACM Symposium on User Interface Software and Technology (UIST)"
+publication: "Journal of the Imaging Society of Japan"
 #publication_short: "UIST 2022"
 
 # Summary. An optional shortened abstract.
 summary: 
 tags:
 featured: true
-url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
+url_pdf: ""
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
