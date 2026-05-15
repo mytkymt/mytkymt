@@ -1,0 +1,55 @@
+---
+title: "TastePrint: A 3D Food Printing System for Layer-wise Taste Distribution via Airbrushed Liquid Seasoning"
+authors:
+- Yamato Miyatake
+- Parinya Punpongsanon
+
+date: "2026-04-15"
+doi: "10.48550/arXiv.2603.22887"
+
+# Schedule page publish date (NOT publication's date).
+publishDate: "2026-04-15"
+
+# 0 = Uncategorized
+# 1 = Journal paper 
+# 2 = Journal JP
+# 3 = Conference Oral
+# 4 = Conference demo
+# 5 = Conference jp
+# 6 = Book
+# 7 = Book section
+# 8 = Patent
+publication_types: ["1"]
+
+# Publication name and optional abbreviated publication name.
+publication: "arXiv"
+#publication_short: TVCG
+
+abstract: 
+
+# Summary. An optional shortened abstract.
+summary: 
+tags:
+- "Journal paper"
+featured: true
+url_pdf: "https://arxiv.org/pdf/2603.22887"
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+
+
+# Associated Projects (optional).
+#   Associate this publication with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `internal-project` references `content/project/internal-project/index.md`.
+#   Otherwise, set `projects: []`.
+projects:
+- tasteprint
+
+# Slides (optional).
+#   Associate this publication with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides: "example"` references `content/slides/example/index.md`.
+#   Otherwise, set `slides: ""`.
+# slides: example
+---
