@@ -24,7 +24,7 @@ publishDate: "2023-10-27"
 # 7 = Book section
 # 8 = Patent
 # 9 = Press
-publication_types: ["1"]
+publication_types: ["9"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Journal of the Imaging Society of Japan"
