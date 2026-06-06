@@ -22,7 +22,7 @@ publishDate: "2026-04-15"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "arXiv"
+publication: "Applied Food Research"
 #publication_short: TVCG
 
 abstract: 
