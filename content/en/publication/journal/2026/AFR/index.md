@@ -5,7 +5,7 @@ authors:
 - Parinya Punpongsanon
 
 date: "2026-04-15"
-doi: "10.48550/arXiv.2603.22887"
+doi: "10.1016/j.afres.2026.102242"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2026-04-15"
