@@ -34,10 +34,12 @@
     <div class="col-lg-3 col-12 feature-image">
       {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
       {{ with $resource }}
+      {{ $display_image := .Fit "1040x1040 webp q80" }}
       <!-- Check if there's a link for the item and wrap image with it -->
       {{ if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
-        <!-- Display the image with a style to make it square and adjust margin -->
-        <img class = "project-image" src="{{ .RelPermalink }}" alt="">
+        <img class="project-image" src="{{ $display_image.RelPermalink }}"
+             width="{{ $display_image.Width }}" height="{{ $display_image.Height }}"
+             loading="lazy" decoding="async" alt="{{ $item.Title | plainify }}">
       {{if $do_link}}</a>{{end}}
       {{end}}
     </div>
