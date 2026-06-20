@@ -45,7 +45,7 @@
       */}}
 
       {{ with $person.education }}
-      <div class="col-3">
+      <div class="col-12 col-md-4 background-education">
         <h3>{{ i18n "education" | markdownify }}</h3>
         <ul class="ul-edu fa-ul">
           {{ range .courses }}
@@ -63,11 +63,11 @@
       {{ end }}
 
       {{ with $person.experience }}
-      <div class="col">
+      <div class="col-12 col-md-8 background-experience">
         <h3>{{ i18n "experience" | markdownify }}</h3>
         {{ range . }}
-          <div class="row mb-1">
-              <div class="col mx-aout">
+          <div class="row experience-item mb-2">
+              <div class="col-12 col-sm-4 experience-date">
                 {{ with .date_start }} {{ time.Format "Jan.2006" .}}{{ end }} - 
                 {{if .date_end}}
                 {{ with .date_end }} {{ time.Format "Jan.2006" .}}{{ end }}
@@ -75,7 +75,7 @@
                 {{ i18n "present" }}
                 {{end}}
               </div>
-              <div class="col-9 mx-auto">
+              <div class="col-12 col-sm-8 experience-description">
                 <div class="description">
                   {{ .title }}, {{ with .company_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .company }}</a>
                 </div>

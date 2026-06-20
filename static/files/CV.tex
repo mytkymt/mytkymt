@@ -1,0 +1,105 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.68in]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica}
+\setCJKmainfont{Hiragino Mincho ProN}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\titleformat{\section}{\large\bfseries\sffamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+\newcommand{\daterange}[1]{\hfill #1}
+\newcommand{\pubheading}[1]{\vspace{3pt}{\bfseries\sffamily\small #1}\vspace{-3pt}}
+\newlist{publist}{enumerate}{1}
+\setlist[publist]{label=\arabic*., leftmargin=1.5em, itemsep=2pt, topsep=2pt}
+\setlist[itemize]{leftmargin=1.4em, itemsep=0pt, topsep=1pt}
+
+\begin{document}
+
+{\LARGE\bfseries\sffamily Yamato Miyatake}\\
+Portfolio: \href{https://www.miyatakeyama.to}{https://www.miyatakeyama.to}\\
+Email: \href{mailto:yamato.miyatake@fip.ics.saitama-u.ac.jp}{yamato.miyatake@fip.ics.saitama-u.ac.jp} / \href{mailto:miyatake.yamato@gmail.com}{miyatake.yamato@gmail.com}
+
+\section*{Introduction}
+I am currently pursuing a Ph.D. at Saitama University under the supervision of Assoc. Prof. Parinya Punpongsanon, focusing on the intersection of human-computer interaction, human-food interaction, digital fabrication, computational design, and human-centered AI. My goal is to pioneer innovations in digital culinary design.
+
+Before this, I worked on automated driving systems at Bosch, where I honed my skills in AI-based environment recognition. In 2022, I earned my Master of Engineering degree from Osaka University, specializing in Computer Vision, Robotics, Machine Learning, Signal Processing, and Human-Computer Interaction. Additionally, my research has explored haptic presentation in Augmented Reality (AR) and embedding information using 3D food printing. These works have been presented at premier conferences, including IEEE VR and ACM UIST.
+
+\section*{Education}
+\textbf{Ph.D. Student (three-years course), Saitama University, Japan} \daterange{October 2024 - Present}\\
+Division of Mathematics, Electronics and Informatics, Graduate School of Science and Engineering,\\
+Under advisory of Assoc. Prof. Parinya Punpongsanon
+
+\textbf{Master of Engineering, Osaka University, Japan} \daterange{March 2022}\\
+Division of Systems Science and Applied Informatics, Graduate School of Engineering Science,\\
+Under advisory of Prof. Kosuke Sato, Assoc. Prof. Daisuke Iwai, and Asst. Prof. Parinya Punpongsanon
+
+\textbf{Bachelor of Engineering, Osaka University, Japan} \daterange{March 2020}\\
+Division of Systems Science and Applied Informatics, School of Engineering Science,\\
+Under advisory of Prof. Kosuke Sato and Prof. Daisuke Iwai
+
+\textbf{Associate Degree of Engineering, National Institute of Technology, Japan} \daterange{March 2018}\\
+Department of Electrical and Computer Engineering,\\
+Under advisory of Prof. Yasushi Kami
+
+\section*{Employment}
+Individual researcher, JST, Japan \daterange{Oct. 2024 - Mar. 2027}\\
+Software Development Engineer, Bosch, Germany \daterange{Apr. 2022 - Dec. 2024}\\
+Research Engineer (Internship), SONY, Japan \daterange{Feb. 2021 (1 month)}\\
+Teaching Assistant, Osaka University, Japan \daterange{Oct. 2020 - Mar. 2020}\\
+Software Engineer (Internship), JAXA, Japan \daterange{Aug. 2017 (1 month)}\\
+Software Engineer (Internship), APCAS, Sri Lanka \daterange{Mar. 2016 (1 month)}
+
+\section*{Grants}
+ACT-X [NextAI-Math-Info], JST, Japan, 45,000 USD + stipend \daterange{Oct. 2024 - Mar. 2027}\\
+Research Fellowships for Young Scientists, JSPS, Japan, 10,000 USD + stipend \daterange{Apr. 2026 - Mar. 2027}
+
+\section*{Publications}
+\pubheading{JOURNAL ARTICLES}
+\begin{publist}
+\item Yamato Miyatake and Parinya Punpongsanon, TastePrint: A 3D Food Printing System for Layer-wise Taste Distribution via Airbrushed Liquid Seasoning, Applied Food Research, 2026. Impact Factor: 6.2.
+\item Yamato Miyatake and Parinya Punpongsanon, EateryTag: Investigating Unobtrusive Edible Tags using Digital Food Fabrication, Frontiers in Nutrition, 2025.
+\item Parinya Punpongsanon, Yamato Miyatake, Daisuke Iwai, and Kosuke Sato, Food DX Through Unobtrusive Edible Tags using Food 3D Printing (Review article), Journal of the Imaging Society of Japan, 2023.
+\item Yamato Miyatake, Takefumi Hiraki, Daisuke Iwai, and Kosuke Sato, HaptoMapping: Visuo-Haptic Augmented Reality by Embedding User-Imperceptible Haptic Display Control Signals in a Projected Image, IEEE Transaction on Visualization and Computer Graphics, 2022.
+\end{publist}
+
+\pubheading{CONFERENCE PAPERS (full papers)}
+\begin{publist}[resume]
+\item Yamato Miyatake, Aoi Yamada, Huaishu Peng, and Parinya Punpongsanon, ChewTect: Designing Temporal Food Texture via Computational Molding, Proceedings of the ACM Designing Interactive Systems Conference (DIS '26), Best Paper Honorable Mention, 2026.
+\item Yamato Miyatake, Parinya Punpongsanon, Daisuke Iwai, and Kosuke Sato, interiqr: Unobtrusive Edible Tags using Food 3D Printing, The ACM Symposium on User Interface Software and Technology (UIST), 2022.
+\item Yamato Miyatake, Takefumi Hiraki, Tomosuke Maeda, Daisuke Iwai, and Kosuke Sato, Visuo-Haptic Display by Embedding Imperceptible Spatial Haptic Information into Projected Images, In Proceedings of EuroHaptics 2020, 2020.
+\end{publist}
+
+\pubheading{CONFERENCE PAPERS (short papers, demos, and posters)}
+\begin{publist}[resume]
+\item Yamato Miyatake, Parinya Punpongsanon, An Exploratory Study on Edible Conductive Materials Using Water and Oil-based Gels for Human-Food Interaction, The ACM Symposium on User Interface Software and Technology (UIST) 2025 Posters, 2025.
+\item Yamato Miyatake, Huaishu Peng, and Parinya Punpongsanon, Towards Personalized Food Texture through Internal Structure with 3D Printed Silicone Molds, The ACM Symposium on User Interface Software and Technology (UIST) 2025 Posters, 2025.
+\item Yamato Miyatake, Parinya Punpongsanon, An Exploratory Study on Fabricating of Unobtrusive Edible Tags, In ACM SIGGRAPH Asia Posters, 2024.
+\item Yamato Miyatake, Parinya Punpongsanon, Daisuke Iwai, and Kosuke Sato, Demonstration of interiqr: Unobtrusive Edible Tags using Food 3D Printing, The ACM Symposium on User Interface Software and Technology (UIST), 2022.
+\item Yamato Miyatake, Takefumi Hiraki, Tomosuke Maeda, Daisuke Iwai, and Kosuke Sato, HaptoMapping: Visuo-Haptic AR system using projection-based wearable haptic devices, In ACM SIGGRAPH Asia 2020 Emerging Technologies, 2020.
+\end{publist}
+
+\pubheading{JAPANESE PAPERS}
+\begin{publist}[resume]
+\item 見澤宏紀, 岡部兼也, 山田蒼, 宮武大和, プンポンサノン・パリンヤ, 着色要因による食欲変化と味覚への影響 ―クッキー事例として―, 電子情報通信学会 2026年総合大会, 2026.
+\item 岡部兼也, 宮武大和, プンポンサノン・パリンヤ, 機能推定による自動パラメータ生成を用いた3Dモデル編集の検討, 電子情報通信学会 2026年総合大会, 2026.
+\item 大澤璃乙, 山田蒼, 岡部兼也, 宮武大和, プンポンサノン・パリンヤ, 代替食品における食感と構造改変との関連性に関する研究, 電子情報通信学会 2026年総合大会, 2026.
+\item 山田蒼, 宮武大和, 雨坂宇宙, 岩井大輔, プンポンサノン・パリンヤ, 内部構造を制御した食品の咀嚼音特性に基づく食事摂取量推定, 電子情報通信学会 2026年総合大会, 2026.
+\item 神尾幸希, 宮武大和, プンポンサノン・パリンヤ, 食品の電気抵抗情報を用いた可食センサーに関する研究, 情報処理学会 第87回全国大会講演論文集, 2025.
+\item 松田綾美, 宮武大和, プンポンサノン・パリンヤ, 岩井大輔, 佐藤宏介, センサ内蔵スマートテーブルウェアの構築とロボットアームによるフィードバックの検討, 第66回システム制御情報学会研究発表講演会講演論文集 (SCI '22), 学生発表奨励賞, 2022.
+\item 宮武大和, プンポンサノン・パリンヤ, 岩井大輔, 佐藤宏介, 3Dプリント食品内部への情報埋め込み, 情報処理学会 第84回全国大会講演論文集, 2022.
+\end{publist}
+
+\section*{Skills}
+\textbf{Software}\quad Python (Pytorch), C++, Matlab, OpenCV, Unity, React, Fusion360\\
+\textbf{Hardware}\quad Micro controller, Sensors (Radar, video), 3D Printers
+
+\end{document}

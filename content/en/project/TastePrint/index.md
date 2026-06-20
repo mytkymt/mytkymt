@@ -6,7 +6,7 @@ tags:
 - "Fabrication"
 - "Food"
 presented:
-- "arXiv"
+- "Applied Food Research (2026)"
 date: "2026-04-28T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

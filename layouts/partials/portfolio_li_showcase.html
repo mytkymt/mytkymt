@@ -29,7 +29,7 @@
 {{ $js_tag_classes := delimit (apply (apply $item.Params.tags "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
 
 <!-- Start of project item -->
-<div class="row project-item isotope-item align-items-center ml-0 mb-4 justify-content-center">
+<div class="row project-item isotope-item align-items-center mx-0 mb-4 justify-content-center">
     <!-- Container for image -->
     <div class="col-lg-3 col-12 feature-image">
       {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
@@ -42,7 +42,7 @@
       {{end}}
     </div>
     <!-- Container for title -->
-    <div class="col-9">
+    <div class="col-12 col-lg-9 project-details">
       <div class="article-title left-text mb-0 mt-0">
         <!-- Check if there's a link for the item and apply it to the title -->
         {{- if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end -}}

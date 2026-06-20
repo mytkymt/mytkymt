@@ -93,7 +93,7 @@ body,
 .nav-link,
 .navbar-brand {
   font-weight: 300;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
 }
 
 h1,
@@ -109,21 +109,21 @@ strong,
 .nav-link.active,
 .dropdown-item-active {
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .navbar {
-    height: 70px;
-    background: $sta-menu-primary;
+  height: 70px;
+  background: $sta-menu-primary;
   /* this is the part that takes out the shadow & the only edit */
-    box-shadow: none;  
-    font-size: 18px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    padding: 0 1rem;
+  box-shadow: none;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  padding: 0 1rem;
 }
 
 .home-section {
@@ -144,12 +144,202 @@ strong,
 
 .article-subtitle {
   font-size: 0.9rem;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .project-image {
   border-radius: 5px;
-  width: 80%;  
-  margin: 0 auto; 
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
   object-fit: cover;
+}
+
+.publication-entry {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+
+.publication-number {
+  flex: 0 0 2rem;
+  padding: 0;
+  text-align: right;
+}
+
+.publication-content {
+  min-width: 0;
+  flex: 1 1 auto;
+  padding-left: 0.5rem;
+  overflow-wrap: anywhere;
+}
+
+.article-style,
+.article-container,
+.docs-article-container,
+.view-list-item,
+.pub-list-item,
+.project-details {
+  overflow-wrap: anywhere;
+}
+
+.article-style img,
+.article-style video,
+.article-style iframe,
+.article-style embed,
+.article-style object {
+  max-width: 100%;
+}
+
+.article-style pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    height: 50px;
+    padding: 0 0.75rem;
+  }
+
+  .navbar-toggler,
+  .nav-icons .nav-link {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ul.nav-icons {
+    padding: 0;
+  }
+
+  ul.nav-icons li {
+    padding-right: 0;
+  }
+
+  #navbar-main .navbar-collapse {
+    top: 50px;
+    max-height: calc(100vh - 50px);
+    padding: 0.5rem 0.75rem 0.75rem;
+    overflow-y: auto;
+    background: $sta-menu-primary;
+    border-top: 1px solid rgba($sta-menu-text, 0.12);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+  }
+
+  #navbar-main .main-menu-item .nav-item {
+    padding: 0 !important;
+  }
+
+  #navbar-main .main-menu-item .nav-item .nav-link {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 0.625rem 0.75rem !important;
+  }
+
+  .project-showcase {
+    margin-top: 2rem !important;
+  }
+
+  .project-showcase .project-item {
+    width: 100%;
+  }
+
+  .project-showcase .feature-image {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .project-image {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .project-details {
+    max-width: 520px;
+    padding: 1rem 0 0;
+  }
+
+  .background-experience {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-section {
+    padding: 40px 0 30px;
+  }
+
+  .home-section:first-of-type {
+    padding-top: 30px;
+  }
+
+  .section-heading h1,
+  .home-section > .container > h1 {
+    font-size: 2rem;
+  }
+
+  .article-container,
+  .docs-article-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .article-title {
+    font-size: 1.1rem;
+  }
+
+  .publication-entry {
+    padding-left: 0;
+  }
+
+  .publication-number {
+    flex-basis: 1.75rem;
+  }
+
+  .publication-content {
+    padding-left: 0.4rem;
+  }
+
+  .publication-content .btn-links,
+  .project-details .btn-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .publication-content .btn,
+  .project-details .btn {
+    min-height: 36px;
+    margin: 0 !important;
+  }
+
+  .experience-item {
+    margin-right: 0;
+    margin-left: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .experience-date,
+  .experience-description {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .experience-date {
+    margin-bottom: 0.2rem;
+    color: rgba(0, 0, 0, 0.62);
+    font-size: 0.85rem;
+  }
+
+  .site-footer .float-right {
+    float: none !important;
+    margin-left: 0.75rem;
+  }
 }
