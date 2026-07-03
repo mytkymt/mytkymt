@@ -18,7 +18,7 @@
     weight = 1
 
   [[ja.menu.main]]
-    name = "経歴"
+    name = "Experience"
     url = "#background"
     weight = 10
 
