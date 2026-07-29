@@ -68,13 +68,15 @@
               {{/* "Jan.2006" localises to "10月.2024" in Japanese, which is not
                    how a date is written — use 2024年10月 there instead. */}}
               {{ $date_layout := cond (eq site.Language.Lang "ja") "2006年1月" "Jan. 2006" }}
+              {{/* Each date is its own nowrap group, so a line can only ever
+                   break at the dash — never inside "2027年3月". */}}
               <div class="col-12 col-sm-4 experience-date">
-                {{ with .date_start }}{{ time.Format $date_layout . }}{{ end }} –
-                {{ if .date_end }}
-                {{ with .date_end }}{{ time.Format $date_layout . }}{{ end }}
-                {{ else }}
-                {{ i18n "present" }}
-                {{ end }}
+                {{- with .date_start }}<span class="date-part">{{ time.Format $date_layout . }}</span>{{ end }} –
+                {{ if .date_end -}}
+                  {{- with .date_end }}<span class="date-part">{{ time.Format $date_layout . }}</span>{{ end -}}
+                {{- else -}}
+                  <span class="date-part">{{ i18n "present" }}</span>
+                {{- end }}
               </div>
               <div class="col-12 col-sm-8 experience-description">
                 <div class="description">

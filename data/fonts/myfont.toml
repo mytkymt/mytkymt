@@ -3,20 +3,18 @@ name = "myfont"
 
 # Noto Sans for Latin, Noto Sans JP for Japanese.
 #
-# Noto Sans is a variable font with both `wdth` (62.5–100) and `wght` axes, so
-# Condensed ExtraLight is available as the tuple wdth=75, wght=200.
-# Noto Sans JP has no `wdth` axis — requesting one returns HTTP 400 — so
-# Japanese cannot be condensed and is loaded at normal width only.
+# Weights loaded (see custom.scss for where each is applied):
+#   Noto Sans     200  ExtraLight — English body text
+#   Noto Sans     300  Light      — Japanese pages' Latin runs
+#   Noto Sans     400  Regular
+#   Noto Sans     700  Bold       — headings and <strong>
+#   Noto Sans JP  300  Light      — Japanese body text
+#   Noto Sans JP  400  Regular
+#   Noto Sans JP  700  Bold
 #
-# Instances loaded (see custom.scss for where each is applied):
-#   Noto Sans    75,200  Condensed ExtraLight — English body text
-#   Noto Sans   100,300  Light                — Latin inside Japanese text
-#   Noto Sans   100,400  Regular
-#   Noto Sans   100,700  Bold                 — headings and <strong>
-#   Noto Sans JP    300  Light                — Japanese body text
-#   Noto Sans JP    400  Regular
-#   Noto Sans JP    700  Bold
-google_fonts = "family=Noto+Sans:wdth,wght@75,200;100,300;100,400;100,700&family=Noto+Sans+JP:wght@300;400;700"
+# All at normal width. Noto Sans does expose a `wdth` axis (Condensed is
+# available as wdth=75), but the condensed cut read as too light here.
+google_fonts = "family=Noto+Sans:wght@200;300;400;700&family=Noto+Sans+JP:wght@300;400;700"
 
 # Font families
 heading_font = "Noto Sans"

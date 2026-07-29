@@ -55,8 +55,7 @@ body,
 .dropdown-item,
 .nav-link,
 .navbar-brand {
-  font-weight: 200;      /* Noto Sans ExtraLight */
-  font-stretch: 75%;     /* ...in its Condensed width */
+  font-weight: 200; /* Noto Sans ExtraLight */
   letter-spacing: 0;
 }
 
@@ -73,7 +72,6 @@ strong,
 .nav-link.active,
 .dropdown-item-active {
   font-weight: 700;
-  font-stretch: 100%;  /* Bold stays at normal width, against the condensed body */
   letter-spacing: 0;
 }
 
@@ -203,10 +201,7 @@ a:focus {
 }
 
 /* Noto Sans JP does offer ExtraLight (200), but kanji strokes thin out to the
-   point of being hard to read at body size, so Japanese runs at Light (300).
-   It also has no `wdth` axis, so nothing on a Japanese page is condensed —
-   including the Latin words mixed into the text, which would otherwise change
-   width mid-sentence. */
+   point of being hard to read at body size, so Japanese runs at Light (300). */
 html[lang^="ja"] body,
 html[lang^="ja"] .article-container,
 html[lang^="ja"] .docs-article-container,
@@ -217,7 +212,6 @@ html[lang^="ja"] .dropdown-item,
 html[lang^="ja"] .nav-link,
 html[lang^="ja"] .navbar-brand {
   font-weight: 300;
-  font-stretch: 100%;
 }
 
 body {
@@ -237,12 +231,26 @@ html[lang^="ja"] li {
   overflow-wrap: anywhere;
 }
 
-/* Measure: unbounded text lines are hard to track back to the next line. */
+/* Measure.
+   A cap for running prose, so a line is not so long that the eye loses the
+   next one. The homepage sections all sit on the same col-lg-8 grid column
+   (~770px here), which is under this cap — the cap only binds on very wide
+   viewports, and every section still wraps at the same width.
+
+   Publication entries are deliberately excluded: they are citations that get
+   scanned rather than read, and capping them left their right edge well short
+   of every other section's. */
+:root {
+  --measure: 46em;
+}
+
 .article-style p,
+.article-style li,
 .wg-blank p,
-.wg-about p,
-.wg-blank li {
-  max-width: 42em;
+.wg-blank li,
+.wg-blank blockquote,
+.wg-about p {
+  max-width: var(--measure);
 }
 
 /* Headings sit tighter than body text and should not inherit 1.9 leading. */
@@ -290,6 +298,20 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   margin: 0 auto;
   object-fit: cover;
+}
+
+/* Experience dates.
+   At full body size "2024年10月 – 2027年3月" needs 238px in a 237px content box,
+   so every two-part date wrapped onto a second line. Dates are metadata rather
+   than running text, so they take a smaller size, and each date is a nowrap
+   group (`.date-part`) so a break can only land on the dash. */
+.experience-date {
+  font-size: 0.9rem;
+  white-space: normal;
+}
+
+.experience-date .date-part {
+  white-space: nowrap;
 }
 
 /* Publication list: 22 entries in one flat run is hard to scan, so give each
