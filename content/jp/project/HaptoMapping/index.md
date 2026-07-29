@@ -1,18 +1,25 @@
 ---
 title: "HaptoMapping"
-subtitle: 'Visuo-Haptic Augmented Reality by Embedding User-Imperceptible Tactile Display Control Signals in a Projected Image'
+subtitle: "映像に人の目に見えない信号を埋め込み、映像と触感を重ねて提示するAR"
 summary: 
 tags:
 - Haptics
 presented: 
 - "IEEE TVCG'23"
-- "IEEE VR'22 (Oral)"
-- "SIGGRAPH Asia'20 (Demo)"
-- "EuroHaptics'20 (Oral)"
+- "IEEE VR'22 （口頭発表）"
+- "SIGGRAPH Asia'20 （デモ発表）"
+- "EuroHaptics'20 （口頭発表）"
 date: "2023-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
+
+authors:
+  - Yamato Miyatake
+  - Takefumi Hiraki
+  - Tomosuke Maeda
+  - Daisuke Iwai
+  - Kosuke Sato
 
 image:
   caption: 
@@ -31,4 +38,9 @@ url_video: "https://youtu.be/Xt9G5ohcn5M"
 #   Otherwise, set `slides = ""`.
 slides: example
 ---
-HaptoMapping is a projection-based visuo-haptic augmented reality (VHAR) system, that can render visual and haptic content independently and present consistent visuo-haptic sensations on physical surfaces.
+
+プロジェクタで投影する映像に**知覚できない制御信号を埋め込み**、装着型の触覚デバイスがこれを読み取ることで、映像に対応した触感を提示するAR技術です。
+
+映像と触覚をそれぞれ独立に制御できるため、実物体の表面上で見た目と触り心地を一致させて重畳できます。
+
+IEEE VR 2022 で口頭発表、学術誌 IEEE TVCG に掲載されたほか、SIGGRAPH Asia 2020、EuroHaptics 2020 でも発表しています。

@@ -1,11 +1,25 @@
 # Font style metadata
 name = "myfont"
 
-# Optional Google font URL
-#google_fonts = "Jost:400,700|Montserrat|Roboto+Mono"
+# Noto Sans for Latin, Noto Sans JP for Japanese.
+#
+# Noto Sans is a variable font with both `wdth` (62.5–100) and `wght` axes, so
+# Condensed ExtraLight is available as the tuple wdth=75, wght=200.
+# Noto Sans JP has no `wdth` axis — requesting one returns HTTP 400 — so
+# Japanese cannot be condensed and is loaded at normal width only.
+#
+# Instances loaded (see custom.scss for where each is applied):
+#   Noto Sans    75,200  Condensed ExtraLight — English body text
+#   Noto Sans   100,300  Light                — Latin inside Japanese text
+#   Noto Sans   100,400  Regular
+#   Noto Sans   100,700  Bold                 — headings and <strong>
+#   Noto Sans JP    300  Light                — Japanese body text
+#   Noto Sans JP    400  Regular
+#   Noto Sans JP    700  Bold
+google_fonts = "family=Noto+Sans:wdth,wght@75,200;100,300;100,400;100,700&family=Noto+Sans+JP:wght@300;400;700"
 
 # Font families
-heading_font = "Helvetica Neue"
-body_font = "Helvetica Neue"
-nav_font = "Helvetica Neue"
+heading_font = "Noto Sans"
+body_font = "Noto Sans"
+nav_font = "Noto Sans"
 mono_font = "SFMono-Regular"

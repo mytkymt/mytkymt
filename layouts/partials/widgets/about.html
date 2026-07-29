@@ -10,9 +10,6 @@
   {{ $author = $page.File.TranslationBaseName }}
 {{ end }}
 
-{{ warnf "DEBUG (about.html) – $author: %s, page slug: %s, page.File.Path: %s" $author $page.File.TranslationBaseName $page.File.Path }}
-{{ warnf "%#v" $page.Params }}
-
 {{ $person_page_path := (printf "/authors/%s" $author) }}
 {{ $person_page := site.GetPage $person_page_path }}
 {{ if not $person_page }}
@@ -34,20 +31,30 @@
       <img class="avatar {{if eq $avatar_shape "square"}}avatar-square{{else}}avatar-circle{{end}}" src="{{ $avatar_image.RelPermalink }}" alt="{{$person_page.Title}}">
       {{ end }}
 
+      {{/* Role and affiliation are not section headings — they are supporting
+           text for the name. Marking them up as <h3> put empty and out-of-order
+           headings into the document outline, so they are plain elements now. */}}
       <div class="portrait-title">
-        <h2>{{ $person_page.Title }}</h2>
-        {{ with $person.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
+        {{/* The person's name is the single <h1> of the homepage. */}}
+        {{ if $page.Params.widget }}<h1 class="portrait-name">{{ $person_page.Title }}</h1>{{ else }}<p class="portrait-name">{{ $person_page.Title }}</p>{{ end }}
+        {{ with $person.role }}<p class="portrait-role">{{ . | markdownify | emojify }}</p>{{ end }}
 
-        {{ range $person.organizations }}
-        <h3>
-          {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
-          <span>{{ .name }}</span>
-          {{ if .url }}</a>{{ end }}
-        </h3>
+        {{/* Skip malformed entries, so a `url` without a `name` can never emit
+             an empty, unnamed link (as the previous YAML did). */}}
+        {{ range $org := $person.organizations }}
+        {{ with $org.name }}
+        <p class="portrait-org">
+          {{ with $org.url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ $org.name }}{{ with $org.url }}</a>{{ end }}
+        </p>
+        {{ end }}
         {{ end }}
       </div>
 
-      <ul class="network-icon" aria-hidden="true">
+      {{/* This list was `aria-hidden="true"` while still containing focusable
+           links: screen-reader users lost every contact link, and keyboard
+           users landed on announced-as-nothing stops. Each link now carries a
+           visible-to-AT name via .sr-only. */}}
+      <ul class="network-icon">
         {{ range $person.social }}
         {{ $pack := or .icon_pack "fas" }}
         {{ $pack_prefix := $pack }}
@@ -62,15 +69,28 @@
         {{ else if in (slice "http" "https") $scheme }}
           {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
         {{ end }}
+        {{/* Accessible name for the link. Icon fonts convey nothing to a
+             screen reader, so each entry gets visually-hidden text. */}}
+        {{ $labels := dict
+            "envelope"    (i18n "social_email")
+            "linkedin-in" "LinkedIn"
+            "x-twitter"   "X"
+            "github"      "GitHub"
+            "google-scholar" "Google Scholar"
+            "orcid"       "ORCID"
+            "researchgate" "ResearchGate"
+        }}
+        {{ $label := or .label (index $labels .icon) .icon }}
         <li>
           <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
             {{ if eq .icon "x-twitter" }}
-            <svg class="big-icon" viewBox="0 0 1200 1227" role="img" aria-label="X" xmlns="http://www.w3.org/2000/svg" style="width: 2rem; height: 2rem; fill: currentColor; vertical-align: middle;">
+            <svg class="big-icon" viewBox="0 0 1200 1227" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" style="width: 2rem; height: 2rem; fill: currentColor; vertical-align: middle;">
               <path d="M714.163 519.284 1160.89 0H1055.06L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.831l409.645-476.152 327.196 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.474-67.894L144.011 79.694h162.604l304.797 436.007 47.474 67.894 396.2 566.721H892.482L569.165 687.854v-.026Z"/>
             </svg>
             {{ else }}
-            <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} big-icon"></i>
+            <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} big-icon" aria-hidden="true"></i>
             {{ end }}
+            <span class="sr-only">{{ $label }}</span>
           </a>
         </li>
         {{ end }}
@@ -81,7 +101,7 @@
   <div class="col-12 col-lg-8">
 
     {{/* Only display widget title in explicit instances of about widget, not in author pages. */}}
-    {{ if and $page.Params.widget $page.Title }}<h1>{{ $page.Title | markdownify | emojify }}</h1>{{ end }}
+    {{ if and $page.Params.widget $page.Title }}<h2>{{ $page.Title | markdownify | emojify }}</h2>{{ end }}
 
     {{ $person_page.Content }}
 

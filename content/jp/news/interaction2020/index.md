@@ -1,11 +1,11 @@
 ---
-Title: "Demonstration at Interaction 2020"
-date: 2020-03-09
-
+title: "インタラクション 2020 でデモ発表を行いました"
+date: 2020-03-09T00:00:00+09:00
+type: "news"
 projects: [HaptoMapping]
 ---
-The following paper is presented in the interactive session (demonstration) at [Interaction 2020](https://www.interaction-ipsj.org/2020/).
+[インタラクション 2020](https://www.interaction-ipsj.org/2020/) のインタラクティブセッション（デモ発表）で、以下の論文を発表しました。
 
-宮武 大和, 平木 剛史, 前田 智祐, 岩井 大輔, 佐藤 宏介.</br> 
-HaptoMapping: 映像への不可視な情報埋め込みによる視触覚重畳提示.</br>
-[[PDF link]](https://www.miyatakeyama.to/publication/conference/2020/interaction/Interaction.pdf)
+宮武大和、平木剛史、前田智祐、岩井大輔、佐藤宏介.
+「HaptoMapping: 映像への不可視な情報埋め込みによる視触覚重畳提示」
+[[PDF]](https://www.miyatakeyama.to/publication/conference/2020/interaction/Interaction.pdf)

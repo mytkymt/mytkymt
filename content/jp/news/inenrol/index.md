@@ -1,7 +1,5 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
-title: "Enrolled in Engineering Science, graduate school of Osaka University"
+title: "大阪大学 大学院基礎工学研究科に進学しました"
 date: 2020-04-01T23:32:55+09:00
-
+type: "news"
 ---

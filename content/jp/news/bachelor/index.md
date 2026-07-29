@@ -1,7 +1,5 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
-title: "Graduated from Osaka University"
+title: "大阪大学 基礎工学部を卒業しました"
 date: 2020-03-30T23:32:55+09:00
-
+type: "news"
 ---

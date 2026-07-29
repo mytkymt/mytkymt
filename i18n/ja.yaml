@@ -9,7 +9,7 @@
 - id: home
   translation: Home
 - id: close
-  translation: Close
+  translation: 閉じる
 - id: languages
   translation: Languages
 - id: related
@@ -58,18 +58,12 @@
   translation: ダウンロード
 - id: interests
   translation: 興味・関心
-- id: education
-  translation: 学歴
-- id: experience
-  translation: 経歴
 - id: user_profile_latest
   translation: Latest
 - id: see_certificate
   translation: See certificate
-- id: present
-  translation: Present
 - id: more_pages
-  translation: See all
+  translation: すべて見る
 - id: more_posts
   translation: 投稿一覧
 - id: more_talks
@@ -136,10 +130,6 @@
   translation: Slides
 - id: authors
   translation: 著者
-- id: search
-  translation: Search
-- id: search_placeholder
-  translation: 検索...
 - id: search_results
   translation: results found
 - id: search_no_results
@@ -158,3 +148,25 @@
   translation: 詳細を見る
 - id: published_with
   translation: Published with {wowchemy} — the free, {repo_link}open source{/repo_link} website builder that empowers creators.
+
+# --- Added: accessibility labels and Japanese UI wording ---
+- id: skip_to_content
+  translation: 本文へスキップ
+- id: social_email
+  translation: メール
+- id: academic_service
+  translation: 学会活動
+- id: project_members
+  translation: メンバー
+- id: project_presented_at
+  translation: 発表先
+- id: search
+  translation: 検索
+- id: search_placeholder
+  translation: サイト内を検索...
+- id: education
+  translation: 学歴
+- id: experience
+  translation: 経歴
+- id: present
+  translation: 現在

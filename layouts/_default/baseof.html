@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{{- $language_code := site.LanguageCode | default "en-us" -}}
+<html lang="{{$language_code}}" {{ if in site.Data.i18n.rtl.rtl $language_code }}dir="rtl"{{end}}>
+
+{{ partial "site_head" . }}
+
+{{- $highlight_active_link := site.Params.main_menu.highlight_active_link | default true -}}
+<body id="top" data-spy="scroll" data-offset="70" data-target="{{ if or .IsHome (eq .Type "widget_page") | and $highlight_active_link }}#navbar-main{{else}}#TableOfContents{{end}}" {{ if not (.Scratch.Get "light") }}class="dark"{{end}}>
+
+  {{/* Skip link: the first focusable element on the page, so keyboard and
+       screen-reader users can jump past the navbar instead of tabbing through
+       it on every page. Visible only while focused (see custom.scss). */}}
+  <a class="skip-link" href="#main-content">{{ i18n "skip_to_content" }}</a>
+
+  {{ partial "search" . }}
+
+  {{ partial "navbar" . }}
+
+  {{/* `<main>` landmark — the upstream theme ships without one. */}}
+  <main id="main-content" tabindex="-1">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "site_js" . }}
+
+  {{/* Docs and Updates layouts include the site footer in a different location. */}}
+  {{ if not (in (slice "book" "docs" "updates") .Type) }}
+  <div class="container">
+    {{ partial "site_footer" . }}
+  </div>
+  {{ end }}
+
+  {{ partial "citation" . }}
+
+</body>
+</html>

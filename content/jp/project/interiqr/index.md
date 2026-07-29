@@ -1,6 +1,6 @@
 ---
 title: "interiqr"
-subtitle: "Unobtrusive Edible Tags using Food 3D Printing"
+subtitle: "3Dプリント食品の内部に、見た目を変えずに情報を埋め込む"
 summary: 
 tags:
 - "Fabrication"
@@ -9,12 +9,18 @@ date: "2022-04-27T00:00:00Z"
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
+authors:
+  - Yamato Miyatake
+  - Parinya Punpongsanon
+  - Daisuke Iwai
+  - Kosuke Sato
+
 #image:
 #  caption: 
 #  focal_point: Smart
 
 presented: 
-- "ACM UIST'22 (Oral and Demo)"
+- "ACM UIST'22 （口頭発表・デモ）"
 
 #url_code: ""
 url_pdf: "https://www.dropbox.com/s/0v4rypppd5t4pc8/UIST_2022_Interiqr_Miyatake.pdf?dl=0"
@@ -30,5 +36,11 @@ url_video_name: "Teaser"
 #   Otherwise, set `slides = ""`.
 slides: example
 ---
-We present interiqr, a method that utilizes the infill parameter in the 3D printing process to embed information inside the food that is difficult to recognize with the human eye. Our key idea is to utilize the air space or secondary materials to generate a specific pattern inside the food without changing the model geometry. As a result, our method exploits the patterns that appear as hidden edible tags to store the data and simultaneously adds them to a 3D printing pipeline. Our contribution also includes the framework that connects the user with a data-embedding interface through the food 3D printing process, and the decoding system allows the user to decode the information inside the 3D printed food through backlight illumination and a simple image processing technique. Finally, we evaluate the usability of our method under different settings and demonstrate our method through the example application scenarios.<br>
 
+3Dプリント時の内部充填パラメータを利用し、**外観を変えることなく食品の内部に情報を埋め込む**手法です。
+
+食品にラベルやコードを貼付すると外観が損なわれ、おいしさの感じ方にも影響します。本手法では、内部の空隙の配置をパターンとして符号化するため、外形はまったく変わりません。読み取りは背面から光を透過させて撮影し、画像処理を施すことで完結します。
+
+産地・原材料・アレルギー情報などを食品自体に保持させる用途を想定しています。
+
+ACM UIST 2022 で口頭発表およびデモを行い、海外メディア New Atlas にも取り上げられました。

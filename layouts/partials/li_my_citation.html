@@ -12,7 +12,7 @@
     <span class="article-metadata li-cite-author">
       {{ partial "page_metadata_authors" . }}
     </span>
-    "{{ .Title }}",
+    <span{{ if and (eq site.Language.Lang "ja") (not (findRE "[\\p{Hiragana}\\p{Katakana}]" .Title)) }} lang="en"{{ end }}>"{{ .Title }}"</span>,
     {{ if .Params.publication_short }}
     {{- .Params.publication_short | markdownify -}},
     {{ else if .Params.publication }}

@@ -1,0 +1,51 @@
+{{/*
+  Highwire Press `citation_*` tags.
+
+  These are the tags Google Scholar, Semantic Scholar, Zotero and most
+  reference managers read to index a paper page and build a citation from it.
+  The theme emits none of them, so publication pages were invisible to every
+  academic crawler.
+*/}}
+{{- if eq .Type "publication" -}}
+{{- $skip_tags := slice "Journal paper" "Conference paper" "Preprint" "Press" "Poster" "Demo" -}}
+{{- $topics := slice -}}
+{{- range .Params.tags -}}{{ if not (in $skip_tags .) }}{{ $topics = $topics | append . }}{{ end }}{{- end -}}
+  <meta name="citation_title" content="{{ .Title | plainify }}">
+  {{- range .Params.authors }}
+  <meta name="citation_author" content="{{ . }}">
+  {{- end }}
+  {{- with .Date }}
+  <meta name="citation_publication_date" content="{{ .Format "2006/01/02" }}">
+  <meta name="citation_date" content="{{ .Format "2006/01/02" }}">
+  {{- end }}
+  {{- $pub := .Params.publication | plainify }}
+  {{- with $pub }}
+    {{- $types := $.Params.publication_types | default (slice "0") }}
+    {{- if in (slice "1" "2") (index $types 0) }}
+  <meta name="citation_journal_title" content="{{ . }}">
+    {{- else }}
+  <meta name="citation_conference_title" content="{{ . }}">
+    {{- end }}
+  {{- end }}
+  {{- with .Params.doi }}
+  <meta name="citation_doi" content="{{ . }}">
+  {{- end }}
+  {{- with .Params.url_pdf }}
+  <meta name="citation_pdf_url" content="{{ . | absURL }}">
+  {{- end }}
+  {{- with .Params.abstract }}
+  <meta name="citation_abstract" content="{{ . | plainify | truncate 4000 "" }}">
+  {{- end }}
+  {{- with $topics }}
+  <meta name="citation_keywords" content="{{ delimit . "; " }}">
+  {{- end }}
+  <meta name="citation_language" content="{{ site.Language.Lang }}">
+{{- end -}}
+
+{{/* Topical keywords, so a query like "food printing" / "フードプリント" has
+     something explicit to match on the homepage. */}}
+{{- if .IsHome -}}
+  {{- with site.Params.profiles.knows_about }}
+  <meta name="keywords" content="{{ delimit . ", " }}">
+  {{- end }}
+{{- end -}}

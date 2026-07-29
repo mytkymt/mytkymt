@@ -7,34 +7,51 @@
   languageCode = "en-us"
   contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
 
+  [en.params]
+    description = "Yamato Miyatake is an HCI researcher at Saitama University designing eating experiences through human-food interaction and digital fabrication. Using 3D food printing, his work covers information embedded inside food (interiqr, EateryTag), spatial taste design (TastePrint), and computational food texture design (ChewTect). Published at ACM UIST, DIS, SIGGRAPH Asia, IEEE VR and TVCG."
+
 # Configure the Japanese version of the site.
+# Audience: undergraduates and media, not researchers — so the navigation and
+# section labels are in plain Japanese and the ordering leads with "what is this
+# research about" rather than with the publication list.
 [ja]
- languageCode = "ja-jp"
+ languageCode = "ja"
  contentDir = "content/jp"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+ # Japanese-readable site title, so the tab and search results are not
+ # English-only for Japanese visitors.
+ title = "宮武大和 | Yamato Miyatake"
+
+  [ja.params]
+    description = "宮武大和（みやたけ やまと）は、HCI（ヒューマン・コンピュータ・インタラクション）を専門とする埼玉大学の博士後期課程の研究者です。Human-Food Interaction を研究領域とし、食品3Dプリンティング（フードプリント）などのデジタルファブリケーションを用いて、食品への情報埋め込み、味の空間的な設計、食感の設計といった「食体験の設計」に取り組んでいます。"
 
   [[ja.menu.main]]
-    name = "Home"
+    name = "ホーム"
     url = "#about"
     weight = 1
 
   [[ja.menu.main]]
-    name = "Experience"
-    url = "#background"
-    weight = 10
+    name = "研究内容"
+    url = "#research"
+    weight = 15
 
   [[ja.menu.main]]
-    name = "Projects"
+    name = "プロジェクト"
     url = "#projects"
     weight = 20
 
   [[ja.menu.main]]
-    name = "Publications"
-    url = "#publications"
+    name = "経歴"
+    url = "#background"
     weight = 30
 
   [[ja.menu.main]]
-    name = "CV"
-    url = "/files/CV.pdf"
+    name = "業績"
+    url = "#publications"
+    weight = 40
+
+  [[ja.menu.main]]
+    name = "取材・お問い合わせ"
+    url = "#contact"
     weight = 50
 
 # Uncomment the lines below to configure your website in a second language.

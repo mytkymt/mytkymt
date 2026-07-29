@@ -25,6 +25,10 @@ googleAnalytics = ""
 # Name of Academic theme folder in `themes/`.
 theme = "academic"
 
+# Emit /robots.txt (Hugo skips it unless this is true) so crawlers get an
+# explicit allow plus the sitemap location.
+enableRobotsTXT = true
+
 # Get last modified date for content from Git?
 enableGitInfo = false
 buildFuture = true
@@ -49,8 +53,17 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   publication_types = "/publication-type/:slug/"
 
 [outputs]
-  home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
+  home = [ "HTML", "RSS", "JSON", "WebAppManifest", "LLMS" ]
   section = [ "HTML", "RSS" ]
+
+# /llms.txt — a plain-text digest of who this researcher is, what the research
+# topics are, and the full publication list with DOIs. Cheap for an LLM agent to
+# read end-to-end compared with crawling the rendered pages.
+[outputFormats.LLMS]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
 
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]

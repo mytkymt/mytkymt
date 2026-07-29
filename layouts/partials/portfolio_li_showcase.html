@@ -56,18 +56,21 @@
         {{ $item.Params.subtitle | markdownify | emojify }}
       </div>
 
-      {{/*Members*/}}
+      {{/*Members — hidden entirely when the project has no `authors`, which
+           previously rendered a dangling "Members:" label with nothing after it. */}}
+      {{ with $item.Param "authors" }}
       <div class="article-subtitle project-members">
-      <span><b>Members: </b></span>
+      <span><b>{{ i18n "project_members" }}: </b></span>
       <span class="">
         {{ partial "page_metadata_authors" $item }}
       </span>
       </div>
+      {{ end }}
 
       {{ $presented := $item.Params.presented }}
       {{ if $presented }}
         <div class="article-subtitle left-text ml-0 mr-0 mb-2 mt-0">
-          <b>Presented at</b> 
+          <b>{{ i18n "project_presented_at" }}</b>
           {{ $length := len $item.Params.presented }}
           {{ range $index, $element := $item.Params.presented }}
             {{ $element | markdownify | emojify }}

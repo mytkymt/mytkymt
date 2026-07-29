@@ -1,6 +1,6 @@
 ---
 title: "TastePrint"
-subtitle: "A 3D Food Printing System for Layer-wise Taste Distribution via Airbrushed Liquid Seasoning"
+subtitle: "液体調味料をエアブラシで吹きつけ、層ごとに味を変えて印刷する"
 summary:
 tags:
 - "Fabrication"
@@ -28,4 +28,9 @@ url_pdf: ""
 #   Otherwise, set `slides = ""`.
 slides: example
 ---
-ChewTect explores temporal food texture design through computational molding.
+
+食品を3Dプリンタで造形する過程で、液体調味料を霧状にして層間に吹きつけることにより、**1つの食品のなかで味の分布を制御する**手法です。
+
+味つけを全体に一様にかけるのではなく、層ごとに変化させることで、食べ進めるにつれて味わいが変わるといった食体験の設計が可能になります。
+
+学術誌 Applied Food Research（2026年）に掲載されました。

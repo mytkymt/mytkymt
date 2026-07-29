@@ -1,42 +1,5 @@
-@font-face {
-  font-family: "SiteHelveticaNeue";
-  src: local("Helvetica Neue UltraLight"), local("HelveticaNeue-UltraLight"),
-    local("Helvetica Neue Thin"), local("HelveticaNeue-Thin");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SiteHelveticaNeue";
-  src: local("Helvetica Neue Light"), local("HelveticaNeue-Light");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SiteHelveticaNeue";
-  src: local("Helvetica Neue"), local("HelveticaNeue");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SiteHelveticaNeue";
-  src: local("Helvetica Neue Medium"), local("HelveticaNeue-Medium");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SiteHelveticaNeue";
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold");
-  font-weight: 700;
-  font-style: normal;
-}
-
-:root {
-  --site-sans-font: "SiteHelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+/* Font stack is declared under "Readability" below — Latin from Noto Sans,
+   Japanese from Noto Sans JP, both loaded via data/fonts/myfont.toml. */
 
 html,
 body,
@@ -92,7 +55,8 @@ body,
 .dropdown-item,
 .nav-link,
 .navbar-brand {
-  font-weight: 300;
+  font-weight: 200;      /* Noto Sans ExtraLight */
+  font-stretch: 75%;     /* ...in its Condensed width */
   letter-spacing: 0;
 }
 
@@ -109,7 +73,101 @@ strong,
 .nav-link.active,
 .dropdown-item-active {
   font-weight: 700;
+  font-stretch: 100%;  /* Bold stays at normal width, against the condensed body */
   letter-spacing: 0;
+}
+
+/*************************************************
+ *  Accessibility
+ **************************************************/
+
+/* Visually hidden, but read by assistive tech. Used for icon-link names. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link: off-screen until focused, then pinned to the top-left. */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0.5rem;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background: #ffffff;
+  color: #1a1a1a !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* `<main>` carries tabindex="-1" so the skip link can move focus into it;
+   suppress the resulting outline on that container only. */
+#main-content:focus {
+  outline: none;
+}
+
+/* The theme set `outline: none` without providing a replacement, so keyboard
+   users had no visible indication of where focus was. Outline on :focus first
+   (works everywhere), then withdrawn for mouse clicks via :focus-visible. */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+summary:focus,
+[tabindex]:not([tabindex="-1"]):focus {
+  outline: 3px solid #1a1a1a !important;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+summary:focus:not(:focus-visible),
+[tabindex]:not([tabindex="-1"]):focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+/* Hover/focus must not reduce contrast — the theme faded links to #d7d7d7
+   (1.4:1), so links effectively disappeared on interaction. */
+a:hover,
+a:focus {
+  color: $sta-link-hover;
+  text-decoration: underline;
+}
+
+/* Minimum 24x24 CSS px pointer targets (WCAG 2.5.8). Inline links inside a
+   sentence are exempt, so only standalone icon controls are sized here. */
+.nav-icons .nav-link,
+.back-to-top,
+.navbar-toggler,
+.network-icon li a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The profile icon row now has taller hit areas; keep it from wrapping oddly. */
+.network-icon li {
+  margin-right: 2px;
 }
 
 .navbar {
@@ -126,11 +184,89 @@ strong,
   padding: 0 1rem;
 }
 
+/* Fixed navbar would otherwise cover the target when jumping to #anchors. */
+:target,
+#main-content {
+  scroll-margin-top: 80px;
+}
+
+/*************************************************
+ *  Readability
+ **************************************************/
+
+/* Latin glyphs resolve from Noto Sans; Japanese falls through to Noto Sans JP.
+   Order matters — listing Noto Sans first keeps ASCII off the CJK face, whose
+   Latin glyphs are wider and sit differently on the baseline. */
+:root {
+  --site-sans-font: "Noto Sans", "Noto Sans JP", "Hiragino Sans",
+    "Yu Gothic Medium", Meiryo, sans-serif;
+}
+
+/* Noto Sans JP does offer ExtraLight (200), but kanji strokes thin out to the
+   point of being hard to read at body size, so Japanese runs at Light (300).
+   It also has no `wdth` axis, so nothing on a Japanese page is condensed —
+   including the Latin words mixed into the text, which would otherwise change
+   width mid-sentence. */
+html[lang^="ja"] body,
+html[lang^="ja"] .article-container,
+html[lang^="ja"] .docs-article-container,
+html[lang^="ja"] .article-metadata,
+html[lang^="ja"] .article-subtitle,
+html[lang^="ja"] .pub-list-item,
+html[lang^="ja"] .dropdown-item,
+html[lang^="ja"] .nav-link,
+html[lang^="ja"] .navbar-brand {
+  font-weight: 300;
+  font-stretch: 100%;
+}
+
+body {
+  line-height: 1.75;
+}
+
+/* Japanese has no inter-word spaces, so it needs more leading and a line
+   length cap; long unbroken runs otherwise stretch the full container. */
+html[lang^="ja"] body {
+  line-height: 1.9;
+}
+
+html[lang^="ja"] p,
+html[lang^="ja"] li {
+  /* Avoid breaking a line right before a closing bracket or punctuation. */
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+/* Measure: unbounded text lines are hard to track back to the next line. */
+.article-style p,
+.wg-blank p,
+.wg-about p,
+.wg-blank li {
+  max-width: 42em;
+}
+
+/* Headings sit tighter than body text and should not inherit 1.9 leading. */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.35;
+}
+
+/* Section rhythm: sections previously ran together with no visual separation
+   because every background colour in the theme is the same white. */
 .home-section {
   background-color: $sta-home-section-odd;
-  padding: 50px 0 30px 0;
+  padding: 4rem 0 3.5rem;
   animation: intro 0.3s both;
   animation-delay: 0.15s;
+}
+
+.home-section + .home-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.section-heading h2,
+.home-section > .container > h2 {
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.01em;
 }
 
 .article-title {
@@ -156,16 +292,28 @@ strong,
   object-fit: cover;
 }
 
+/* Publication list: 22 entries in one flat run is hard to scan, so give each
+   row breathing space and let the author's own name stand out. */
 .publication-entry {
   display: flex;
   align-items: flex-start;
   padding-left: 1rem;
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.9rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  line-height: 1.65;
+}
+
+.publication-entry:last-child {
+  border-bottom: 0;
 }
 
 .publication-number {
   flex: 0 0 2rem;
   padding: 0;
   text-align: right;
+  color: rgba(0, 0, 0, 0.58); /* 5.2:1 — 0.45 was 3.35:1 */
+  font-variant-numeric: tabular-nums;
 }
 
 .publication-content {
@@ -173,6 +321,65 @@ strong,
   flex: 1 1 auto;
   padding-left: 0.5rem;
   overflow-wrap: anywhere;
+}
+
+/* Publication-type headings ("国際会議（口頭発表）" etc.) were the same weight
+   as the entries beneath them, so the grouping was invisible. */
+.wg-publication h3 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.wg-publication h3:first-of-type {
+  margin-top: 0.5rem;
+}
+
+/* Profile column */
+.portrait-name {
+  margin: 20px 0 10px;
+  font-size: 1.75em;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #000;
+}
+
+.portrait-role,
+.portrait-org {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+/* Research-intro section: numbered topics read better as distinct blocks. */
+.wg-blank h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.wg-blank hr {
+  margin: 2.25rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* "> 関連プロジェクト:" callouts */
+.wg-blank blockquote {
+  margin: 1rem 0 0;
+  padding: 0.65rem 1rem;
+  border-left: 3px solid rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.03);
+  font-size: 0.92rem;
+  /* The theme's blockquote grey (#7a7a7a) drops to 4.29:1 over this tint. */
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.wg-blank blockquote p {
+  margin-bottom: 0;
 }
 
 .article-style,
@@ -202,6 +409,24 @@ strong,
   .navbar {
     height: 50px;
     padding: 0 0.75rem;
+  }
+
+  /* The bilingual site title is long enough to run under the search and
+     language icons on narrow screens; keep it inside its own column. */
+  .navbar-brand-mobile-wrapper {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    padding-right: 0.75rem; /* gap before the search / language icons */
+  }
+
+  .navbar-brand-mobile-wrapper .navbar-brand {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .navbar-toggler,

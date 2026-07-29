@@ -1,17 +1,24 @@
 # Theme metadata
-name = "ebony_clay"
+#
+# Monochrome look, but every foreground colour here is checked against the
+# white background for WCAG 2.1 AA (4.5:1 body text, 3:1 UI / large text).
+# The previous values failed: menu #aeacac = 2.26:1, link #868383 = 3.76:1,
+# and link_hover #d7d7d7 = 1.44:1, which made links disappear on hover/focus.
+name = "monochrome"
 
 # Is theme light or dark?
 light = true
 
 # Primary
-primary = "#ffffff"
+# Was #ffffff, which rendered every `.btn-primary` / `.btn-outline-primary`
+# white-on-white — the "Copy" button in the citation dialog was invisible.
+primary = "#3d3d3d"
 
 # Menu
 menu_primary = "#ffffff"
-menu_text = "#aeacac"
-menu_text_active = "#565454"
-menu_title = "#565454"
+menu_text = "#5a5a5a"         # 6.4:1
+menu_text_active = "#1a1a1a"  # 16.1:1
+menu_title = "#1a1a1a"
 
 # Backgrounds
 background = "#ffffff"
@@ -22,5 +29,5 @@ dark_background = ""
 dark_home_section_odd = ""
 dark_home_section_even = ""
 
-link = "#868383"
-link_hover = "#d7d7d7"
+link = "#565454"        # 7.0:1 — still grey, but readable as body text
+link_hover = "#000000"  # darkens on hover/focus instead of fading out

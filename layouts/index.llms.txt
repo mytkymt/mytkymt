@@ -1,0 +1,57 @@
+{{- $person := "" -}}
+{{- range first 1 (where (where site.Pages "Section" "authors") "Params.superuser" true) -}}
+  {{- $person = . -}}
+{{- end -}}
+# {{ site.Title }}
+
+> {{ site.Params.description | default site.Params.profiles.description }}
+
+{{ with $person }}
+## Researcher
+
+- Name: {{ .Title }}{{ with site.Params.profiles.alternate_names }} (also written: {{ delimit . ", " }}){{ end }}
+- Role: {{ .Params.role }}
+{{- range .Params.organizations }}{{ with .name }}
+- Affiliation: {{ . }}{{ end }}{{ end }}
+- Homepage: {{ site.BaseURL }}
+{{- with site.Params.profiles.orcid }}
+- ORCID: {{ . }}{{ end }}
+{{- /* Social links and `same_as` overlap, so merge and dedupe. */ -}}
+{{- $profiles := slice -}}
+{{- range .Params.social }}{{ if in (slice "http" "https") (urls.Parse .link).Scheme }}{{ $profiles = $profiles | append .link }}{{ end }}{{ end -}}
+{{- range site.Params.profiles.same_as }}{{ $profiles = $profiles | append . }}{{ end -}}
+{{- range ($profiles | uniq) }}
+- Profile: {{ . }}{{ end }}
+
+## Research topics
+
+{{ range site.Params.profiles.knows_about }}- {{ . }}
+{{ end }}
+## Biography
+
+{{ .Scratch.Set "bio" ($person.Content | plainify | chomp) }}{{ .Scratch.Get "bio" }}
+{{ end }}
+## Projects
+
+{{ range where site.RegularPages "Type" "project" }}
+### {{ .Title }}{{ with .Params.subtitle }} — {{ . }}{{ end }}
+URL: {{ .Permalink }}
+{{- with .Params.presented }}
+Presented at: {{ delimit . ", " }}{{ end }}
+{{ .Content | plainify | chomp }}
+{{ end }}
+## Publications
+
+{{ range sort (where site.RegularPages "Type" "publication") "Date" "desc" }}
+- {{ with .Params.authors }}{{ delimit . ", " }}. {{ end }}"{{ .Title }}".{{ with .Params.publication }} {{ . | plainify }}.{{ end }} {{ .Date.Format "2006" }}.
+  URL: {{ .Permalink }}
+{{- with .Params.doi }}
+  DOI: https://doi.org/{{ . }}{{ end }}
+{{- with .Params.url_pdf }}
+  PDF: {{ . }}{{ end }}
+{{- with .Params.abstract }}
+  Abstract: {{ . | plainify | chomp }}{{ end }}
+{{ end }}
+## Contact
+
+{{ with site.Params.email }}Email: {{ . }}{{ end }}

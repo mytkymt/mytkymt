@@ -1,12 +1,10 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
-title: "Demonstration at SIGGRAPHAsia 2020 Emerging Technologies"
+title: "SIGGRAPH Asia 2020 Emerging Technologies でデモ発表を行いました"
 date: 2020-12-04T23:28:00+09:00
+type: "news"
 projects: [HaptoMapping]
 ---
-The following paper is presented in the demonstration at SIGGRAPHAsia 2020 Emerging Technologies.
+SIGGRAPH Asia 2020 の Emerging Technologies にて、HaptoMapping のデモ発表を行いました。
 
-Yamato Miyatake, Takefumi Hiraki, Tomosuke Maeda, Daisuke Iwai, Kosuke Sato.</br> 
-Visuo-Haptic Display by Embedding Imperceptible Spatial Haptic Information into Projected Images. </br>
-[[PDF link]](https://www.miyatakeyama.to/publication/conference/2020/eurohaptics/EuroHaptics.pdf)
+宮武大和、平木剛史、前田智祐、岩井大輔、佐藤宏介.
+"HaptoMapping: Visuo-Haptic AR System using Projection-based Control of Wearable Haptic Devices."

@@ -1,12 +1,11 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
-title: "Oral presentation at EuroHaptics 2020"
+title: "EuroHaptics 2020 で口頭発表を行いました"
 date: 2020-09-06T23:15:15+09:00
-
+type: "news"
+projects: [HaptoMapping]
 ---
-The following paper is presented in the oral session at EuroHaptics 2020.
+EuroHaptics 2020 の口頭発表セッションで、以下の論文を発表しました。
 
-Yamato Miyatake, Takefumi Hiraki, Tomosuke Maeda, Daisuke Iwai, Kosuke Sato.</br> 
-Visuo-Haptic Display by Embedding Imperceptible Spatial Haptic Information into Projected Images. </br>
-[[PDF link]](https://www.miyatakeyama.to/publication/conference/2020/eurohaptics/EuroHaptics.pdf)
+宮武大和、平木剛史、前田智祐、岩井大輔、佐藤宏介.
+"Visuo-Haptic Display by Embedding Imperceptible Spatial Haptic Information into Projected Images."
+[[PDF]](https://www.miyatakeyama.to/publication/conference/2020/eurohaptics/EuroHaptics.pdf)

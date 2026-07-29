@@ -12,8 +12,6 @@
   {{ $author = $page.File.TranslationBaseName }}
 {{ end }}
 
-{{ warnf "DEBUG (background.html) – $author: %s, page slug: %s" $author $page.File.TranslationBaseName }}
-
 {{ $person_page_path := (printf "/authors/%s" $author) }}
 {{ $person_page := site.GetPage $person_page_path }}
 {{ if not $person_page }}
@@ -27,7 +25,7 @@
 
 <div class="">
     {{/* Only display widget title in explicit instances of about widget, not in author pages. */}}
-    {{ if and $page.Params.widget $page.Title }}<h1>{{ $page.Title | markdownify | emojify }}</h1>{{ end }}
+    {{ if and $page.Params.widget $page.Title }}<h2>{{ $page.Title | markdownify | emojify }}</h2>{{ end }}
 </div>
     <div class="row">
 
@@ -67,13 +65,16 @@
         <h3>{{ i18n "experience" | markdownify }}</h3>
         {{ range . }}
           <div class="row experience-item mb-2">
+              {{/* "Jan.2006" localises to "10月.2024" in Japanese, which is not
+                   how a date is written — use 2024年10月 there instead. */}}
+              {{ $date_layout := cond (eq site.Language.Lang "ja") "2006年1月" "Jan. 2006" }}
               <div class="col-12 col-sm-4 experience-date">
-                {{ with .date_start }} {{ time.Format "Jan.2006" .}}{{ end }} - 
-                {{if .date_end}}
-                {{ with .date_end }} {{ time.Format "Jan.2006" .}}{{ end }}
-                {{else}}
+                {{ with .date_start }}{{ time.Format $date_layout . }}{{ end }} –
+                {{ if .date_end }}
+                {{ with .date_end }}{{ time.Format $date_layout . }}{{ end }}
+                {{ else }}
                 {{ i18n "present" }}
-                {{end}}
+                {{ end }}
               </div>
               <div class="col-12 col-sm-8 experience-description">
                 <div class="description">
@@ -88,7 +89,7 @@
       {{/* Insert Academic Service block (h3) after Education and Experience (so that Education and Experience remain side by side) */}}
       {{ with $page.Params.sections }}
       <div class="col-12">
-        <h3>Academic Service</h3>
+        <h3>{{ i18n "academic_service" }}</h3>
         {{ range . }}
           {{ if .subtitle }}
             <h4>{{ .subtitle | markdownify | emojify }}</h4>

@@ -1,0 +1,85 @@
+{{/*
+  ScholarlyArticle schema for `publication` pages.
+
+  The theme's generic `Article` partial listed only the first author, dropped
+  the DOI even when present in front matter, and emitted an empty description.
+  Those three fields are exactly what a citation index or an AI agent needs to
+  link this page to the real paper, so they are all populated here.
+*/}}
+
+{{- $page := .page -}}
+{{- $summary := .summary -}}
+{{- $featured_image := ($page.Resources.ByType "image").GetMatch "*featured*" -}}
+{{- $abstract := $page.Params.abstract | default $page.Params.summary | plainify -}}
+{{- $doi := $page.Params.doi -}}
+{{/* Drop bookkeeping tags so `keywords` carries topics only. */}}
+{{- $skip_tags := slice "Journal paper" "Conference paper" "Preprint" "Press" "Poster" "Demo" -}}
+{{- $topics := slice -}}
+{{- range $page.Params.tags -}}{{ if not (in $skip_tags .) }}{{ $topics = $topics | append . }}{{ end }}{{- end -}}
+
+{{/* Map Academic's numeric publication_types onto schema.org types. */}}
+{{- $type := "ScholarlyArticle" -}}
+{{- with $page.Params.publication_types -}}
+  {{- $t := index . 0 -}}
+  {{- if in (slice "3" "4" "5") $t -}}{{- $type = "ScholarlyArticle" -}}{{- end -}}
+  {{- if eq $t "6" -}}{{- $type = "Book" -}}{{- end -}}
+  {{- if eq $t "7" -}}{{- $type = "Chapter" -}}{{- end -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ $type }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ $page.Permalink }}
+  },
+  "headline": {{ $page.Title }},
+  "name": {{ $page.Title }},
+  {{ with $featured_image }}
+  "image": [{{ .Permalink }}],
+  {{ end }}
+  "datePublished": {{ $page.Date.Format "2006-01-02" }},
+  {{ with $page.Params.authors }}
+  "author": [
+    {{ range $i, $a := . }}{{ if $i }},{{ end }}{
+      "@type": "Person",
+      "name": {{ $a }}{{ if and (eq $a "Yamato Miyatake") site.Params.profiles.orcid }},
+      "identifier": {{ site.Params.profiles.orcid }},
+      "sameAs": {{ site.Params.profiles.orcid }}{{ end }}
+    }{{ end }}
+  ],
+  {{ end }}
+  {{ with $page.Params.publication }}
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": {{ . | plainify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ . | plainify }}
+  },
+  {{ end }}
+  {{ with $doi }}
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": {{ . }}
+    }
+  ],
+  "sameAs": {{ printf "https://doi.org/%s" . }},
+  {{ end }}
+  {{ with $page.Params.url_pdf }}
+  "url": {{ . }},
+  {{ end }}
+  {{ with $topics }}
+  "keywords": {{ delimit . ", " }},
+  {{ end }}
+  {{ with $abstract }}
+  "abstract": {{ . }},
+  {{ end }}
+  "inLanguage": {{ site.LanguageCode | default "en" }},
+  "description": {{ $abstract | default $summary | default $page.Title }}
+}
+</script>

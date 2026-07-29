@@ -236,3 +236,23 @@
 
 - id: cookie_learn
   translation: Learn more
+
+
+# --- Added: accessibility labels ---
+- id: skip_to_content
+  translation: Skip to main content
+
+- id: social_email
+  translation: Email
+
+- id: academic_service
+  translation: Academic Service
+
+- id: project_members
+  translation: Members
+
+- id: project_presented_at
+  translation: Presented at
+
+- id: close
+  translation: Close

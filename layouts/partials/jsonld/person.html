@@ -1,0 +1,91 @@
+{{/*
+  Person schema for the site owner.
+
+  The upstream theme only emits a `WebSite` node on the homepage, so there was
+  no machine-readable statement of *who* this site is about. Search engines and
+  AI agents resolve a researcher to a single entity mainly through `sameAs`
+  links to authority profiles (ORCID, Google Scholar, researchmap), so those are
+  emitted here even when the visible icon list changes.
+*/}}
+
+{{- $page := . -}}
+{{- $person := "" -}}
+{{- range first 1 (where (where site.Pages "Section" "authors") "Params.superuser" true) -}}
+  {{- $person = . -}}
+{{- end -}}
+
+{{- with $person -}}
+{{- $avatar := (.Resources.ByType "image").GetMatch "*avatar*" -}}
+
+{{/* sameAs: every social link that is an external profile, plus any extra
+     identifiers declared in params.toml under [profiles]. */}}
+{{- $same_as := slice -}}
+{{- range .Params.social -}}
+  {{- if in (slice "http" "https") (urls.Parse .link).Scheme -}}
+    {{- $same_as = $same_as | append .link -}}
+  {{- end -}}
+{{- end -}}
+{{- range site.Params.profiles.same_as -}}
+  {{- $same_as = $same_as | append . -}}
+{{- end -}}
+{{- $same_as = $same_as | uniq -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": {{ printf "%s#person" site.BaseURL }},
+  "name": {{ .Title }},
+  {{ with site.Params.profiles.alternate_names }}
+  "alternateName": {{ . }},
+  {{ end }}
+  "url": {{ site.BaseURL }},
+  {{ with $avatar }}
+  "image": {{ (.Fill "270x270 Center").Permalink }},
+  {{ end }}
+  {{ with .Params.role }}
+  "jobTitle": {{ . }},
+  {{ end }}
+  {{ with .Params.bio }}
+  "description": {{ . }},
+  {{ end }}
+  {{ with site.Params.profiles.orcid }}
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "ORCID",
+    "value": {{ . }}
+  },
+  {{ end }}
+  {{ range first 1 .Params.organizations }}
+  {{ with .name }}
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": {{ . }}
+  },
+  {{ end }}
+  {{ end }}
+  {{/* Deduplicated, and excluding the current affiliation (which is not
+       "alumniOf" while the degree is still in progress). */}}
+  {{ $current := "" }}
+  {{ range first 1 .Params.organizations }}{{ $current = .name }}{{ end }}
+  {{ $alma := slice }}
+  {{ with .Params.education }}{{ range .courses }}
+    {{ if and .institution (ne .institution $current) }}{{ $alma = $alma | append .institution }}{{ end }}
+  {{ end }}{{ end }}
+  {{ with ($alma | uniq) }}
+  "alumniOf": [
+    {{ range $i, $n := . }}{{ if $i }},{{ end }}{
+      "@type": "CollegeOrUniversity",
+      "name": {{ $n }}
+    }{{ end }}
+  ],
+  {{ end }}
+  {{/* `knowsAbout` is the field an AI agent reads to decide whether this person
+       is relevant to a topical query. Keep it aligned with the research keywords. */}}
+  {{ with site.Params.profiles.knows_about }}
+  "knowsAbout": {{ . }},
+  {{ end }}
+  "sameAs": {{ $same_as }}
+}
+</script>
+{{- end -}}

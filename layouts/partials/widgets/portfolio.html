@@ -8,7 +8,7 @@
 
 <div class="section-heading">
 
-    {{ with $st.Title }}<h1>{{ . | markdownify | emojify }}</h1>{{ end }}
+    {{ with $st.Title }}<h2>{{ . | markdownify | emojify }}</h2>{{ end }}
     {{ with $st.Params.subtitle }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
 
 </div>

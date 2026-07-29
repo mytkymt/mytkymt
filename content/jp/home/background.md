@@ -3,7 +3,7 @@
 widget = "background"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 20  # Order that this section will appear in.
+weight = 30
 
 title = "学歴・経歴"
 
@@ -13,7 +13,7 @@ title = "学歴・経歴"
 author = "admin"
 
 [[sections]]
-subtitle = "Review"
+subtitle = "査読"
 items = ["IEEE VR Workshop (2025, 2026)", "ACM CHI (2025)","ACM UIST (2025) (1 Special Recognitions for Outstanding Reviews)"]
 
 +++

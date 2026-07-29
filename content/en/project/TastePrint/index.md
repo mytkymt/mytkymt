@@ -28,4 +28,4 @@ url_pdf: ""
 #   Otherwise, set `slides = ""`.
 slides: example
 ---
-ChewTect explores temporal food texture design through computational molding.
+TastePrint is a 3D food printing system that airbrushes liquid seasoning between printed layers, so that taste can be distributed layer by layer within a single piece of food.

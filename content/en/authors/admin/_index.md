@@ -16,10 +16,10 @@ role: Ph.D. Student
 # Organizations/Affiliations
 organizations:
 - name: Saitama University
-- url:  "https://en.saitama-u.ac.jp/"
+  url: "https://en.saitama-u.ac.jp/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include AR/VR/MR, Human-Computer Interaction, Haptics.
+bio: An HCI researcher designing eating experiences through human-food interaction and digital fabrication.
 
 interests:
 - Extended Reality
@@ -39,12 +39,15 @@ education:
   - course: Ph.D. Student
     institution: Saitama University
     year: 
-  - course: MSc in Engineering
+  - course: M.Eng.
     institution: Osaka University
     year: 2022
-  - course: BSc in Engineering
+  - course: B.Eng.
     institution: Osaka University
     year: 2020
+  - course: Associate Degree in Engineering
+    institution: National Institute of Technology, Akashi College
+    year: 2018
 
 # Experiences.
 #   Add/remove as many `[[experience]]` blocks below as you like.
@@ -61,7 +64,6 @@ experience:
   - title: Software Engineer (Full time)
     company: Bosch
     company_url: https://bosch.com
-    location: Kanagawa, Japan
     location: Stuttgart, Germany
     date_start: 2022-04-01
     date_end: 2024-12-31
@@ -93,6 +95,12 @@ social:
 - icon: x-twitter
   icon_pack: fab
   link: 'https://x.com/miyatakeyama'
+- icon: google-scholar
+  icon_pack: ai
+  link: 'https://scholar.google.com/citations?user=_fvSDcAAAAAJ'
+- icon: orcid
+  icon_pack: ai
+  link: 'https://orcid.org/0000-0003-1241-0114'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -112,9 +120,18 @@ user_groups:
 - Visitors
 ---
 
-Yamato Miyatake is currently pursuing a Ph.D. at [Saitama University](https://en.saitama-u.ac.jp/) under the supervision of [Parinya Punpongsanon](https://punpongsanon.info/), focusing on the intersection of human-food interaction, digital fabrication, and Human-centered AI. His goal is to pioneer innovations in digital culinary experiences.
+I am an **HCI (Human-Computer Interaction)** researcher working in **Human-Food Interaction** — the study of how people interact with food, and how that interaction can be deliberately designed.
 
-Before this, he worked on driver assistance system at [Bosch](https://www.bosch.com/) , where he honed his skills in sensor-based environment recognition. 
+Eating is not a purely gustatory experience. It spans appearance, aroma, the sensation of chewing, the order in which things are tasted, and the exchange of information about what the food is. These qualities have traditionally been controlled only indirectly, through ingredient selection and culinary know-how. My goal is to make them explicit objects of design.
 
-In 2022, he earned a Master of Engineering degree from [Osaka University](https://www.osaka-u.ac.jp/en), specializing in Computer Vision, Robotics, Machine Learning, Signal Processing, and Human-Computer Interaction.
-Additionally, his research at [SENS laboratory](https://www.sens.sys.es.osaka-u.ac.jp/) has explored haptic presentation in Augmented Reality (AR) and embedding information using 3D food printing. These works have been presented at premier conferences, including IEEE VR and UIST.
+To that end I use digital fabrication, and 3D food printing in particular. Because material is deposited layer by layer, the internal structure that is invisible from the outside can be specified one layer at a time — a degree of design freedom that conventional cooking and industrial food manufacturing do not offer. My current work covers three directions:
+
+- **Embedding information in food** — retaining data such as provenance or ingredients inside the food itself, without altering its appearance
+- **Spatial taste design** — controlling how taste is distributed within a single piece of food
+- **Texture design** — producing distinct textures from identical materials by designing internal structure
+
+I am currently a Ph.D. student at the Graduate School of Science and Engineering, [Saitama University](https://en.saitama-u.ac.jp/), advised by Assoc. Prof. [Parinya Punpongsanon](https://punpongsanon.info/). I am a principal investigator of [JST ACT-X](https://www.jst.go.jp/kisoken/act-x/) (2024–) and a JSPS Research Fellow (DC2, 2026–).
+
+I received my M.Eng. from [Osaka University](https://www.osaka-u.ac.jp/en) in 2022, specialising in computer vision, robotics, machine learning, and signal processing. At the [SENS laboratory](https://www.sens.sys.es.osaka-u.ac.jp/) I also worked on haptic presentation in augmented reality, embedding imperceptible control signals into projected images (HaptoMapping). Between 2022 and 2024 I worked at Bosch as a software engineer on environment recognition for driver assistance systems, before returning to research.
+
+My work has appeared at ACM UIST, ACM DIS, SIGGRAPH Asia and IEEE VR, and in IEEE TVCG, Frontiers in Nutrition and Applied Food Research.
