@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "chewtect",
+    "source_description": "著者の公開前原稿（2026-DIS-ChewTect/main.pdf）",
+    "source_url": null,
+    "source_sha256": "888db6528400b826dea05ae603501e0fd16e0b4acf3854dc007bea402287e16d",
+    "official_doi": "10.1145/3800645.3812893",
+    "created": "2026-09-16",
+    "figures": 14
+  },
+  {
+    "slug": "conductive-gels",
+    "source_description": "著者提供の公開前原稿（2025_UIST_Poster_OleoCircuit__Miyatake_.pdf）",
+    "source_url": null,
+    "source_sha256": "33022babd8b24a16851cf95d2104c0ec43ac01ebac4f0b9fc5e6e6041ec663e5",
+    "official_doi": "10.1145/3746058.3758423",
+    "created": "2026-09-16",
+    "figures": 2
+  },
+  {
+    "slug": "eaterytag",
+    "source_description": "著者の投稿原稿（2025_Frontiers_EmbeddedTags__Miyatake_ (1).pdf）",
+    "source_url": null,
+    "source_sha256": "b9ec13bbaa075f566500244789b3bcb11e186edd58ba5818cc4a63d2e5c38854",
+    "official_doi": "10.3389/fnut.2025.1641849",
+    "created": "2026-09-16",
+    "figures": 18
+  },
+  {
+    "slug": "haptomapping",
+    "source_description": "著者提供のプレプリント（HaptoMapping-TVCG-preprint.pdf）",
+    "source_url": null,
+    "source_sha256": "ab4b9f3881eb48ba3bf982260cddbf11b4843caca33bed9cf0c128a3d9ab1a25",
+    "official_doi": "10.1109/TVCG.2021.3136214",
+    "created": "2026-09-16",
+    "figures": 14
+  },
+  {
+    "slug": "tasteprint",
+    "source_description": "arXiv:2603.22887v2（2026年4月15日）",
+    "source_url": "https://arxiv.org/abs/2603.22887v2",
+    "source_sha256": "7ae72d0d5fe4b2e7f286df37a66bdcd7f1444d8a577b4a5e0ef503dd94b2bd4f",
+    "official_doi": "10.1016/j.afres.2026.102242",
+    "created": "2026-09-16",
+    "figures": 10
+  }
+]

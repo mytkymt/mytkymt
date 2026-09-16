@@ -2,6 +2,21 @@
 {{ $page := .page }}
 {{ $link := "" }}
 
+{{/* A translation is a reading aid linked to the original publication. */}}
+{{ with $page.Params.japanese_translation }}
+  {{ $translation := site.GetPage (printf "/translations/%s" .) }}
+  {{ if not $translation }}
+    {{ range $page.Site.Home.AllTranslations }}
+      {{ if eq .Site.Language.Lang "ja" }}
+        {{ $translation = .Site.GetPage (printf "/translations/%s" $page.Params.japanese_translation) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ with $translation }}
+  <a class="btn btn-outline-dark my-1 mr-1{{ if $is_list }} btn-sm{{ end }}" href="{{ .RelPermalink }}" lang="ja">日本語版（AI翻訳）</a>
+  {{ end }}
+{{ end }}
+
 {{/*Project link*/}}
 {{ if $page.Params.projects }}
 {{ range $page.Params.projects }}

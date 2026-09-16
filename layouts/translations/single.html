@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article class="translation-reader" lang="ja">
+  <header class="translation-header">
+    <a class="translation-back" href="{{ "/ja/#publications" | relURL }}">← 業績一覧に戻る</a>
+    <p class="translation-kicker">論文の日本語版 · AI自動翻訳</p>
+    <h1>{{ .Title }}</h1>
+    <p class="translation-original-title" lang="en">{{ .Params.original_title }}</p>
+    <p class="translation-byline">原著：{{ delimit .Params.original_authors " / " }}</p>
+    <p class="translation-meta">{{ .Params.original_publication }} · {{ .Params.original_year }}<br>日本語版の作成日：{{ .Date.Format "2006年1月2日" }}</p>
+    <aside class="translation-notice" aria-label="日本語版について">
+      <strong>この日本語版について</strong>
+      <p>{{ .Params.translation_notice }}</p>
+    </aside>
+    <nav class="translation-actions" aria-label="論文のリンク">
+      {{ with .Resources.GetMatch "translation-ja.pdf" }}<a class="btn btn-outline-dark" href="{{ .RelPermalink }}">日本語PDFを開く</a>{{ end }}
+      <a class="btn btn-outline-dark" href="https://doi.org/{{ .Params.original_doi }}" target="_blank" rel="noopener">正式版を確認する ↗</a>
+      {{ with .Params.source_url }}<a class="btn btn-outline-dark" href="{{ . }}" target="_blank" rel="noopener">翻訳元を確認する ↗</a>{{ end }}
+    </nav>
+  </header>
+  <details class="translation-toc" open>
+    <summary>目次を表示する</summary>
+    {{ .TableOfContents }}
+  </details>
+  <div class="article-style translation-body">{{ .Content }}</div>
+  <footer class="translation-endnote"><p>{{ .Params.translation_notice }}</p><a href="https://doi.org/{{ .Params.original_doi }}">正式版を確認する</a></footer>
+</article>
+{{ end }}

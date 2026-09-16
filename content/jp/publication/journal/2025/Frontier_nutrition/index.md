@@ -1,4 +1,5 @@
 ---
+japanese_translation: "eaterytag"
 title: "EateryTag: Investigating Unobtrusive Edible Tags using Digital Food Fabrication"
 authors:
 - Yamato Miyatake

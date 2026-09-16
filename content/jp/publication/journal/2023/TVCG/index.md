@@ -1,4 +1,5 @@
 ---
+japanese_translation: "haptomapping"
 title: "HaptoMapping: Visuo-Haptic Augmented Reality by Embedding User-Imperceptible Tactile Display Control Signals in a Projected Image"
 authors:
 - Yamato Miyatake

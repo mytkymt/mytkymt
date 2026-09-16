@@ -1,11 +1,12 @@
 ---
+japanese_translation: "conductive-gels"
 title: "An Exploratory Study on Edible Conductive Materials Using Water and Oil-based Gels for Human-Food Interaction"
 authors:
 - Yamato Miyatake
 - Parinya Punpongsanon
 
 date: "2025-10-01T00:00:00Z"
-doi: "10.1145/3746058.3758407"
+doi: "10.1145/3746058.3758423"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-10-01T00:00:00Z"

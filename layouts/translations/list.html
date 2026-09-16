@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="translation-reader" lang="ja">
+  <a href="{{ "/ja/#publications" | relURL }}">← 業績一覧に戻る</a>
+  <h1>{{ .Title }}</h1>
+  <div class="article-style">{{ .Content }}</div>
+  {{ range sort .Pages "Params.original_year" "desc" }}
+  <section class="translation-list-item">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Params.original_publication }} · {{ .Params.original_year }}</p>
+    <a href="{{ .RelPermalink }}">日本語版を読む →</a>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

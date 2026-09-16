@@ -6,7 +6,7 @@ authors:
 - Parinya Punpongsanon
 
 date: "2025-10-01T00:00:00Z"
-doi: "10.1145/3746058.3758423"
+doi: "10.1145/3746058.3758407"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-10-01T00:00:00Z"

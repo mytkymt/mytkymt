@@ -1,4 +1,5 @@
 ---
+japanese_translation: "tasteprint"
 title: "TastePrint: A 3D Food Printing System for Layer-wise Taste Distribution via Airbrushed Liquid Seasoning"
 authors:
 - Yamato Miyatake

@@ -1,6 +1,45 @@
 /* Font stack is declared under "Readability" below — Latin from Noto Sans,
    Japanese from Noto Sans JP, both loaded via data/fonts/myfont.toml. */
 
+/* Japanese reading editions of published papers. */
+.translation-reader {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+  color: #20252a;
+  font-weight: 400;
+  h1 { font-size: clamp(1.55rem, 4vw, 2.25rem); margin: 1rem 0; }
+  h2 { font-size: 1.4rem; margin-top: 2.8rem; padding-bottom: .5rem; border-bottom: 1px solid #dce2e7; }
+  h3 { font-size: 1.12rem; margin-top: 2rem; }
+  h4 { font-size: 1rem; margin-top: 1.5rem; }
+  .translation-kicker { margin-top: 1.5rem; color: #36576c; font-size: .85rem; font-weight: 700; }
+  .translation-original-title { color: #53616b; font-size: 1rem; line-height: 1.5; }
+  .translation-byline, .translation-meta, .translation-source { font-size: .82rem; }
+  .translation-meta { color: #53616b; }
+  .translation-notice { background: #f1f5f7; border-left: 3px solid #456b82; padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: .9rem; }
+  .translation-notice p { margin: .5rem 0 0; }
+  .translation-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 2rem; }
+  .translation-toc { padding: 1rem 1.25rem; border: 1px solid #dce2e7; border-radius: 4px; font-size: .85rem; }
+  .translation-toc summary { cursor: pointer; font-weight: 700; }
+  .translation-toc nav { margin-top: .75rem; }
+  .translation-toc ul { padding-left: 1.25rem; }
+  .translation-body { font-size: .95rem; line-height: 1.95; }
+  .translation-body p, .translation-body li { font-weight: 400; max-width: none; }
+  .translation-body figure { margin: 2rem 0; break-inside: avoid; }
+  .translation-body figure img { display: block; max-height: 580px; width: auto; max-width: 100%; margin: 0 auto; }
+  .translation-body figcaption { font-size: .82rem; line-height: 1.75; color: #45535e; margin-top: .75rem; }
+  .translation-body table { display: block; overflow-x: auto; font-size: .8rem; width: 100%; }
+  .translation-body th, .translation-body td { padding: .55rem .7rem; border: 1px solid #dce2e7; }
+  .translation-body td { white-space: nowrap; }
+  .translation-body .references { font-size: .78rem; line-height: 1.65; }
+  .translation-endnote { border-top: 1px solid #dce2e7; margin-top: 3rem; padding-top: 1.25rem; font-size: .85rem; }
+  .translation-list-item { padding-bottom: 1.5rem; }
+}
+@media print {
+  .translation-reader { max-width: none; padding: 0; }
+  .translation-actions, .translation-back, .translation-toc { display: none !important; }
+}
+
 html,
 body,
 button,

@@ -1,4 +1,5 @@
 ---
+japanese_translation: "chewtect"
 title: "ChewTect: Designing Temporal Food Texture via Computational Molding"
 authors:
 - "Yamato Miyatake"
