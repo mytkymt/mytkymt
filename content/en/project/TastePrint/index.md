@@ -26,6 +26,6 @@ url_pdf: ""
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 TastePrint is a 3D food printing system that airbrushes liquid seasoning between printed layers, so that taste can be distributed layer by layer within a single piece of food.

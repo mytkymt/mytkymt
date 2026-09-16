@@ -47,6 +47,9 @@ url_pdf: "https://doi.org/10.1145/3800645.3812893"
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
+projects:
+- ChewTect
+
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.

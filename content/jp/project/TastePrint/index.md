@@ -26,7 +26,7 @@ url_pdf: ""
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 
 食品3Dプリントの過程で**層ごとの味の分布を制御する**手法です。液体調味料をエアブラシで霧状にして層間に吹きつけます。

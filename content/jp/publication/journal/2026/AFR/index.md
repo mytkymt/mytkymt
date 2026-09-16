@@ -45,7 +45,7 @@ url_pdf: "https://arxiv.org/pdf/2603.22887"
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects:
-- tasteprint
+- TastePrint
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.

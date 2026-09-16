@@ -2,7 +2,7 @@
 title: "Two posters will be presented at UIST 2025"
 date: 2025-10-01T23:28:00+09:00
 type: "news"
-projects: [HaptoMapping]
+projects: [ChewTect]
 ---
 Two posters will be presented at the ACM Symposium on User Interface Software and Technology (UIST) 2025:
 

@@ -34,7 +34,7 @@ url_video_name: "Teaser"
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 
 食品の外観を保ちながら**内部に情報を埋め込む**手法です。3Dプリント時に内部の空隙の配置を制御します。

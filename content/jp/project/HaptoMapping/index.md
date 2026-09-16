@@ -36,7 +36,7 @@ url_video: "https://youtu.be/Xt9G5ohcn5M"
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 
 投影映像に**知覚できない制御信号を埋め込む**視触覚AR技術です。装着型の触覚デバイスが信号を読み取ります。これにより映像に対応する触覚刺激を提示します。

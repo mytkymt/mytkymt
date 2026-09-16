@@ -36,6 +36,6 @@ authors:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 HaptoMapping is a projection-based visuo-haptic augmented reality (VHAR) system, that can render visual and haptic content independently and present consistent visuo-haptic sensations on physical surfaces.

@@ -29,7 +29,7 @@ url_pdf: ""
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 
 内部構造を制御して**咀嚼中の食感の変化を設計する**研究です。希望する食感に基づいて型（モールド）の形状を計算します。
