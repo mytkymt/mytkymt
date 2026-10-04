@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: 博士後期課程
+role: 博士後期課程 / 日本学術振興会 特別研究員（DC2）
 
 # Organizations/Affiliations
 organizations:
@@ -54,6 +54,12 @@ education:
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 experience:
+  - title: 特別研究員（DC2）
+    company: 日本学術振興会（JSPS）
+    company_url: https://www.jsps.go.jp/
+    location: 埼玉
+    date_start: 2026-04-01
+    date_end: 2028-03-31
   - title: 研究代表者（JST ACT-X）
     company: 科学技術振興機構（JST）
     company_url: https://www.jst.go.jp/kisoken/act-x/
@@ -117,16 +123,10 @@ user_groups:
 - Visitors
 ---
 
-専門は **HCI（ヒューマン・コンピュータ・インタラクション）** です。人とコンピュータの関わりを扱う分野です。その中でも人と食との関わりを対象とする **Human-Food Interaction** を研究しています。
+食品3Dプリンティングなどの技術を用いて食品の内部構造や成分の配置を変え、**味や食感を設計する方法**を研究しています。食品の外観を保ちながら内部に情報を埋め込む研究にも取り組んでいます。
 
-食事の体験には味覚・見た目・香り・食感が関わります。食べる順序や食品に関する情報も体験に影響します。これらを設計可能にすることが研究の目的です。
+専門は人とコンピュータの関わりを扱う **HCI（ヒューマン・コンピュータ・インタラクション）** で、特に人と食との関わりを対象とする **Human-Food Interaction** を研究しています。
 
-食品3Dプリンティングなどのデジタルファブリケーション技術を用いて食品の内部構造や成分分布を制御します。主に次の三つの課題に取り組んでいます。
+現在は[埼玉大学](https://en.saitama-u.ac.jp/)大学院理工学研究科の博士後期課程に在籍し、[Parinya Punpongsanon](https://punpongsanon.info/)准教授のもとで研究を行っています。2024年10月から[JST ACT-X](https://www.jst.go.jp/kisoken/act-x/)の研究代表者を務め、2026年4月からは日本学術振興会の特別研究員（DC2）としても研究に取り組んでいます。
 
-- **食品への情報の埋め込み**：外観を保ちながら産地や原材料などの情報を食品内部に埋め込みます。
-- **味の空間的な設計**：食品内部の味の分布を制御します。食べる位置に応じて味が変わる食品を設計します。
-- **食感の設計**：内部構造を制御して同じ材料から異なる食感を持つ食品を作製します。
-
-現在は[埼玉大学](https://en.saitama-u.ac.jp/)大学院理工学研究科の博士後期課程に在籍しています。[Parinya Punpongsanon](https://punpongsanon.info/)准教授のもとで研究を行っています。2024年から[JST ACT-X](https://www.jst.go.jp/kisoken/act-x/)の研究代表者を務めています。2026年から日本学術振興会の特別研究員（DC2）として研究に取り組んでいます。
-
-研究成果を ACM UIST・ACM DIS・SIGGRAPH Asia・IEEE VR などの国際会議で発表しています。IEEE TVCG・Frontiers in Nutrition・Applied Food Research などの学術誌にも掲載されています。
+研究成果は ACM UIST・ACM DIS・SIGGRAPH Asia・IEEE VR などの国際会議で発表しており、IEEE TVCG・Frontiers in Nutrition・Applied Food Research などの学術誌にも掲載されています。

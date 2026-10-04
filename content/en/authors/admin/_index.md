@@ -11,7 +11,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Ph.D. Student
+role: Ph.D. Student / JSPS Research Fellow (DC2)
 
 # Organizations/Affiliations
 organizations:
@@ -55,6 +55,12 @@ education:
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 experience:
+  - title: Research Fellow (DC2)
+    company: Japan Society for the Promotion of Science (JSPS)
+    company_url: https://www.jsps.go.jp/
+    location: Saitama, Japan
+    date_start: 2026-04-01
+    date_end: 2028-03-31
   - title: Independent researcher (JST ACT-X)
     company: JST
     company_url: https://www.jst.go.jp/kisoken/act-x/
