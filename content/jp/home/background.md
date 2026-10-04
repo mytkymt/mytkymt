@@ -14,6 +14,6 @@ author = "admin"
 
 [[sections]]
 subtitle = "査読"
-items = ["ACM SCF (2026)", "ICXR (2026)", "IEEE VR Workshop (2025, 2026)", "ACM CHI (2025, 2026)","ACM UIST (2025) (1 Special Recognitions for Outstanding Reviews)"]
+items = ["ACM SCF (2026)", "ICXR (2026)", "IEEE VR Workshop (2025, 2026)", "ACM CHI (2025, 2026, 2027)","ACM UIST (2025) (1 Special Recognitions for Outstanding Reviews)"]
 
 +++
