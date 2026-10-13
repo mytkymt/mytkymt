@@ -1,5 +1,6 @@
 ---
 title: "TastePrint"
+japanese_translation: "tasteprint"
 subtitle: "液体調味料の噴霧によって層ごとの味の分布を制御します"
 summary:
 tags:

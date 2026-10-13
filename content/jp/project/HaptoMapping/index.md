@@ -1,5 +1,6 @@
 ---
 title: "HaptoMapping"
+japanese_translation: "haptomapping"
 subtitle: "映像に知覚できない信号を埋め込んで映像と触覚を重ねて提示します"
 summary: 
 tags:

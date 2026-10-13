@@ -182,6 +182,10 @@
 
 - id: award
   translation: Award
+- id: achievement_creative_collaboration
+  translation: Creative Collaborations
+- id: achievement_selection_presentation
+  translation: Selections and Presentations
 # Project details
 
 - id: open_project_site

@@ -41,6 +41,8 @@ Generated `translation-ja.pdf` files are checked in as page resources. Hosting o
 
 The dedicated layouts are in `layouts/translations/`. A publication's `japanese_translation` field enables a link in both language versions. One representative publication per project carries that link.
 
+Japanese project pages also set `japanese_translation` to the relevant reading edition. Project buttons appear only on the Japanese site, in both the homepage project list and project detail pages. The interiqr project links to the extended EateryTag edition and explains that relationship in its description. Dynamic Culinary Experiences currently links to its English UIST 2026 manuscript; a Japanese reading edition has not yet been prepared.
+
 ## Related metadata correction
 
 The two UIST 2025 poster DOI values were swapped in the portfolio. The conductive-gel poster uses `10.1145/3746058.3758423`. The texture/molding poster uses `10.1145/3746058.3758407`. The supplied conductive-gel manuscript and [Saitama University's researcher record](https://rdb.eva.saitama-u.ac.jp/search/detail.html?lang=en&systemId=a166407bdf319c38520e17560c007669) confirm this mapping. Existing directory names were retained to preserve URLs.

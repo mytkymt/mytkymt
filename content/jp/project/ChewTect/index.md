@@ -1,5 +1,6 @@
 ---
 title: "ChewTect"
+japanese_translation: "chewtect"
 subtitle: "型（モールド）の設計によって咀嚼中の食感の変化を制御します"
 summary:
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "interiqr"
+japanese_translation: "eaterytag"
 subtitle: "外観を保ちながら3Dプリント食品の内部に情報を埋め込みます"
 summary: 
 tags:
@@ -44,3 +45,5 @@ slides: ""
 産地・原材料・アレルギー情報などを食品自体に記録する用途を想定しています。
 
 ACM UIST 2022 で口頭発表とデモ発表を行いました。海外メディア New Atlas にも取り上げられました。
+
+日本語版のボタンから関連研究EateryTagの論文翻訳を読めます。interiqrの手法も含め、複数の食品加工法による情報埋め込みを扱っています。

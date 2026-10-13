@@ -35,7 +35,7 @@ summary:
 tags:
 - "Conference paper - Demo"
 featured: true
-url_pdf: ""
+url_pdf: "/ja/publication/conference/2025/uist_chewtect/oleocircuit.pdf"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -46,7 +46,7 @@ url_pdf: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects: []
+projects: [OleoCircuit]
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
