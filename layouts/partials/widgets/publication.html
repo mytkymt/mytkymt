@@ -74,24 +74,6 @@
     {{ with $st.Params.subtitle }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
   </div>
 
-  {{/* Activities belong in the achievements section alongside the paper list. */}}
-  {{ $activities := where site.RegularPages "Type" "achievement" }}
-  {{ range $kind := slice "creative_collaboration" "selection_presentation" }}
-    {{ $matching := where $activities "Params.achievement_kind" $kind }}
-    {{ with $matching }}
-      <h3 class="mt-4">{{ i18n (printf "achievement_%s" $kind) }}</h3>
-      <ul class="achievement-list">
-        {{ range sort . "Date" "desc" }}
-          <li class="mb-3">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <span class="text-muted">({{ .Date.Format "2006-01-02" }})</span>
-            {{ with .Params.summary }}<p class="mb-1">{{ . | markdownify }}</p>{{ end }}
-            {{ partial "page_links" (dict "page" . "is_list" 1) }}
-          </li>
-        {{ end }}
-      </ul>
-    {{ end }}
-  {{ end }}
   <div class="items">
     {{ $pubCounter := 1 }}
 
@@ -112,3 +94,22 @@
     {{end}}
 
   </div>
+
+  {{/* Activities belong in the achievements section alongside the paper list. */}}
+  {{ $activities := where site.RegularPages "Type" "achievement" }}
+  {{ range $kind := slice "selection_presentation" "creative_collaboration" }}
+    {{ $matching := where $activities "Params.achievement_kind" $kind }}
+    {{ with $matching }}
+      <h3 class="mt-4">{{ i18n (printf "achievement_%s" $kind) }}</h3>
+      <ul class="achievement-list">
+        {{ range sort . "Date" "desc" }}
+          <li class="mb-3">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span class="text-muted">({{ .Date.Format "2006-01-02" }})</span>
+            {{ with .Params.summary }}<p class="mb-1">{{ . | markdownify }}</p>{{ end }}
+            {{ partial "page_links" (dict "page" . "is_list" 1) }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  {{ end }}
